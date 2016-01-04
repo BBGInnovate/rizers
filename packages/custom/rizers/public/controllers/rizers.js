@@ -10,12 +10,11 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
 
     $scope.find = function() {
       $http.get('/api/accounts/').success(function(data) {
-		$scope.accounts=data;
+		  $scope.accounts=data;
 	  });
     };
 
     $scope.findOne = function() {
-      console.log('one id is ' +  $stateParams.accountId);
       $http.get('/api/accounts/'+ $stateParams.accountId).success(function(data) {
 		$scope.account=data;
 	  });	

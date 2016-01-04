@@ -7,6 +7,7 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
 	/* fetch our master list of rizers */
 	$http.get('/api/accounts/').success(function(data) {
 		$scope.accountList=data;
+		  $scope.filterAccount="";
 	});
   }
 ]);
