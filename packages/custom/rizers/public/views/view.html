@@ -5,6 +5,7 @@
 		<h1><a href="/">Rize API demo</a></h1>
 	</header>
 
+	<!-- person profile -->
 	<article ng-if="account.person" class="rize-profile">
 
 		<div>
@@ -42,6 +43,8 @@
 		</aside>
 	</article><!-- person profile -->
 
+
+	<!-- organization profile -->
 	<article ng-if="account.person == false" class="rize-profile-organization">
 		<div>
 			<h2 class="rize-profile-category">{{ account.categories }}</h2>

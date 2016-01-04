@@ -11,13 +11,14 @@
 
   <div class="col-md-12 row">
   <ul class="rizers-list">
-    <li ng-repeat="account in accountList | filter:filterAccount" class="rizers-list-profile">
+    <li ng-repeat="account in accountList | filter:filterAccount | filter:query" class="rizers-list-profile">
       
       <a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}"><img ng-if="account.twitter.profile_image_url_https!=null" src="{{ account.twitter.profile_image_url_https }}" class="rizers-twitter-photo-small"/>{{account.first_name + ' ' + account.last_name}}</a>
+      <!--https://twitter.com/@name/profile_image?size=original -->
+
       <a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}">{{account.display_name}}</a>
     </li>
   </ul>
   </div>
 </section>
 <!-- end system/public/views/index.html -->
-<!--https://twitter.com/@name/profile_image?size=original -->
