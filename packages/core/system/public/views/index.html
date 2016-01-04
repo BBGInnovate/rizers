@@ -4,9 +4,10 @@
   <div class="col-md-12 ">
     <h1>50 rizers</h1>
   </div>
+  Search: <input ng-model="query"><BR>
   <div class="col-md-12 row">
   <ul>
-    <li ng-repeat="account in accountList">
+    <li ng-repeat="account in accountList | filter:query">
       
       <p data-ng-if="account.account_type=='Person'"><a href="/accounts/{{account.id}}">{{account.first_name + ' ' + account.last_name}}</a></p>
       <p data-ng-if="account.account_type=='Organization'"><a href="/accounts/{{account.id}}">{{account.display_name}}</a></p>
