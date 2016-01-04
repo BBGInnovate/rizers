@@ -1,7 +1,4 @@
-one rizer
 <section data-ng-controller="RizersController" data-ng-init="findOne()">
-  <span>{{account.display_name}}</span>
-
 
 <div id="main" class="main-content" role="main">
 	<header>
@@ -15,7 +12,7 @@ one rizer
 			<h2 class="rize-profile-location">{{ account.location }}</h2>
 			<div class="clearAll"></div>
 		</div>
-		<div class="rize-profile-banner" style="background-image: url(<%= global.profiles[currentNumber].image %>)">
+		<div class="rize-profile-banner" style="background-image: url({{ account.profile.image }})" ng-if="account.profile.image">
 			<div class="rize-profile-banner-text">
 				<h1 class="rize-profile-name">{{ account.display_name }}</h1>
 				<h3 class="rize-profile-position">{{ account.job_title }}</h3>
@@ -41,9 +38,9 @@ one rizer
 				<li ng-if="account.facebook.url" class="rize-profile-social-link"> <a href="{{account.facebook.url}}"></a></li>
 			</ul>
 		</div>
-		<aside class="rize-profile-quotation">
-			<h3 class="rize-profile-quotation-text">“<%= global.profiles[currentNumber].quotation %>”</h3>
-			<p class="rize-profile-quotation-name"><a href="<%= twitter_link %>"><img src="<%= twitter_profile_image %>" class="rize-profile-twitter-mugshot"/>"<%= twitter_name %></a><span class="rize-profile-quotation-date"><%= global.profiles[currentNumber].quotationdate %></span></p>
+		<aside ng-if="account.profile.quotation" class="rize-profile-quotation">
+			<h3 class="rize-profile-quotation-text">“{{ account.profile.quotation }}”</h3>
+			<p class="rize-profile-quotation-name"><a href="https://twitter.com/{{ account.twitter.screen_name }}"><img src="{{ account.twitter.profile_image_url_https }}" class="rize-profile-twitter-mugshot"/>{{ account.profile.name }}</a><span class="rize-profile-quotation-date">{{ account.profile.quotationdate }}</span></p>
 		</aside>
 	</article>
 </div><!-- #main -->

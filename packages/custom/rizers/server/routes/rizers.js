@@ -26,8 +26,6 @@ for (var i=0; i < allRizerJson.length; i++) {
   //Check if linkedin info is available.
   if (oneRizer.linkedin) {
     oneRizer.job_title = oneRizer.linkedin.job_title;
-
-    oneRizer.linkedin_link = '<li class="rize-profile-social-link"><a href="' +oneRizer.linkedin.url + '"></a></li>';
   }
 }
 
