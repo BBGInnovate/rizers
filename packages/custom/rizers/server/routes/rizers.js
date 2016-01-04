@@ -2,6 +2,8 @@
 
 var fs = require('fs');
 
+
+
 /**** PROFILE JSON ****/
 var profileDataPath=process.cwd() + '/packages/custom/rizers/server/models/profiles.json';
 var allProfileJson=JSON.parse(fs.readFileSync( profileDataPath ));
@@ -12,13 +14,21 @@ for (var i=0; i < allProfileJson.length; i++) {
 }
 
 /**** API JSON ****/
-var apiDataPath=process.cwd() + '/packages/custom/rizers/server/models/api.json';
-var allRizerJson=JSON.parse(fs.readFileSync( apiDataPath )).accounts;
+var apiDataPath = process.cwd() + '/packages/custom/rizers/server/models/api.json';
+var allRizerJson = JSON.parse(fs.readFileSync( apiDataPath )).accounts;
 var rizersById = {};
 for (var i=0; i < allRizerJson.length; i++) {
-  var oneRizer=allRizerJson[i];
-  rizersById[oneRizer.id]=oneRizer;
-  oneRizer.profile=profilesById[oneRizer.id];
+  var oneRizer = allRizerJson[i];
+  rizersById[oneRizer.id] = oneRizer;
+  oneRizer.profile = profilesById[oneRizer.id];
+  oneRizer.location = oneRizer.city_name + ", " + oneRizer.country_name;
+
+  //Check if linkedin info is available.
+  if (oneRizer.linkedin) {
+    oneRizer.job_title = oneRizer.linkedin.job_title;
+
+    oneRizer.linkedin_link = '<li class="rize-profile-social-link"><a href="' +oneRizer.linkedin.url + '"></a></li>';
+  }
 }
 
 
