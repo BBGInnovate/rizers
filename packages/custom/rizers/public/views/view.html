@@ -5,7 +5,7 @@
 		<h1><a href="/">Rize API demo</a></h1>
 	</header>
 
-	<article class="rize-profile">
+	<article ng-if="account.person" class="rize-profile">
 
 		<div>
 			<h2 class="rize-profile-category">{{ account.categories }}</h2>
@@ -15,14 +15,12 @@
 		<div class="rize-profile-banner" style="background-image: url({{ account.profile.image }})" ng-if="account.profile.image">
 			<div class="rize-profile-banner-text">
 				<h1 class="rize-profile-name">{{ account.display_name }}</h1>
-				<h3 class="rize-profile-position">{{ account.job_title }}</h3>
+				<h3 class="rize-profile-position">{{ account.linkedin.job_title }}</h3>
 			</div>
 		</div>
 
-		<div class="rize-profile-description">
-			<p>
-			{{ account.rize_summary }}
-			</p>
+		<div  ng-if="account.rize_summary" class="rize-profile-description">
+			<div ng-bind-html="account.rize_summary"></div>
 			<div class='rize-profile-description-related' ng-if="account.rize_links">
 				<ul>
 					<li ng-repeat="link in account.rize_links">
@@ -42,7 +40,23 @@
 			<h3 class="rize-profile-quotation-text">“{{ account.profile.quotation }}”</h3>
 			<p class="rize-profile-quotation-name"><a href="https://twitter.com/{{ account.twitter.screen_name }}"><img src="{{ account.twitter.profile_image_url_https }}" class="rize-profile-twitter-mugshot"/>{{ account.profile.name }}</a><span class="rize-profile-quotation-date">{{ account.profile.quotationdate }}</span></p>
 		</aside>
-	</article>
+	</article><!-- person profile -->
+
+	<article ng-if="account.person == false" class="rize-profile-organization">
+		<div>
+			<h2 class="rize-profile-category">{{ account.categories }}</h2>
+			<h2 class="rize-profile-location">{{ account.location }}</h2>
+			<div class="clearAll"></div>
+		</div>
+
+		<img src="{{ account.twitter.profile_image_url_https }}"/>
+		<h1 class="rize-profile-name">{{ account.display_name }}</h1>
+		<div  ng-if="account.rize_summary" class="rize-profile-description">
+			<p>
+				{{ account.rize_summary }}
+			</p>
+		</div>
+	</article><!-- organization profile -->
 </div><!-- #main -->
 
 </section>

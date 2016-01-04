@@ -494,3 +494,36 @@ body {
     width: 25%;
   }
 }
+
+
+
+
+
+
+
+.rizers-list{
+  padding-left: 0;
+}
+.rizers-list-profile{
+  border-bottom: 1px solid #C2C2C2;
+  list-style-type: none;
+  padding: 0;
+}
+.rizers-list-profile a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 25px;
+}
+.rizers-twitter-photo-small {
+  border-radius: 50%;
+  height: auto;
+  vertical-align: middle;
+  width: 25px;
+}
+
+@media screen and (min-width: 600px) {
+  .rizers-list-profile{
+    border-bottom: none;
+  }
+}
