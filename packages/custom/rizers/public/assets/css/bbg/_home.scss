@@ -1,0 +1,85 @@
+.usa-bbg-banner{
+	background: #CCC no-repeat center center / cover;
+	height: $banner-image-height;
+	max-width: 9999px;
+	position: relative;
+	width: 100%;
+
+	@include media($medium-screen) {
+		margin-bottom: 6rem;
+	}
+
+	a:focus {
+			box-shadow: none;
+	}
+
+	.usa-bbg-banner-site-logo-img{
+		width: 100px;
+		@include media($medium-screen) {
+			width: 150px;
+		}
+
+		:focus {
+			box-shadow: none;
+		}
+
+	}
+
+	.usa-bbg-banner-box{
+		margin: 0 auto;
+		max-width: $site-max-width;
+		padding-bottom: $site-margins/2;
+		position: absolute;
+			bottom:0;
+
+		.usa-bbg-banner-site-title{
+			color: #FFF;
+			font-size: $h1-font-size * .8;
+			margin-bottom: 5px;
+			max-width: $site-max-width;
+			padding-right: $site-margins;
+			text-shadow: $text-shadow;
+			@include media($medium-screen) {
+				font-size: $h1-font-size;
+			}
+		}
+
+		.usa-bbg-banner-site-description{
+			background-color: $box-transparent;
+			border-radius: 0 $border-radius $border-radius 0;
+			color: #FFF;
+			display: inline-block;
+			margin-top: 0;
+			margin-right: 0;
+			margin-left: -$site-margins;
+			padding: 10px $site-margins;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.usa-bbg-portfolio-project {
+	@include media($medium-large-screen) {
+		@include omega(4n);
+	}
+}
+
+.usa-bbg-staff-profile {
+	@include media($large-screen) {
+	}
+}
+
+.usa-bbg-featured-title {
+	margin-top: 0;
+}
+
+.usa-bbg-label {
+	margin-bottom: $site-margins;
+	margin-top: $site-margins * 2;
+
+	a:hover .usa-label-big {
+		background-color: #205493;
+		text-decoration: none;
+	}
+}
+

@@ -57,7 +57,7 @@ module.exports = function(System){
 			oneRizer.person = true;
 		} else {
 			//Add the preferred profile image
-			//Order Twitter -> Facebook -> Spreadsheet
+			//Order should be Spreadsheet -> Twitter -> Facebook
 			oneRizer.profile_image = '';
 			
 			if (oneRizer.twitter.profile_image_url_https !== null){
