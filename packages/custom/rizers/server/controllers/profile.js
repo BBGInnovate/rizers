@@ -8,7 +8,7 @@ var fs = require('fs');
 function splitParagraphs(source){
 	var splitGraphs = '';
 
-	var paragraphs = (source==null) ? "" : source;
+	var paragraphs = (source===null) ? '' : source;
 	paragraphs = paragraphs.split('\n')
 
 	for (var i = 0; i<paragraphs.length; i++){
@@ -36,51 +36,59 @@ module.exports = function(System){
 	var apiDataPath = process.cwd() + '/packages/custom/rizers/server/models/api.json';
 	var allRizerJson = JSON.parse(fs.readFileSync( apiDataPath )).accounts;
 	var rizersById = {};
-	for (var i=0; i < allRizerJson.length; i++) {
+	for (i = 0; i < allRizerJson.length; i++) {
 		var oneRizer = allRizerJson[i];
 		rizersById[oneRizer.id] = oneRizer;
 		oneRizer.profile = profilesById[oneRizer.id];
-		oneRizer.location = oneRizer.city_name + ", " + oneRizer.country_name;
+		oneRizer.location = oneRizer.city_name + ', ' + oneRizer.country_name;
+
 
 		oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
 
+
 		//Trying to split the categories into an array and return the first value
-		oneRizer.categories = (oneRizer.categories==null) ? "" : oneRizer.categories;
-		oneRizer.categories = oneRizer.categories.split(", ");
+		oneRizer.categories = (oneRizer.categories === null) ? '' : oneRizer.categories;
+		oneRizer.categories = oneRizer.categories.split(', ');
 		oneRizer.categories = oneRizer.categories[0];
 
-		/*
-		//Check if linkedin info is available.
-		if (oneRizer.linkedin) {
-			oneRizer.job_title = oneRizer.linkedin.job_title;
-		}
-		*/
 
 		oneRizer.person = false;
-		if (oneRizer.account_type == "Person") {
-			oneRizer.person = true;  	
-		};
+		if (oneRizer.account_type === 'Person') {
+			oneRizer.person = true;
+		} else {
+			//Add the preferred profile image
+			//Order Twitter -> Facebook -> Spreadsheet
+			oneRizer.profile_image = '';
+			
+			if (oneRizer.twitter.profile_image_url_https !== null){
+				oneRizer.profile_image = oneRizer.twitter.profile_image_url_https;
+			} else if (oneRizer.facebook.profile_image !== null){
+				oneRizer.profile_image = oneRizer.facebook.profile_image;
+			} else {
+				//add a column to the spreadsheet for a fallback image/logo
+			}
+		}
 	}
 
 
 
-  return {
-    render:function(req,res){
-		res.render('index',{ locals: { config: System.config.clean }});
-    },
-    aggregatedList:function(req,res) {
-		res.send(res.locals.aggregatedassets);
-    },
-    showAll:function(req,res){
-    	console.log('RETURNING RIZER JSON');
-    	res.json(allRizerJson);
-    },
-    showOne:function(req,res) {
-    	console.log('returning one rizer');
-    	var oneRizer=rizersById[req.params.id];
-    	res.json(oneRizer);
-    }
-  };
+	return {
+		render:function(req,res){
+			res.render('index',{ locals: { config: System.config.clean }});
+		},
+		aggregatedList:function(req,res) {
+			res.send(res.locals.aggregatedassets);
+		},
+		showAll:function(req,res){
+			console.log('RETURNING RIZER JSON');
+			res.json(allRizerJson);
+		},
+		showOne:function(req,res) {
+			console.log('returning one rizer');
+			var oneRizer=rizersById[req.params.id];
+			res.json(oneRizer);
+		}
+	};
 };
 
 

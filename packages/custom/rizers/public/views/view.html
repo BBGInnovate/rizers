@@ -51,13 +51,11 @@
 			<h2 class="rize-profile-location">{{ account.location }}</h2>
 			<div class="clearAll"></div>
 		</div>
-
-		<img src="{{ account.twitter.profile_image_url_https }}"/>
+		<div class="rize-banner-image" style="height: 300px; width: 100%; background: url({{account.profile.image}}) no-repeat center center / cover;"></div>
+		<img src="{{ account.profile_image }}" style="float: left; margin-top: -75px; max-width: 150px; box-shadow: 1px 1px 2px #CCC"/>
 		<h1 class="rize-profile-name">{{ account.display_name }}</h1>
 		<div  ng-if="account.rize_summary" class="rize-profile-description">
-			<p>
-				{{ account.rize_summary }}
-			</p>
+			<div ng-bind-html="account.rize_summary"></div>
 		</div>
 	</article><!-- organization profile -->
 </div><!-- #main -->
