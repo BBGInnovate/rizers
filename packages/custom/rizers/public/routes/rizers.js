@@ -10,3 +10,11 @@ angular.module('mean.rizers').config(['$stateProvider',
 ]);
 
 
+
+/*
+angular.module('mean.rizers', ['mean.system'])
+.config(['$viewPathProvider', function($viewPathProvider) {
+  $viewPathProvider.override('system/views/index.html', 'rizers/views/homepage.html');
+}]);
+*/
+
