@@ -42,7 +42,16 @@ import 'bbg/home';
 import 'bbg/site';
 import 'bbg/staff';
 */
-@import 'rize/variables';
-@import 'rize/rize';
-
-html{color:green;}
+html,
+body {
+  font-size: 0rem;
+}
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+  margin: 0;
+  padding: 0px;
+}
+html {
+  color: green;
+}
