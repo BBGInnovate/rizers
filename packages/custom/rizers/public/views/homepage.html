@@ -1,26 +1,30 @@
 <!-- begin system/public/views/index.html -->
 <!-- ng-bind-html="description" OR data-ng-if -->
+<div id="main" class="main-content" role="main">
 <section class="" data-ng-controller="IndexController">
-  <div class="col-md-12 ">
-    <h1>50 rizers RIZERS HOMEPAGE</h1>
-  </div>
   Search: <input ng-model="query"><BR>
     <label><input type="radio" ng-model="filterAccount.account_type" value="Person">Person</label>
     <label><input type="radio" ng-model="filterAccount.account_type" value="Organization">Organization</label>
     <label><input type="radio" ng-model="filterAccount.account_type" value="">All</label>
 
-  <div class="col-md-12 row">
-  <ul class="rizers-list">
-    <li ng-repeat="account in accountList | filter:filterAccount | filter:query" class="rizers-list-profile">
+  <div>
+  <ul class="rize-list">
+    <li ng-repeat="account in accountList | filter:filterAccount | filter:query" class="rize-list-profile">
       
-        <a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}"><img ng-if="account.twitter.profile_image_url_https!=null" src="{{ account.twitter.profile_image_url_https }}" class="rizers-twitter-photo-small"/>{{account.first_name + ' ' + account.last_name}}</a>
+        <a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}">
+        <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.twitter.profile_image_url_https }});" class="rize-list-photo-small"></div>
+        {{account.first_name + ' ' + account.last_name}}
+        </a>
         <!--https://twitter.com/@name/profile_image?size=original -->
 
         <a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}">
-        <img src="{{ account.profile_image }}" class="rizers-twitter-photo-small"/>
-        {{account.display_name}}</a>
+        <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
+        {{account.display_name}}
+        </a>
     </li>
   </ul>
   </div>
 </section>
+</div>
+
 <!-- end system/public/views/index.html -->
