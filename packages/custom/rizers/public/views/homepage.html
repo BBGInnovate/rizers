@@ -3,9 +3,12 @@
 <div id="main" class="main-content" role="main">
 <section class="" data-ng-controller="IndexController">
   Search: <input ng-model="query"><BR>
+   <button class="phoneNumber" ng-click="filterAccount.account_type='Person'">PEOPLE ONLY</button>
+   <span style="color:red; background:#000" ng-click="filterAccount.account_type='Organization'">ORGS ONLY</span>
     <label><input type="radio" ng-model="filterAccount.account_type" value="Person">Person</label>
     <label><input type="radio" ng-model="filterAccount.account_type" value="Organization">Organization</label>
     <label><input type="radio" ng-model="filterAccount.account_type" value="">All</label>
+
 
   <div>
   <ul class="rize-list">
