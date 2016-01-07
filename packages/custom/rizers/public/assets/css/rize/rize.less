@@ -14,7 +14,8 @@
 @heading-line-height: 1.3;
 @lead-line-height:    1.7;
 
-@font-sans:           'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+@font-sans-display:   'Oswald', 'Arial', sans-serif;
+@font-sans:           'Arial', sans-serif;
 @font-serif:          'Merriweather', 'Georgia', 'Times New Roman', serif;
 
 @font-normal:         400;
@@ -59,6 +60,11 @@ body {
 	width: 100%;
 }
 
+h1, h2, h3, h4, h5{
+  font-family: @font-sans-display;
+  font-weight: 500;
+}
+
 .clearfix:after {
 	content: "";
 	display: table;
@@ -69,9 +75,15 @@ body {
 .rize-profiles-header {
 	background-color: @color-dark-gray;
 	margin: 0;
-	padding: 10px 0;
+	padding: 0;
 }
-
+.rize-profiles-header-box {
+	max-width: 900px;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	margin: 0 auto;
+	padding:0;
+}
 .rize-profiles-header-logo{
 	vertical-align: middle;
 	width: 30px;
@@ -98,7 +110,11 @@ body {
 
 /* Featured image */
 .rize-profiles-banner-box {
-	background: url(https://africa.rizing.org/wp-content/uploads/2015/10/Jamestown-view-from-the-lighthouse-photo-credit-Charlotte-1200x900.jpeg) no-repeat center center / cover;
+	/*background: url(https://africa.rizing.org/wp-content/uploads/2015/10/Jamestown-view-from-the-lighthouse-photo-credit-Charlotte-1200x900.jpeg) no-repeat center center / cover;*/
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image: url(https://africa.rizing.org/wp-content/uploads/2015/10/Jamestown-view-from-the-lighthouse-photo-credit-Charlotte-1200x900.jpeg);
 	height: 300px;
 	position: relative;
 	width: 100%;
@@ -112,16 +128,18 @@ body {
 	position: absolute;
 		left: 0;
 		top: 0;
+	text-transform: uppercase;
 }
 
 .rize-profiles-banner-cutline {
 	background-color: fade(@color-dark-gray, @color-fade);
 	color: #FFF;
+	font-size: 1.5rem;
 	padding: 1rem;
 	position: absolute;
 		bottom: 0;
 		right: 0;
-	width: 33%;
+	width: 20%;
 }
 
 
@@ -130,8 +148,8 @@ body {
 	float: left;
 	margin: -75px 2% auto 2%;
 	position: relative;
-	z-index: 9999;
 	width: 20%;
+	z-index: 9999;
 }
 .rize-profiles-mugshot-photo {
 	border: 5px solid #FFF;
@@ -144,10 +162,13 @@ body {
 	margin-left: auto;
 }
 .rize-profiles-person-name {
-	font-size: 3.5rem;
+	font-size: 4rem;
 	margin-bottom: 0;
+	margin-top: 0;
 }
 .rize-profiles-person-job_title {
+	font-size: 1.7rem;
+	margin-top: 0;
 	text-transform: uppercase;
 }
 
@@ -158,7 +179,7 @@ body {
 }
 
 .rize-profiles-quotation-text {
-	font-size: 2rem;
+	font-size: 3rem;
 	text-align: center;
 }
 .rize-profiles-article-text {
@@ -171,8 +192,55 @@ body {
 	width: 52%;
 }
 
+
+
 .rize-profiles-aside-right {
 	float: right;
 	margin: 0 2% 0 0;
 	width: 20%;
 }
+.rize-profiles-aside-right img {
+  max-width: 100%;
+}
+
+/* old CSS */
+.rize-profile-social-link {
+  display: inline-block;
+}
+
+.rize-profile-social-link a {
+  background-color: #999;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+
+
+.rizers-list{
+  padding-left: 0;
+}
+.rizers-list-profile{
+  border-bottom: 1px solid #C2C2C2;
+  list-style-type: none;
+  padding: 0;
+}
+.rizers-list-profile a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 25px;
+}
+.rizers-twitter-photo-small {
+  border-radius: 50%;
+  height: auto;
+  vertical-align: middle;
+  width: 25px;
+}
+
+@media screen and (min-width: 600px) {
+  .rizers-list-profile{
+    border-bottom: none;
+  }
+}
+
