@@ -1,9 +1,9 @@
 <footer class="rize-footer">
 	<div class="rize-footer-nav">
-	<ul class="rize-footer-nav-links">
-		<li><a href="/">List</a></li>
-		<li><a href="">Categories</a></li>
-		<li><a href="">Map</a></li>
+	<ul class="rize-footer-nav-links" data-ng-controller="IndexController">
+		<li><a href="/">Home</a></li>
+		<li><a href="" ng-click="filterAccount.account_type='Organization'">Organization</a></li>
+		<li><a href="" ng-click="filterAccount.account_type='Person'">Person</a></li>
 		<li><a href="">Search</a></li>
 	</ul>
 	</div>
