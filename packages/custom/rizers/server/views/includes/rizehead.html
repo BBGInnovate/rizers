@@ -26,11 +26,8 @@
     <!-- {{locals.config.cssFramework}} -->
     <!--"/bower_components/bootstrap/dist/css/bootstrap.css"-->
     <link rel="stylesheet" type="text/css" href="/rizers/assets/css/rizers.css">
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-    {% for file in aggregatedassets.header.css %}
-        <link rel="stylesheet" href="{{file}}">
-    {% endfor %}
 
     {% for file in aggregatedassets.footer.css %}
         <link rel="stylesheet" href="{{file}}">
