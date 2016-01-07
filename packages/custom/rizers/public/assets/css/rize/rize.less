@@ -100,7 +100,7 @@ p {
 }
 
 
-
+/***************/
 /* Site banner */
 .rize-profiles-header {
 	background-color: @color-dark-gray;
@@ -138,7 +138,50 @@ p {
 
 
 
-/* Featured image */
+
+/* Site footer */
+.rize-footer {
+	background-color: transparent;
+	bottom: 0;
+	box-shadow: none;
+	position: fixed;
+	width: 100%;
+}
+.rize-footer-nav {
+	background-color: @color-dark-gray;
+	color: #FFF;
+	display: block;
+	margin: 0 auto;
+	max-width: @max-width;
+}
+.rize-footer-nav-links {
+	margin: 0;
+}
+.rize-footer-nav-links li{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 24%;
+}
+.rize-footer-nav-links li a{
+	border-right: 1px solid #666;
+	color: #FFF;
+	display: inline-block;
+	margin: 0;
+	padding: 40px 0 5px 0;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
+}
+.rize-footer-nav-links li:last-of-type a{
+	border-right: none;
+}
+
+
+/********/
+/* Grid */
 .rize-profiles-banner-box {
 	.backgroundCover;
 	height: 300px;
@@ -146,6 +189,63 @@ p {
 	width: 100%;
 }
 
+.rize-profiles-article-text {
+	display: block;
+	font-size: 1.25rem;
+	line-height: 2rem;
+	margin: 0 @margin-small;
+	max-width: @max-width;
+	padding: 0;
+	width: 100% - 2*@margin-small;
+}
+
+.rize-profiles-aside-left,
+.rize-profiles-aside-right {
+	margin: 0 @margin-small;
+	width: 100% - 2*@margin-small;
+}
+
+.rize-profiles-footer {
+	background-color: @color-light-gray;
+	box-shadow: none;
+	color: #FFF;
+	margin: 50px 0 0 0;
+	padding: 2rem 0 3rem 0;
+	position: static;
+	width: 100%;
+}
+
+@media screen and (min-width: @medium-screen) {
+	.rize-profiles-article-text {
+		display: inline-block;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		margin: 0 auto;
+		max-width: @max-width;
+		width: 54%;
+	}
+
+	.rize-profiles-aside-left {
+		float: left;
+		margin: 0 @margin-large 0 @margin-large;
+		width: @column-width-side;
+	}
+
+	.rize-profiles-aside-right {
+		float: right;
+		margin: 0 @margin-large 0 0;
+		width: @column-width-side;
+	}
+}
+
+@media screen and (min-width: @large-screen) {
+	.rize-profiles-banner-box {
+		height: 500px;
+	}
+}
+
+
+/* Featured image */
 .rize-profiles-category {
 	.backgroundColorTransparent(@color-accent-secondary);
 	color: #FFF;
@@ -221,58 +321,14 @@ p {
 
 
 
-/********/
-/* Grid */
-.rize-profiles-article-text {
-	display: block;
-	font-size: 1.25rem;
-	line-height: 2rem;
-	margin: 0 @margin-small;
-	max-width: @max-width;
-	padding: 0;
-	width: 100% - 2*@margin-small;
-}
-.rize-profiles-aside-left,
-.rize-profiles-aside-right {
-	margin: 0 @margin-small;
-	width: 100% - 2*@margin-small;
-}
-.rize-profiles-footer {
-	background-color: @color-dark-gray;
-	box-shadow: none;
-	color: #FFF;
-	margin: 0;
-	padding: 2rem 0;
-	position: static;
-	width: 100%;
-}
 
-@media screen and (min-width: @medium-screen) {
-	.rize-profiles-article-text {
-		display: inline-block;
-		font-size: 1.5rem;
-		line-height: 2.5rem;
-		margin: 0 auto 0 auto;
-		max-width: @max-width;
-		width: 54%;
-	}
-	.rize-profiles-aside-left {
-		float: left;
-		margin: 0 @margin-large 0 @margin-large;
-		width: @column-width-side;
-	}
-	.rize-profiles-aside-right {
-		float: right;
-		margin: 0 @margin-large 0 0;
-		width: @column-width-side;
-	}
-}
 
 
 
 /******************/
 /* profile styles */
 .rize-profiles-quotation-text {
+	color: #333;
 	font-size: 2rem;
 	font-weight: 100;
 	line-height: 2rem;
@@ -282,11 +338,12 @@ p {
 
 .rize-profiles-quotation-name {
 	font-size: 1.5rem;
+	margin-top: 1rem;
 	text-align: center;
 }
 
 .rize-profiles-quotation-name a{
-	color: @color-accent-primary;
+	color: #FFF;
 }
 
 .rize-profiles-aside-image {
@@ -335,29 +392,41 @@ p {
 
 
 /* List page styles */
-.rizers-list{
+.rize-list {
 	padding-left: 0;
 }
-.rizers-list-profile{
+.rize-list-profile {
 	border-bottom: 1px solid @color-light-gray;
 	list-style-type: none;
 	padding: 0;
 }
-.rizers-list-profile a{
+.rize-list-profile a {
 	display: block;
-	width: 100%;
+	font-size: 1.5rem;
 	height: 100%;
-	padding: 10px 10px 10px 25px;
+	padding: 10px 3rem 10px 3rem;
+	width: 100%;
 }
-.rizers-twitter-photo-small {
+.rize-twitter-photo-small {
 	border-radius: 50%;
 	height: auto;
 	vertical-align: middle;
 	width: 25px;
 }
 
+.rize-list-photo-small{
+	display:none;
+}
 @media screen and (min-width: @medium-screen) {
-	.rizers-list-profile{
+	.rize-list-photo-small{
+		.backgroundCover;
+		border-radius: 50%;
+		display: inline-block;
+		height: 30px;
+		vertical-align: middle;
+		width: 30px;	
+	}
+	.rize-list-profile {
 		border-bottom: none;
 	}
 }
