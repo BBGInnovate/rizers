@@ -37,6 +37,17 @@
 					<h3 class="rize-profiles-person-job_title">{{ account.linkedin.job_title }}</h3>
 				</div>
 			</header>
+			<aside class="rize-profiles-aside-left">
+				<div class="rize-profile-social">
+					<h3>FOLLOW ONLINE</h3>
+					<ul>
+						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"></a></li>
+						<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}"></a></li>
+						<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}"></a></li>
+					</ul>
+				</div>
+
+			</aside>
 
 			<div class="rize-profiles-article-text">
 				<div  ng-if="account.rize_summary" class="rize-profile-description">
@@ -53,20 +64,13 @@
 			</div>
 
 			<aside class="rize-profiles-aside-right">
-				<div class="rize-profile-social">
-					<h3>FOLLOW ONLINE</h3>
-					<ul>
-						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"></a></li>
-						<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}"></a></li>
-						<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}"></a></li>
-					</ul>
-				</div>
 				<img src="http://placehold.it/600x400">
 			</aside>
 
-			<aside class="rize-profiles-aside-left">
+
+			<footer class="rize-profiles-footer">
 				<h3 class="rize-profiles-quotation-text">“{{ account.profile.quotation }}”</h3>
-			</aside>
+			</footer>
 
 	</article><!-- person profile -->
 

@@ -40,7 +40,8 @@
 // Magic Numbers
 @max-width:               900px;
 @max-width-text:          600px;
-
+@margin-small             5%;
+@margin-large             2%;
 
 html {
 	font-family: @font-sans;
@@ -54,6 +55,8 @@ body {
 }
 
 #main {
+	border: 1px solid #CCC;
+	border-top: none;
 	margin: 0 auto;
 	max-width: @max-width;
 	padding: 0;
@@ -61,8 +64,8 @@ body {
 }
 
 h1, h2, h3, h4, h5{
-  font-family: @font-sans-display;
-  font-weight: 500;
+	font-family: @font-sans-display;
+	font-weight: 500;
 }
 
 .clearfix:after {
@@ -133,30 +136,47 @@ h1, h2, h3, h4, h5{
 .rize-profiles-banner-cutline {
 	background-color: fade(@color-dark-gray, @color-fade);
 	color: #FFF;
-	font-size: 1.5rem;
-	padding: 1rem;
+	font-size: 1.25rem;
+	padding: 10px @margin-small;
 	position: absolute;
 		bottom: 0;
-		right: 0;
-	width: 20%;
+		left: 0;
+	width: 90%;
 }
+  @media screen and (min-width: 600px) {
+    .rize-profiles-banner-cutline {
+      left: auto;
+      right: 0;
+      padding: 10px;
+      width: 20%;
+    }
+  }
 
 
 
 .rize-profiles-mugshot {
 	float: left;
-	margin: -75px 2% auto 2%;
+	margin: 5px @margin-small auto @margin-small;
 	position: relative;
-	width: 20%;
-	z-index: 9999;
+	width: 80px;
+	vertical-align: middle;
 }
+  @media screen and (min-width: 600px) {
+    .rize-profiles-mugshot {
+      margin: -75px @margin-large auto @margin-large;
+      position: relative;
+      width: 20%;
+      z-index: 9999;
+    }
+  }
+
 .rize-profiles-mugshot-photo {
 	border: 5px solid #FFF;
 	border-radius: 50%;
 	max-width: 100%;
 }
 .rize-profiles-person {
-	margin-right: 2%;
+	margin-right: @margin-large;
 	max-width: 74%;
 	margin-left: auto;
 }
@@ -172,24 +192,44 @@ h1, h2, h3, h4, h5{
 }
 
 .rize-profiles-aside-left {
-	float: left;
-	margin: 0 2% 0 2%;
-	width: 20%;
+	margin: 0 @margin-small;
+	width: 90%;
 }
+  @media screen and (min-width: 600px) {
+    .rize-profiles-aside-left {
+      float: left;
+      margin: 0 @margin-large 0 @margin-large;
+      width: 20%;
+    }
+  }
 
 .rize-profiles-quotation-text {
-	font-size: 3rem;
+	font-size: 2rem;
+	font-weight: 100;
+	line-height: 2rem;
+	margin-top: 0;
 	text-align: center;
 }
+
 .rize-profiles-article-text {
-	display: inline-block;
-	font-size: 1.5rem;
-	line-height: 2.5rem;
-	margin: 0 auto 0 auto;
+	display: block;
+	font-size: 1.25rem;
+	line-height: 2rem;
+	margin: 0 @margin-small;
 	max-width: @max-width;
 	padding: 0;
-	width: 52%;
+	width: 90%;
 }
+  @media screen and (min-width: 600px) {
+    .rize-profiles-article-text {
+      display: inline-block;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      margin: 0 auto 0 auto;
+      max-width: @max-width;
+      width: 52%;
+    }
+  }
 
 .rize-profile-description-related-link {
   color: @color-accent-primary;
@@ -198,13 +238,21 @@ h1, h2, h3, h4, h5{
 
 
 .rize-profiles-aside-right {
-	float: right;
-	margin: 0 2% 0 0;
-	width: 20%;
+	margin: 0 @margin-small;
+	width: 90%;
 }
 .rize-profiles-aside-right img {
   max-width: 100%;
 }
+  @media screen and (min-width: 600px) {
+    .rize-profiles-aside-right {
+      float: right;
+      margin: 0 @margin-large 0 0;
+      width: 20%;
+    }
+  }
+
+
 
 /* old CSS */
 .rize-profile-social-link {
@@ -247,3 +295,13 @@ h1, h2, h3, h4, h5{
   }
 }
 
+
+.rize-profiles-footer {
+	background-color: #333;
+	box-shadow: none;
+	color: #FFF;
+	margin: 0;
+	padding: 2rem 0;
+	position: relative;
+	width: 100%;
+}

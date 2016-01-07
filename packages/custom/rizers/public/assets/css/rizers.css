@@ -365,12 +365,12 @@ body {
   padding: 0;
 }
 #main {
+  border: 1px solid #CCC;
+  border-top: none;
   margin: 0 auto;
   max-width: 900px;
   padding: 0;
   width: 100%;
-  border: 1px solid #CCC;
-  border-top: none;
 }
 h1,
 h2,
@@ -393,10 +393,10 @@ h5 {
 }
 .rize-profiles-header-box {
   max-width: 900px;
-  border-left: 1px solid #666;
-  border-right: 1px solid #666;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
   margin: 0 auto;
-  padding:5px 0;
+  padding: 0;
 }
 .rize-profiles-header-logo {
   vertical-align: middle;
@@ -422,7 +422,6 @@ h5 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url(https://africa.rizing.org/wp-content/uploads/2015/10/Jamestown-view-from-the-lighthouse-photo-credit-Charlotte-1200x900.jpeg);
   height: 300px;
   position: relative;
   width: 100%;
@@ -447,32 +446,29 @@ h5 {
   left: 0;
   width: 90%;
 }
-  @media screen and (min-width: 600px) {
-    .rize-profiles-banner-cutline {
-      left: auto;
-      right: 0;
-      padding: 10px;
-      width: 20%;
-    }
+@media screen and (min-width: 600px) {
+  .rize-profiles-banner-cutline {
+    left: auto;
+    right: 0;
+    padding: 10px;
+    width: 20%;
   }
-
-
+}
 .rize-profiles-mugshot {
   float: left;
   margin: 5px 5% auto 5%;
-  position: static;
+  position: relative;
   width: 80px;
   vertical-align: middle;
 }
-  @media screen and (min-width: 600px) {
-    .rize-profiles-mugshot {
-      margin: -75px 2% auto 2%;
-      position: relative;
-      width: 20%;
-      z-index: 9999;
-    }
+@media screen and (min-width: 600px) {
+  .rize-profiles-mugshot {
+    margin: -75px 2% auto 2%;
+    position: relative;
+    width: 20%;
+    z-index: 9999;
   }
-
+}
 .rize-profiles-mugshot-photo {
   border: 5px solid #FFF;
   border-radius: 50%;
@@ -482,7 +478,6 @@ h5 {
   margin-right: 2%;
   max-width: 74%;
   margin-left: auto;
-  vertical-align: middle;
 }
 .rize-profiles-person-name {
   font-size: 4rem;
@@ -497,48 +492,43 @@ h5 {
 .rize-profiles-aside-left {
   margin: 0 5%;
   width: 90%;
-  font-size: 10rem;
-  margin-bottom: 0;
-  text-align: center;
 }
-  @media screen and (min-width: 600px) {
-    .rize-profiles-aside-left {
-      float: left;
-      margin: 0 2% 0 2%;
-      width: 20%;
-    }
+@media screen and (min-width: 600px) {
+  .rize-profiles-aside-left {
+    float: left;
+    margin: 0 2% 0 2%;
+    width: 20%;
   }
-
+}
 .rize-profiles-quotation-text {
   font-size: 2rem;
   font-weight: 100;
-  text-align: center;
   line-height: 2rem;
+  margin-top: 0;
+  text-align: center;
 }
-
 .rize-profiles-article-text {
   display: block;
   font-size: 1.25rem;
   line-height: 2rem;
   margin: 0 5%;
+  max-width: 900px;
   padding: 0;
   width: 90%;
 }
-  @media screen and (min-width: 600px) {
-    .rize-profiles-article-text {
-      display: inline-block;
-      font-size: 1.5rem;
-      line-height: 2.5rem;
-      margin: 0 auto 0 auto;
-      max-width: 900px;
-      padding: 0;
-      width: 52%;
-    }
+@media screen and (min-width: 600px) {
+  .rize-profiles-article-text {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin: 0 auto 0 auto;
+    max-width: 900px;
+    width: 52%;
   }
+}
 .rize-profile-description-related-link {
   color: orange;
 }
-
 .rize-profiles-aside-right {
   margin: 0 5%;
   width: 90%;
@@ -546,38 +536,32 @@ h5 {
 .rize-profiles-aside-right img {
   max-width: 100%;
 }
-
-  @media screen and (min-width: 600px) {
-    .rize-profiles-aside-right {
-      float: right;
-      margin: 0 2% 0 0;
-      width: 20%;
-    }
+@media screen and (min-width: 600px) {
+  .rize-profiles-aside-right {
+    float: right;
+    margin: 0 2% 0 0;
+    width: 20%;
   }
-
+}
 /* old CSS */
 .rize-profile-social-link {
   display: inline-block;
 }
-
 .rize-profile-social-link a {
   background-color: #999;
   display: block;
   height: 40px;
   width: 40px;
 }
-
-
-
-.rizers-list{
+.rizers-list {
   padding-left: 0;
 }
-.rizers-list-profile{
+.rizers-list-profile {
   border-bottom: 1px solid #C2C2C2;
   list-style-type: none;
   padding: 0;
 }
-.rizers-list-profile a{
+.rizers-list-profile a {
   display: block;
   width: 100%;
   height: 100%;
@@ -589,9 +573,17 @@ h5 {
   vertical-align: middle;
   width: 25px;
 }
-
 @media screen and (min-width: 600px) {
-  .rizers-list-profile{
+  .rizers-list-profile {
     border-bottom: none;
   }
+}
+.rize-profiles-footer {
+  background-color: #333;
+  box-shadow: none;
+  color: #FFF;
+  margin: 0;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
 }
