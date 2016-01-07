@@ -535,7 +535,9 @@ h5 {
       width: 52%;
     }
   }
-
+.rize-profile-description-related-link {
+  color: orange;
+}
 
 .rize-profiles-aside-right {
   margin: 0 5%;

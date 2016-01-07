@@ -489,6 +489,9 @@ h5 {
   padding: 0;
   width: 52%;
 }
+.rize-profile-description-related-link {
+  color: orange;
+}
 .rize-profiles-aside-right {
   float: right;
   margin: 0 2% 0 0;

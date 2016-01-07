@@ -41,10 +41,10 @@
 			<div class="rize-profiles-article-text">
 				<div  ng-if="account.rize_summary" class="rize-profile-description">
 					<div ng-bind-html="account.rize_summary"></div>
-					<div class='rize-profile-description-related' ng-if="account.rize_links">
+					<div class="rize-profile-description-related" ng-if="account.rize_links">
 						<ul>
 							<li ng-repeat="link in account.rize_links">
-								<a href="{{link.url}}">{{ link.title }}</a>
+								<a href="{{link.url}}" class="rize-profile-description-related-link">{{ link.title }}</a>
 							</li>
 						</ul>
 					</div>
@@ -54,6 +54,7 @@
 
 			<aside class="rize-profiles-aside-right">
 				<div class="rize-profile-social">
+					<h3>FOLLOW ONLINE</h3>
 					<ul>
 						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"></a></li>
 						<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}"></a></li>
