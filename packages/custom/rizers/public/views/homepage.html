@@ -15,8 +15,8 @@
     <li ng-repeat="account in accountList | filter:filterAccount | filter:query" class="rize-list-profile">
       
         <a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}">
-        <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.twitter.profile_image_url_https }});" class="rize-list-photo-small"></div>
-        {{account.first_name + ' ' + account.last_name}}
+          <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.twitter.profile_image_url_https }});" class="rize-list-photo-small"></div>
+          {{account.first_name + ' ' + account.last_name}}
         </a>
         <!--https://twitter.com/@name/profile_image?size=original -->
 

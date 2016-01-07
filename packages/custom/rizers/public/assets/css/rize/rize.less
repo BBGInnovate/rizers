@@ -112,9 +112,10 @@ p {
 	border-left: 1px solid @color-medium-gray;
 	border-right: 1px solid @color-medium-gray;
 	margin: 0 auto;
-	padding:0;
+	padding:5px 0;
 }
 .rize-profiles-header-logo {
+	padding: 0 0 5px 0;
 	vertical-align: middle;
 	width: 30px;
 }
@@ -206,7 +207,7 @@ p {
 }
 
 .rize-profiles-footer {
-	background-color: @color-light-gray;
+	background-color: #F5F5F5;
 	box-shadow: none;
 	color: #FFF;
 	margin: 50px 0 0 0;
@@ -222,7 +223,7 @@ p {
 		line-height: 2.5rem;
 		margin: 0 auto;
 		max-width: @max-width;
-		width: 54%;
+		width: 52%;
 	}
 
 	.rize-profiles-aside-left {
@@ -343,11 +344,18 @@ p {
 }
 
 .rize-profiles-quotation-name a{
-	color: #FFF;
+	color: @color-accent-primary;
 }
 
 .rize-profiles-aside-image {
 	max-width: 100%;
+}
+
+.rize-profiles-map {
+	.backgroundCover;
+	display: block;
+	height: 250px;
+	width: 100%;
 }
 
 .rize-profile-description-related-link {
@@ -407,24 +415,18 @@ p {
 	padding: 10px 3rem 10px 3rem;
 	width: 100%;
 }
-.rize-twitter-photo-small {
-	border-radius: 50%;
-	height: auto;
-	vertical-align: middle;
-	width: 25px;
-}
 
-.rize-list-photo-small{
+.rize-list-photo-small {
 	display:none;
 }
 @media screen and (min-width: @medium-screen) {
-	.rize-list-photo-small{
+	.rize-list-photo-small {
 		.backgroundCover;
 		border-radius: 50%;
 		display: inline-block;
-		height: 30px;
+		height: 45px;
 		vertical-align: middle;
-		width: 30px;	
+		width: 45px;	
 	}
 	.rize-list-profile {
 		border-bottom: none;
