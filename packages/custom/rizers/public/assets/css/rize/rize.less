@@ -1,47 +1,53 @@
 // Typography
-@em-base:             10px;
-@base-font-size:      rem(17px);
-@small-font-size:     rem(14px);
-@lead-font-size:      rem(20px);
-@title-font-size:     rem(52px);
-@h1-font-size:        rem(40px);
-@h2-font-size:        rem(30px);
-@h3-font-size:        rem(20px);
-@h4-font-size:        rem(17px);
-@h5-font-size:        rem(15px);
-@h6-font-size:        rem(13px);
-@base-line-height:    1.5;
-@heading-line-height: 1.3;
-@lead-line-height:    1.7;
+@em-base:                 10px;
+@base-font-size:          rem(17px);
+@small-font-size:         rem(14px);
+@lead-font-size:          rem(20px);
+@title-font-size:         rem(52px);
+@h1-font-size:            rem(40px);
+@h2-font-size:            rem(30px);
+@h3-font-size:            rem(20px);
+@h4-font-size:            rem(17px);
+@h5-font-size:            rem(15px);
+@h6-font-size:            rem(13px);
+@base-line-height:        1.5;
+@heading-line-height:     1.3;
+@lead-line-height:        1.7;
 
-@font-sans-display:   'Oswald', 'Arial', sans-serif;
-@font-sans:           'Arial', sans-serif;
-@font-serif:          'Merriweather', 'Georgia', 'Times New Roman', serif;
+@font-sans-display:      'Oswald', 'Arial', sans-serif;
+@font-sans:              'Arial', sans-serif;
+@font-serif:             'Merriweather', 'Georgia', 'Times New Roman', serif;
 
-@font-normal:         400;
-@font-bold:           700;
-
+@font-normal:             400;
+@font-bold:               700;
 
 // Color
 @color-main:              #000;
 @color-background:        #FFF;
 @color-dark-gray:         #333;
+@color-medium-gray:       #999;
+@color-light-gray:        #CCC;
 @color-accent-primary:    orange;
 @color-accent-secondary:  green;
 @color-fade:              70%;
+@color-facebook:          #3d5a98;
+@color-linkedin:          #1985bd;
+@color-twitter:           #55acee;
 
 // Mobile First Breakpoints
 @small-screen:            320px;
 @medium-screen:           600px;
 @medium-large-screen:     900px;
-@medium-screen:           1100px;
-
+@large-screen:            1100px;
 
 // Magic Numbers
 @max-width:               900px;
 @max-width-text:          600px;
-@margin-small             5%;
-@margin-large             2%;
+@margin-small:            5%;
+@margin-large:            2%;
+@column-width-side:       20%;
+
+
 
 html {
 	font-family: @font-sans;
@@ -50,13 +56,13 @@ html {
 	padding: 0;
 }
 body {
+	background-color: orange;
 	margin: 0;
 	padding: 0;
 }
 
 #main {
-	border: 1px solid #CCC;
-	border-top: none;
+	background-color: #FFF;
 	margin: 0 auto;
 	max-width: @max-width;
 	padding: 0;
@@ -66,6 +72,10 @@ body {
 h1, h2, h3, h4, h5{
 	font-family: @font-sans-display;
 	font-weight: 500;
+}
+
+ul{
+	padding-left: 0;
 }
 
 .clearfix:after {
@@ -82,12 +92,12 @@ h1, h2, h3, h4, h5{
 }
 .rize-profiles-header-box {
 	max-width: 900px;
-	border-left: 1px solid #999;
-	border-right: 1px solid #999;
+	border-left: 1px solid @color-medium-gray;
+	border-right: 1px solid @color-medium-gray;
 	margin: 0 auto;
 	padding:0;
 }
-.rize-profiles-header-logo{
+.rize-profiles-header-logo {
 	vertical-align: middle;
 	width: 30px;
 }
@@ -100,7 +110,7 @@ h1, h2, h3, h4, h5{
 	text-transform: uppercase;
 }
 
-.rize-profiles-header-title a{
+.rize-profiles-header-title a {
 	color: #FFF;
 	text-decoration: none;
 }
@@ -113,7 +123,6 @@ h1, h2, h3, h4, h5{
 
 /* Featured image */
 .rize-profiles-banner-box {
-	/*background: url(https://africa.rizing.org/wp-content/uploads/2015/10/Jamestown-view-from-the-lighthouse-photo-credit-Charlotte-1200x900.jpeg) no-repeat center center / cover;*/
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -143,17 +152,17 @@ h1, h2, h3, h4, h5{
 		left: 0;
 	width: 90%;
 }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: @medium-screen) {
     .rize-profiles-banner-cutline {
       left: auto;
       right: 0;
       padding: 10px;
-      width: 20%;
+      width: @column-width-side;
     }
   }
 
-
-
+/**************************************/
+/* Profile image, name and job styles */
 .rize-profiles-mugshot {
 	float: left;
 	margin: 5px @margin-small auto @margin-small;
@@ -161,11 +170,11 @@ h1, h2, h3, h4, h5{
 	width: 80px;
 	vertical-align: middle;
 }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: @medium-screen) {
     .rize-profiles-mugshot {
       margin: -75px @margin-large auto @margin-large;
       position: relative;
-      width: 20%;
+      width: @column-width-side;
       z-index: 9999;
     }
   }
@@ -191,26 +200,8 @@ h1, h2, h3, h4, h5{
 	text-transform: uppercase;
 }
 
-.rize-profiles-aside-left {
-	margin: 0 @margin-small;
-	width: 90%;
-}
-  @media screen and (min-width: 600px) {
-    .rize-profiles-aside-left {
-      float: left;
-      margin: 0 @margin-large 0 @margin-large;
-      width: 20%;
-    }
-  }
-
-.rize-profiles-quotation-text {
-	font-size: 2rem;
-	font-weight: 100;
-	line-height: 2rem;
-	margin-top: 0;
-	text-align: center;
-}
-
+/********/
+/* Grid */
 .rize-profiles-article-text {
 	display: block;
 	font-size: 1.25rem;
@@ -220,59 +211,113 @@ h1, h2, h3, h4, h5{
 	padding: 0;
 	width: 90%;
 }
-  @media screen and (min-width: 600px) {
-    .rize-profiles-article-text {
-      display: inline-block;
-      font-size: 1.5rem;
-      line-height: 2.5rem;
-      margin: 0 auto 0 auto;
-      max-width: @max-width;
-      width: 52%;
-    }
-  }
-
-.rize-profile-description-related-link {
-  color: @color-accent-primary;
-}
-
-
-
+.rize-profiles-aside-left,
 .rize-profiles-aside-right {
 	margin: 0 @margin-small;
 	width: 90%;
 }
-.rize-profiles-aside-right img {
-  max-width: 100%;
+.rize-profiles-footer {
+	background-color: @color-dark-gray;
+	box-shadow: none;
+	color: #FFF;
+	margin: 0;
+	padding: 2rem 0;
+	position: static;
+	width: 100%;
 }
-  @media screen and (min-width: 600px) {
-    .rize-profiles-aside-right {
-      float: right;
-      margin: 0 @margin-large 0 0;
-      width: 20%;
-    }
-  }
+
+@media screen and (min-width: @medium-screen) {
+	.rize-profiles-article-text {
+		display: inline-block;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		margin: 0 auto 0 auto;
+		max-width: @max-width;
+		width: 54%;
+	}
+	.rize-profiles-aside-left {
+		float: left;
+		margin: 0 @margin-large 0 @margin-large;
+		width: @column-width-side;
+	}
+	.rize-profiles-aside-right {
+		float: right;
+		margin: 0 @margin-large 0 0;
+		width: @column-width-side;
+	}
+}
+
+/******************/
+/* profile styles */
+.rize-profiles-quotation-text {
+	font-size: 2rem;
+	font-weight: 100;
+	line-height: 2rem;
+	margin: 0;
+	text-align: center;
+}
+.rize-profiles-quotation-name {
+	font-size: 1.5rem;
+	margin: 0;
+	text-align: center;
+}
+.rize-profiles-quotation-name a{
+	color: @color-accent-primary;
+}
+.rize-profiles-aside-image {
+	max-width: 100%;
+}
+
+
+.rize-profile-description-related-link {
+	color: @color-accent-primary;
+}
+
+
+
+
 
 
 
 /* old CSS */
 .rize-profile-social-link {
-  display: inline-block;
+	display: inline-block;
 }
 
 .rize-profile-social-link a {
-  background-color: #999;
-  display: block;
-  height: 40px;
-  width: 40px;
+	background-color: @color-medium-gray;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+	height: 40px;
+	width: 40px;
+}
+.rize-icon-facebook a {
+	background-image: url(../img/social_icons/facebook.png);
+}
+.rize-icon-linkedin a {
+	background-image: url(../img/social_icons/linkedin.png);
+}
+.rize-icon-twitter a {
+	background-image: url(../img/social_icons/twitter.png);
+}
+.rize-icon-facebook a:hover {
+	background-color: @color-facebook;
+}
+.rize-icon-linkedin a:hover {
+	background-color: @color-linkedin;
+}
+.rize-icon-twitter a:hover {
+	background-color: @color-twitter;
 }
 
-
-
+/* List page styles */
 .rizers-list{
   padding-left: 0;
 }
 .rizers-list-profile{
-  border-bottom: 1px solid #C2C2C2;
+  border-bottom: 1px solid @color-light-gray;
   list-style-type: none;
   padding: 0;
 }
@@ -289,19 +334,10 @@ h1, h2, h3, h4, h5{
   width: 25px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: @medium-screen) {
   .rizers-list-profile{
     border-bottom: none;
   }
 }
 
 
-.rize-profiles-footer {
-	background-color: #333;
-	box-shadow: none;
-	color: #FFF;
-	margin: 0;
-	padding: 2rem 0;
-	position: relative;
-	width: 100%;
-}
