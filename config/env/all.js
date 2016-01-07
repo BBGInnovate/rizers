@@ -3,10 +3,15 @@
 var path = require('path'),
   rootPath = path.normalize(__dirname + '/../..');
 
+var applicationPort=3000;
+if ( process.env.NODE_ENV === 'production' ){
+  applicationPort=80;
+}
+
 module.exports = {
   root: rootPath,
   http: {
-    port: process.env.PORT || 3000
+    port: process.env.PORT || applicationPort
   },
   https: {
     port: false,
