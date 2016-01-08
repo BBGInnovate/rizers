@@ -10,7 +10,7 @@
 	<article ng-if="account.person" class="rize-profile">
 
 
-			<header>
+			<header class="rize-profile-header">
 				<div class="rize-profiles-banner-box" style="	background-image: url(https://africa.rizing.org/wp-content/uploads/2015/10/Jamestown-view-from-the-lighthouse-photo-credit-Charlotte-1200x900.jpeg);">
 					<div class="rize-profiles-category">{{ account.categories }}</div>
 					<div class="rize-profiles-banner-cutline">
@@ -29,10 +29,10 @@
 			</header>
 			<aside class="rize-profiles-aside-left">
 				<div class="rize-profile-social">
-					<h3 class="rize-profile-social-label">FOLLOW ONLINE</h3>
+					<h3 class="rize-profile-social-label rize-profile-label">Follow {{account.first_name}} online:</h3>
 					<ul class="rize-profile-social-list">
-						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"><span>LinkedIn</span></a></li>
 						<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}"><span>{{account.twitter.screen_name}}</span></a></li>
+						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"><span>LinkedIn</span></a></li>
 						<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}"><span>Facebook</span></a></li>
 					</ul>
 				</div>
@@ -54,18 +54,21 @@
 			</div>
 
 			<aside class="rize-profiles-aside-right">
-				<style>
-					.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/-0.186964,5.603717,6/400x250.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; }
+				<h3 class="rize-profile-label">{{account.location}}</h3>
+
+					<style>
+					.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,6/400x250.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; }
 					@media (min-width: 401px) and (max-width: 600px) {
-						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/-0.186964,5.603717,6/600x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;
+						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,6/600x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;
 				}
 					}
 					@media (min-width: 601px){
-						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/-0.186964,5.603717,6/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 225px;}
+						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.high-contrast/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,6/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;}
 					}
 				</style>
 
-				<div class="rize-profiles-map"></div>
+				<div class="rize-profiles-map" title="Mapbox Map of {{account.location}}}"></div>
+				© <a href='https://www.mapbox.com/map-feedback/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a>
 			</aside>
 
 

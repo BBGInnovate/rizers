@@ -361,7 +361,7 @@ html {
   padding: 0;
 }
 body {
-  background-color: orange;
+  background-color: #FFA500;
   margin: 0;
   padding: 0;
 }
@@ -527,6 +527,9 @@ p {
   .rize-profiles-banner-box {
     height: 500px;
   }
+  .rize-profile-header {
+    margin-bottom: 20px;
+  }
 }
 /* Featured image */
 .rize-profiles-category {
@@ -614,6 +617,14 @@ p {
   .rize-profiles-person {
     margin-top: 20px;
   }
+  .rize-profiles-person-name {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+  .rize-profiles-person-job_title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
 }
 /******************/
 /* profile styles */
@@ -631,7 +642,7 @@ p {
   text-align: center;
 }
 .rize-profiles-quotation-name a {
-  color: orange;
+  color: #FFA500;
 }
 .rize-profiles-aside-image {
   max-width: 100%;
@@ -645,7 +656,16 @@ p {
   width: 100%;
 }
 .rize-profile-description-related-link {
-  color: orange;
+  color: #FFA500;
+}
+.rize-profile-label {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+  .rize-profile-label {
+    font-size: 1.5rem;
+  }
 }
 /****************/
 /* Social links */
@@ -664,6 +684,9 @@ p {
   line-height: 2.2;
   margin-right: 3px;
   width: auto;
+}
+.rize-profile-social-label {
+  margin-right: 10px;
 }
 .rize-icon-facebook {
   background-image: url(../img/social_icons/facebook-gray.png);
@@ -696,6 +719,9 @@ p {
 @media screen and (min-width: 600px) {
   .rize-profile-social-label {
     display: block;
+  }
+  .rize-profile-social-list {
+    margin: 0;
   }
   .rize-profile-social-link {
     background-size: 40px;
