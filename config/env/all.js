@@ -70,5 +70,6 @@ module.exports = {
   accounts_api_URL:'http://api.rizing.org/api/accounts',
   profileFlatPath:'/packages/custom/rizers/server/models/profiles.json',
   apiFlatPath:'/packages/custom/rizers/server/models/api.json',
+  categoryFlatPath:'/packages/custom/rizers/server/models/categories.json',
   useLiveData:true
 };

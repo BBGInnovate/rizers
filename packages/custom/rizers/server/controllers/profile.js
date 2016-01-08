@@ -22,10 +22,6 @@ function splitParagraphs(source){
 	return splitGraphs
 }
 
-function renderLiveJson() {
-
-}
-
 function buildRizers(apiStr,profileStr,profileObj) {
 	/* if we're using a flat file, we'll have profileStr
 	   if we're coming from tableTop, we'll have profileObj
@@ -89,6 +85,7 @@ module.exports = function(System){
 		request(config.accounts_api_URL, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 				rizerData.apiStr=body;
+				fs.writeFile(process.cwd() + config.apiFlatPath, rizerData.apiStr);
 				console.log("requesting spreadsheet from " + config.spreadsheet_URL);
 				var options = {
 					key: config.spreadsheet_URL,
@@ -97,8 +94,9 @@ module.exports = function(System){
 					},
 					callback: function(data) {
 						rizerData.profileObj=data["profiles"].elements;
+						fs.writeFile(process.cwd() + config.profileFlatPath, JSON.stringify(rizerData.profileObj));
 						rizerData.rd=buildRizers(rizerData.apiStr,"",rizerData.profileObj);
- 
+ 						
 						console.log("LIVE DATA HAS FINISHED LOADING FOR THE APP!")
 					}
 				};
