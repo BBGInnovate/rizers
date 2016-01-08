@@ -1,0 +1,17 @@
+<!-- begin system/public/views/index.html -->
+<!-- ng-bind-html="description" OR data-ng-if -->
+<div id="main" class="main-content" role="main">
+<section class="" data-ng-controller="RizersController" data-ng-init="findCategories()">
+  <div>
+  <ul class="rize-list">
+    <li ng-repeat="category in categoryList" class="rize-list-profile">
+        <a ng-model="organization" href="/categories/{{category.name}}">
+          {{category.name}}
+        </a>
+    </li>
+  </ul>
+  </div>
+</section>
+</div>
+
+<!-- end system/public/views/index.html -->

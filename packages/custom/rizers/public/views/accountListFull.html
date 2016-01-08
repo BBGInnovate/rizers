@@ -1,7 +1,7 @@
 <!-- begin system/public/views/index.html -->
 <!-- ng-bind-html="description" OR data-ng-if -->
 <div id="main" class="main-content" role="main">
-<section class="" data-ng-controller="IndexController">
+<section class="" data-ng-controller="RizersController" data-ng-init="findAccounts()">
   Search: <input ng-model="query"><BR>
    <button class="phoneNumber" ng-click="filterAccount.account_type='Person'">PEOPLE ONLY</button>
    <span style="color:red; background:#000" ng-click="filterAccount.account_type='Organization'">ORGS ONLY</span>
@@ -12,7 +12,7 @@
 
   <div>
   <ul class="rize-list">
-    <li ng-repeat="account in accountList | filter:filterAccount | filter:query" class="rize-list-profile">
+    <li ng-repeat="account in accounts | filter:filterAccount | filter:query" class="rize-list-profile">
       
         <a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}">
           <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.twitter.profile_image_url_https }});" class="rize-list-photo-small"></div>
