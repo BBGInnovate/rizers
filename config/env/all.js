@@ -58,12 +58,17 @@ module.exports = {
     currentLanguage: 'en',
     loginPage: '/auth/login',
     cssFramework: 'bootstrap'
-  },
+  }, 
   // The session cookie name
   sessionName: 'connect.sid',
   // Set bodyParser options
   bodyParser: {
     json: {limit: '100kb'},
     urlencoded: {limit: '100kb', extended: true}
-  }
+  },
+  spreadsheet_URL: 'https://docs.google.com/spreadsheets/d/1KTpCMF4_5TBEIyM-g2tLxHcq2XUaAqMc3IaqnKbJEHs/pubhtml',
+  accounts_api_URL:'http://api.rizing.org/api/accounts',
+  profileFlatPath:'/packages/custom/rizers/server/models/profiles.json',
+  apiFlatPath:'/packages/custom/rizers/server/models/api.json',
+  useLiveData:true
 };
