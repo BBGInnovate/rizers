@@ -29,11 +29,11 @@
 			</header>
 			<aside class="rize-profiles-aside-left">
 				<div class="rize-profile-social">
-					<h3>FOLLOW ONLINE</h3>
-					<ul>
-						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"></a></li>
-						<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}"></a></li>
-						<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}"></a></li>
+					<h3 class="rize-profile-social-label">FOLLOW ONLINE</h3>
+					<ul class="rize-profile-social-list">
+						<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}"><span>LinkedIn</span></a></li>
+						<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}"><span>{{account.twitter.screen_name}}</span></a></li>
+						<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}"><span>Facebook</span></a></li>
 					</ul>
 				</div>
 
