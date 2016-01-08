@@ -82,6 +82,10 @@ p {
 	margin-top: 0;
 }
 
+a {
+	color: @color-accent-primary;
+}
+
 /**********/
 /* Mixins */
 .clearfix:after {
@@ -98,8 +102,6 @@ p {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-
-
 /***************/
 /* Site banner */
 .rize-profiles-header {
@@ -147,6 +149,7 @@ p {
 	box-shadow: none;
 	position: fixed;
 	width: 100%;
+	z-index: 9999;
 }
 .rize-footer-nav {
 	background-color: @color-dark-gray;
@@ -183,6 +186,10 @@ p {
 
 /********/
 /* Grid */
+.rize-profiles-grid {
+	padding-bottom: 20px;
+}
+
 .rize-profiles-banner-box {
 	.backgroundCover;
 	height: 300px;
@@ -204,6 +211,8 @@ p {
 .rize-profiles-aside-right {
 	margin: 0 @margin-small;
 	width: 100% - 2*@margin-small;
+}
+.rize-profiles-asie-right{
 }
 
 .rize-profiles-footer {
@@ -250,6 +259,7 @@ p {
 }
 
 
+/******************/
 /* Featured image */
 .rize-profiles-category {
 	.backgroundColorTransparent(@color-accent-secondary);
@@ -271,6 +281,15 @@ p {
 		bottom: 0;
 		left: 0;
 	width: 90%;
+	z-index: 9999;
+}
+
+.rize-profiles-banner-shadow {
+	background-image: linear-gradient(transparent 0%,#333 300%);
+	height: 20%;
+	position: absolute;
+		bottom: 0;
+	width: 100%;
 }
 @media screen and (min-width: @medium-screen) {
 	.rize-profiles-banner-cutline {
@@ -386,11 +405,14 @@ p {
 	height: 250px;
 	width: 100%;
 }
-
+.mapbox-link {
+	color: @color-medium-gray;
+}
+/*
 .rize-profile-description-related-link {
 	color: @color-accent-primary;
 }
-
+*/
 .rize-profile-label {
 	margin-top: 0;
 	text-transform: uppercase;
@@ -401,6 +423,8 @@ p {
 		font-size: 1.5rem;
 	}
 }
+
+
 
 
 /****************/
@@ -430,15 +454,31 @@ p {
 .rize-icon-facebook {
 	background-image: url(../img/social_icons/facebook-gray.png);
 }
+.rize-icon-instagram {
+	background-image: url(../img/social_icons/instagram-gray.png);
+}
 .rize-icon-linkedin {
 	background-image: url(../img/social_icons/linkedin-gray.png);
 }
 .rize-icon-twitter {
 	background-image: url(../img/social_icons/twitter-gray.png);
 }
+.rize-icon-website {
+	background-image: url(../img/social_icons/website-gray.png);
+}
+.rize-icon-youtube {
+	background-image: url(../img/social_icons/youtube-gray.png);
+}
+
+
+
 .rize-icon-facebook:hover {
 	background-color: @color-facebook;
 	background-image: url(../img/social_icons/facebook-color.png);
+}
+.rize-icon-instagram:hover {
+	background-color: @color-twitter;
+	background-image: url(../img/social_icons/instagram-color.png);
 }
 .rize-icon-linkedin:hover {
 	background-color: @color-linkedin;
@@ -448,6 +488,15 @@ p {
 	background-color: @color-twitter;
 	background-image: url(../img/social_icons/twitter-color.png);
 }
+.rize-icon-website:hover {
+	background-color: @color-twitter;
+	background-image: url(../img/social_icons/website-color.png);
+}
+.rize-icon-youtube:hover {
+	background-color: @color-twitter;
+	background-image: url(../img/social_icons/youtube-color.png);
+}
+
 
 .rize-profile-social-link a{
 	color: #FFF;
@@ -494,6 +543,8 @@ p {
 		font-size: 1.4rem;
 	}
 }
+
+
 
 
 /* List page styles */

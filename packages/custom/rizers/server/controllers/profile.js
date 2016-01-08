@@ -58,22 +58,34 @@ function buildRizers(apiStr,profileStr,profileObj) {
 		oneRizer.categories = oneRizer.categories.split(', ');
 		oneRizer.categories = oneRizer.categories[0];
 
+
+		//Add responsive featured image base.
+		/*
+		oneRizer.profile.image_base = oneRizer.profile.image;
+		oneRizer.profile.image_base = oneRizer.profile.image_base.replace(".jpeg", "");
+		*/
+
+
 		oneRizer.person = false;
 		if (oneRizer.account_type === 'Person') {
 			oneRizer.person = true;
 		} else {
-			//Add the preferred profile image
-			//Order should be Spreadsheet -> Twitter -> Facebook
-			oneRizer.profile_image = '';
-			
-			if (oneRizer.twitter.profile_image_url_https !== null){
-				oneRizer.profile_image = oneRizer.twitter.profile_image_url_https;
-			} else if (oneRizer.facebook.profile_image !== null){
-				oneRizer.profile_image = oneRizer.facebook.profile_image;
-			} else {
-				//add a column to the spreadsheet for a fallback image/logo
-			}
 		}
+
+
+		//Order should be Spreadsheet -> Twitter -> Facebook
+		oneRizer.profile_image = '';
+		
+		if (oneRizer.profile.profileImage != ""){
+			oneRizer.profile_image = oneRizer.profile.profileImage;
+		} else if (oneRizer.twitter.profile_image_url_https !== null){
+			oneRizer.profile_image = oneRizer.twitter.profile_image_url_https;
+		} else if (oneRizer.facebook.profile_image !== null){
+			oneRizer.profile_image = oneRizer.facebook.profile_image;
+		} else {
+			//add a column to the spreadsheet for a fallback image/logo
+		}
+
 	}
 
 	return {allRizerJson:allRizerJson, rizersById:rizersById} ;
