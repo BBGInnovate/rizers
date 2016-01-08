@@ -371,7 +371,6 @@ p {
     background-size: 40px;
     background-position: center center;
     background-color: #999;
-    display: block;
     height: 40px;
     margin-top: 5px;
     padding-left: 0;
@@ -384,6 +383,9 @@ p {
     display: block;
     height: 100%;
     padding-left: 45px;
+  }
+  .rize-profile-social-link a span {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {
