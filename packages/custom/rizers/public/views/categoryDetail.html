@@ -10,13 +10,13 @@
 		<ul class="rize-list">
 			<li ng-repeat="account in accountList | filter:filterByCategory" class="rize-list-profile">
 			  
-				<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}">
+				<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name}}">
 					<div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.twitter.profile_image_url_https }});" class="rize-list-photo-small"></div>
 					{{account.first_name + ' ' + account.last_name}}
 				</a>
 				<!--https://twitter.com/@name/profile_image?size=original -->
 
-				<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}">
+				<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name}}">
 					<div style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
 					{{account.display_name}}
 				</a>
