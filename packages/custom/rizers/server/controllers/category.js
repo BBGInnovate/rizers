@@ -80,7 +80,7 @@ module.exports = function(System){
 				var accounts=profile.getAll();
 				var filteredAccounts=[];
 				for (var i=0; i< accounts.length; i++) {
-					if (accounts[i].profile.category==c.name) {
+					if (accounts[i].profile.category==c.id) {
 						filteredAccounts.push(accounts[i]);
 					}
 				}

@@ -93,6 +93,8 @@ function buildRizers(apiStr,profileStr,profileObj) {
 	
 module.exports = function(System){
   	
+	console.log("===================inside of the profile.JS exports");
+
 	function loadRizerDataLive(renderMessage,res) {
 		request(config.accounts_api_URL, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
@@ -156,7 +158,6 @@ module.exports = function(System){
 			} else {
 				res.json({});
 			}
-			//renderLiveJson();
 		},
 		getAll:function() {
 			if (rizerData && rizerData.rd && rizerData.rd.allRizerJson) {
