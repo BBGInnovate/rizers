@@ -12,7 +12,7 @@ angular.module('mean.rizers').config(['$stateProvider',
       url: '/accounts/:accountId',
       templateUrl: 'rizers/views/profileDetail.html'
     }).state('category Detail view', {
-      url: '/categories/:categoryId',
+      url: '/categories/:categoryId/:categoryName',
       templateUrl: 'rizers/views/categoryDetail.html'
     })
   }

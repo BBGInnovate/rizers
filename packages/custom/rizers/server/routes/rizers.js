@@ -9,7 +9,9 @@ module.exports = function(Rizers, app, auth, database) {
 
 	app.route('/api/accounts/').get(profile.showAll);
 	app.route('/api/accounts/:id').get(profile.showOne);
+	app.route('/api/categories/:id').get(category.showOne);
 	app.route('/api/categories/').get(category.showAll);
+	app.route('/api/liveDataUpdate').get(profile.updateDisk);
 
 	
 };

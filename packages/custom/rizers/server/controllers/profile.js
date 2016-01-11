@@ -93,7 +93,7 @@ function buildRizers(apiStr,profileStr,profileObj) {
 	
 module.exports = function(System){
   	
-	function loadRizerDataLive() {
+	function loadRizerDataLive(renderMessage,res) {
 		request(config.accounts_api_URL, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 				rizerData.apiStr=body;
@@ -108,7 +108,12 @@ module.exports = function(System){
 						rizerData.profileObj=data["profiles"].elements;
 						fs.writeFile(process.cwd() + config.profileFlatPath, JSON.stringify(rizerData.profileObj));
 						rizerData.rd=buildRizers(rizerData.apiStr,"",rizerData.profileObj);
- 						
+ 						if (renderMessage) {
+ 							//we also do this on startup  in the category.js controller, but this is convenient
+ 							categoryData=data["categories"].elements;
+							fs.writeFile(process.cwd() + config.categoryFlatPath, JSON.stringify(categoryData));
+ 							res.json({msg:"Data has been updated!"});
+ 						}
 						console.log("LIVE DATA HAS FINISHED LOADING FOR THE APP!")
 					}
 				};
@@ -128,7 +133,7 @@ module.exports = function(System){
 
 	//PICK YOUR POISON - LOAD FROM DISK OR FROM API/SPREADSHEET
 	if (config.useLiveData) {
-		loadRizerDataLive();	
+		loadRizerDataLive(false);	
 	} else {
 		loadRizerDataDisk();	
 	}
@@ -140,15 +145,25 @@ module.exports = function(System){
 		aggregatedList:function(req,res) {
 			res.send(res.locals.aggregatedassets);
 		},
+		updateDisk:function(req,res) {
+			console.log("updating the disk files");
+			loadRizerDataLive(true, res);
+		},
 		showAll:function(req,res){
 			console.log('RETURNING RIZER JSON');
-		//	if(process.env.NODE_ENV == "development") {
 			if (rizerData && rizerData.rd && rizerData.rd.allRizerJson) {
 				res.json(rizerData.rd.allRizerJson);
 			} else {
 				res.json({});
 			}
 			//renderLiveJson();
+		},
+		getAll:function() {
+			if (rizerData && rizerData.rd && rizerData.rd.allRizerJson) {
+				return rizerData.rd.allRizerJson;
+			} else {
+				return {};
+			}
 		},
 		showOne:function(req,res) {
 			console.log('returning one rizer');

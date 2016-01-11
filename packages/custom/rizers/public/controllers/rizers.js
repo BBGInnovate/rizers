@@ -21,10 +21,10 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
       };
 
       $scope.findCategory = function() {
-        $http.get('/api/accounts/').success(function(data) {
-          $scope.accountList=data;
+        $http.get('/api/categories/'+$stateParams.categoryId).success(function(data) {
+          $scope.accountList=data.accounts;
+          $scope.category=data.category;
           $scope.categoryId=$stateParams.categoryId;
-          $scope.filterByCategory=$stateParams.categoryId;
         });
       };
 
