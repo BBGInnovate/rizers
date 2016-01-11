@@ -1925,7 +1925,11 @@
           "url": "https://africa.rizing.org/meet-yorm-ackuaku-gastronomy-guru-and-founder-of-essense13"
         }
       ],
-      "facebook": null,
+      "facebook": {
+        "object_name": null,
+        "url": null,
+        "profile_image": null
+      },
       "linkedin": {
         "url": "https://www.linkedin.com/in/yormackuaku",
         "job_title": null,

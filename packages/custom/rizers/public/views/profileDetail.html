@@ -73,7 +73,7 @@
 				<div class="rize-profiles-article-text">
 					<div  ng-if="account.rize_summary" class="rize-profile-description">
 						<div ng-bind-html="account.rize_summary"></div>
-						<div class="rize-profile-description-related" ng-if="account.rize_links">
+						<div class="rize-profile-description-related" ng-if="account.rize_links[0].title!=null">
 							<ul>
 								<li ng-repeat="link in account.rize_links">
 									<a href="{{link.url}}" class="rize-profile-description-related-link">{{ link.title }}</a>
