@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
 }
-#main {
+.rize-main-content {
   background-color: #FFF;
   margin: 0 auto;
   max-width: 1024px;
@@ -48,15 +48,18 @@ a {
 /***************/
 /* Site banner */
 .rize-profiles-header {
-  background-color: #333;
   margin: 0;
   padding: 0;
 }
 .rize-profiles-header-box {
-  max-width: 1024px;
-  border-left: 1px solid #999;
-  border-right: 1px solid #999;
+  background-color: #333;
+  border-bottom: 1px solid #000;
+  /*
+	border-left: 1px solid @color-medium-gray;
+	border-right: 1px solid @color-medium-gray;
+	*/
   margin: 0 auto;
+  max-width: 1024px;
   padding: 5px 0;
 }
 .rize-profiles-header-logo {
@@ -78,6 +81,7 @@ a {
 .rize-profiles-navigation-top {
   float: right;
 }
+/***************/
 /* Site footer */
 .rize-footer {
   background-color: transparent;
@@ -147,6 +151,7 @@ a {
 }
 .rize-profiles-footer {
   background-color: #F5F5F5;
+  border-top: 1px solid #ECECEC;
   box-shadow: none;
   color: #FFF;
   margin: 50px 0 0 0;
@@ -207,13 +212,6 @@ a {
   width: 90%;
   z-index: 9999;
 }
-.rize-profiles-banner-shadow {
-  background-image: linear-gradient(transparent 0%, #333 300%);
-  height: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 @media screen and (min-width: 600px) {
   .rize-profiles-banner-cutline {
     padding: 10px;
@@ -221,6 +219,13 @@ a {
     left: auto;
     right: 0;
     width: 20%;
+  }
+  .rize-profiles-banner-shadow {
+    background-image: linear-gradient(transparent 0%, #333 300%);
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 /**************************************/
@@ -319,11 +324,6 @@ a {
 .mapbox-link {
   color: #999;
 }
-/*
-.rize-profile-description-related-link {
-	color: @color-accent-primary;
-}
-*/
 .rize-profile-label {
   margin-top: 0;
   text-transform: uppercase;

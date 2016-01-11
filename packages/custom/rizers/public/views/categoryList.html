@@ -1,12 +1,14 @@
 <!-- begin system/public/views/index.html -->
 <!-- ng-bind-html="description" OR data-ng-if -->
-<div id="main" class="main-content" role="main">
+<div id="main" class="rize-main-content" role="main">
 <section class="" data-ng-controller="RizersController" data-ng-init="findCategories()">
   <div>
   <ul class="rize-list">
-    <li ng-repeat="category in categoryList" class="rize-list-profile">
+    <li ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories">
         <a ng-model="organization" href="/categories/{{category.name}}">
-          {{category.name}}
+        	<img src="{{category.image}}" />
+			<h2 class="rize-list-categories-name">{{category.name}}</h2>
+        	<p class="rize-list-categories-description">{{category.description}}</p>
         </a>
     </li>
   </ul>

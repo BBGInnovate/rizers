@@ -3,7 +3,7 @@
 
 <section data-ng-controller="RizersController" data-ng-init="findOne()">
 
-<div id="main" class="main-content" role="main">
+<div id="main" class="rize-main-content" role="main">
 
 
 	<!-- person profile -->
@@ -12,7 +12,10 @@
 
 			<header class="rize-profile-header">
 				<style>
-					.rize-profiles-banner-box { background-image: url({{ account.profile.image}}) !important; }
+					.rize-profiles-banner-box {
+						background-image: url({{ account.profile.image}}) !important;
+						{{account.profile.css}}
+					}
 					/*It'd be cool if we could grab these images from africa rizing but the size suffixes are consistant: -small, -medium, -large and the aspect ratios change. */
 					/*
 					@media (min-width: 201px) and (max-width: 300px) {
