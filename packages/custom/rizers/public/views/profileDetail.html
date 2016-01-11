@@ -36,7 +36,7 @@
 					}
 				</style>
 				<div class="rize-profiles-banner-box">
-					<div class="rize-profiles-category">{{ account.profile.category }}</div>
+					<a href="/categories/{{ account.profile.category }}"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
@@ -59,11 +59,11 @@
 
 							<li ng-if="account.url" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="Website"><span>Website</span></a></li>
 							<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}" title="Twitter"><span>{{account.twitter.screen_name}}</span></a></li>
-							<li ng-if="account.linkedin" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="LinkedIn"><span>LinkedIn</span></a></li>
+							<li ng-if="account.linkedin.url" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="LinkedIn"><span>LinkedIn</span></a></li>
 							<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}" title="Facebook"><span>Facebook</span></a></li>
 
 							<li ng-if="account.instagram_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.instagram_url}}" title="Instagram"><span>Instagram</span></a></li>
-							<li ng-if="account.youtube_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.youtube_url}}" title="Instagram"><span>Instagram</span></a></li>
+							<li ng-if="account.youtube_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.youtube_url}}" title="Instagram"><span>YouTube</span></a></li>
 
 						</ul>
 					</div>
@@ -112,19 +112,110 @@
 	</article><!-- person profile -->
 
 
+
+
 	<!-- organization profile -->
 	<article ng-if="account.person == false" class="rize-profile-organization">
-		<div>
-			<h2 class="rize-profile-category">{{ account.categories }}</h2>
-			<h2 class="rize-profile-location">{{ account.location }}</h2>
-			<div class="clearAll"></div>
-		</div>
-		<div class="rize-banner-image" style="height: 300px; width: 100%; background: url({{account.profile.image}}) no-repeat center center / cover;"></div>
-		<img src="{{ account.profile_image }}" style="float: left; margin-top: -75px; max-width: 150px; box-shadow: 1px 1px 2px #CCC"/>
-		<h1 class="rize-profile-name">{{ account.display_name }}</h1>
-		<div  ng-if="account.rize_summary" class="rize-profile-description">
-			<div ng-bind-html="account.rize_summary"></div>
-		</div>
+			<header class="rize-profile-header">
+				<style>
+					.rize-profiles-banner-box {
+						background-image: url({{ account.profile.image}}) !important;
+						{{account.profile.css}}
+					}
+					/*It'd be cool if we could grab these images from africa rizing but the size suffixes are consistant: -small, -medium, -large and the aspect ratios change. */
+					/*
+					@media (min-width: 201px) and (max-width: 300px) {
+						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-300x200.jpeg) !important; }
+					}
+					@media (min-width: 301px) and (max-width: 700px) {
+						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-700x467.jpeg) !important; }
+					}
+					@media (min-width: 701px) and (max-width: 1024px) {
+						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-1024x683.jpeg) !important; }
+					}
+					@media (min-width: 1025px) and (max-width: 1200px) {
+						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-1200x801.jpeg) !important; } 
+					}
+					@media (min-width: 1201px) {
+						.rize-profiles-banner-box { background-image: url({{ account.profile.image }}) !important; }
+						*/
+					}
+				</style>
+				<div class="rize-profiles-banner-box">
+					<a href="/categories/{{ account.profile.category }}"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
+					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
+						{{ account.profile.cutline }}
+					</div>
+					<div class="rize-profiles-banner-shadow"></div>
+				</div>
+
+				<div class="rize-profiles-mugshot">
+					<img src="{{ account.profile_image }}" class="rize-profiles-mugshot-photo" />
+				</div>
+				<div class="rize-profiles-person clearfix">
+					<h2 class="rize-profiles-person-name">{{ account.display_name }}</h2>
+					<h3 class="rize-profiles-person-job_title">xxxxxxxxx</h3>
+				</div>
+			</header>
+			<div class="rize-profiles-grid clearfix">
+				<aside class="rize-profiles-aside-left">
+					<div class="rize-profile-social">
+						<h3 class="rize-profile-social-label rize-profile-label">Follow {{account.display_name}} online:</h3>
+						<ul class="rize-profile-social-list">
+
+							<li ng-if="account.url" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="Website"><span>Website</span></a></li>
+							<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}" title="Twitter"><span>{{account.twitter.screen_name}}</span></a></li>
+							<li ng-if="account.linkedin.url" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="LinkedIn"><span>LinkedIn</span></a></li>
+							<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}" title="Facebook"><span>Facebook</span></a></li>
+
+							<li ng-if="account.instagram_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.instagram_url}}" title="Instagram"><span>Instagram</span></a></li>
+							<li ng-if="account.youtube_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.youtube_url}}" title="Instagram"><span>YouTube</span></a></li>
+
+						</ul>
+					</div>
+
+				</aside>
+
+				<div class="rize-profiles-article-text">
+					<div  ng-if="account.rize_summary" class="rize-profile-description">
+						<div ng-bind-html="account.rize_summary"></div>
+						<div class="rize-profile-description-related" ng-if="account.rize_links">
+							<ul>
+								<li ng-repeat="link in account.rize_links">
+									<a href="{{link.url}}" class="rize-profile-description-related-link">{{ link.title }}</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div> 
+
+				<aside class="rize-profiles-aside-right">
+					<h3 class="rize-profile-label">{{account.location}}</h3>
+
+						<style>
+						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/400x250.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; }
+						@media (min-width: 401px) and (max-width: 600px) {
+							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/600x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px; }
+						}
+						@media (min-width: 601px){
+							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.high-contrast/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,4/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;  
+						}
+					</style>
+
+					<div class="rize-profiles-map" title="Mapbox Map of {{account.location}}}"></div>
+					© <a href='https://www.mapbox.com/map-feedback/' class="mapbox-link">Mapbox</a> © <a href='http://www.openstreetmap.org/copyright' class="mapbox-link">OpenStreetMap contributors</a>
+				</aside>
+
+			</div><!-- .rize-grid -->
+			<footer ng-if="account.profile.quotation != ''" class="rize-profiles-footer">
+				<h3 class="rize-profiles-quotation-text">“{{ account.profile.quotation }}”</h3>
+				<p class="rize-profiles-quotation-name">
+				<a href="{{ account.profile.quotationlink }}">{{ account.display_name }}</a>
+				</p>
+			</footer>
+
+
 	</article><!-- organization profile -->
 </div><!-- #main -->
 
