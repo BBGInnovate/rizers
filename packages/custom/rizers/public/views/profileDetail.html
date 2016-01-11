@@ -36,7 +36,7 @@
 					}
 				</style>
 				<div class="rize-profiles-banner-box">
-					<a href="/categories/{{ account.profile.category }}"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
+					<a href="/categories/{{ account.profile.category }}/"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
@@ -142,7 +142,7 @@
 					}
 				</style>
 				<div class="rize-profiles-banner-box">
-					<a href="/categories/{{ account.profile.category }}"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
+					<a href="/categories/{{ account.profile.category }}/"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
@@ -154,7 +154,7 @@
 				</div>
 				<div class="rize-profiles-person clearfix">
 					<h2 class="rize-profiles-person-name">{{ account.display_name }}</h2>
-					<h3 class="rize-profiles-person-job_title">xxxxxxxxx</h3>
+					<h3 class="rize-profiles-person-job_title"></h3>
 				</div>
 			</header>
 			<div class="rize-profiles-grid clearfix">
@@ -163,7 +163,7 @@
 						<h3 class="rize-profile-social-label rize-profile-label">Follow {{account.display_name}} online:</h3>
 						<ul class="rize-profile-social-list">
 
-							<li ng-if="account.url" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="Website"><span>Website</span></a></li>
+							<li ng-if="account.url!=''" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="Website"><span>Website</span></a></li>
 							<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}" title="Twitter"><span>{{account.twitter.screen_name}}</span></a></li>
 							<li ng-if="account.linkedin.url" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="LinkedIn"><span>LinkedIn</span></a></li>
 							<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}" title="Facebook"><span>Facebook</span></a></li>

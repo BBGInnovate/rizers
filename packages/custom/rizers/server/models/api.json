@@ -1,6 +1,6 @@
 {
   "page_info": {
-    "total_accounts": 50,
+    "total_accounts": 49,
     "total_pages": 1,
     "first_page": true,
     "last_page": true,
@@ -8,7 +8,7 @@
     "next_page": null,
     "out_of_bounds": false,
     "offset": 0,
-    "per_page": 50
+    "per_page": 49
   },
   "accounts": [
     {
@@ -65,7 +65,7 @@
       "country_name": "Ghana",
       "categories": "media, policy",
       "keywords": "journalism, media, investigative journalism, investigative reporting, anti-corruption",
-      "url": "anasaremeyawanas.org",
+      "url": "http://anasaremeyawanas.org",
       "instagram_url": null,
       "is_active": true,
       "rize_summary": "Ghana’s award-winning, investigative journalist and undercover, anti-corruption campaigner embodies a bold new African identity.",
@@ -147,7 +147,7 @@
       "country_name": "Ghana",
       "categories": "development, entrepreneurship, innovation, technology",
       "keywords": null,
-      "url": "mightyafrican.blogspot.com",
+      "url": "https://mightyafrican.blogspot.com",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -186,7 +186,7 @@
       "country_name": "Nigeria",
       "categories": "business, development, economy, entrepreneurship",
       "keywords": null,
-      "url": "medium.com/@ayokunleojo",
+      "url": "https://medium.com/@ayokunleojo",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -307,7 +307,7 @@
       "country_name": "Ghana",
       "categories": "entrepreneurship, innovation",
       "keywords": "barcamps, entrepreneurship, technology, startups, development, training, workshops",
-      "url": "www.barcampghana.org/",
+      "url": "http://www.barcampghana.org/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -331,8 +331,8 @@
       },
       "twitter": {
         "screen_name": "@barcampghana",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/681582009148436480/tOGGyDHS_400x400.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/681582009148436480/tOGGyDHS_400x400.jpg"
+        "profile_image_url": "http://pbs.twimg.com/profile_images/684773097975754752/qP7cLhNa_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/684773097975754752/qP7cLhNa_400x400.jpg"
       }
     },
     {
@@ -502,7 +502,7 @@
       "country_name": "Nigeria",
       "categories": "entrepreneurship, startups, development, innovation",
       "keywords": "entrepreneurship, startups, development, innovation, incubators, co working spaces",
-      "url": "cchubnigeria.com",
+      "url": "http://cchubnigeria.com",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -541,7 +541,7 @@
       "country_name": "Senegal",
       "categories": "entrepreneurship, development, innovation",
       "keywords": "entrepreneurship, technology, startups, development, training, workshops",
-      "url": "www.cticdakar.com",
+      "url": "http://www.cticdakar.com",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -736,21 +736,21 @@
       "country_name": "Ghana",
       "categories": "environment, entrepreneurship",
       "keywords": "environment, startups, entrepreneurship, green technology",
-      "url": null,
-      "instagram_url": null,
+      "url": "http://www.environment360gh.org/",
       "youtube_url": null,
       "is_active": true,
       "rize_summary": null,
+      "instagram": "environment360",
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Kids in Accra are Growing Green with Environment360",
+          "url": "https://africa.rizing.org/kids-in-accra-are-growing-green-with-environment360"
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
+        "object_name": "environment360",
+        "url": "http://www.facebook.com/environment360",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xpa1/v/t1.0-1/p200x200/10847836_1518254791779910_3853220607100796129_n.jpg?oh=f4908e25a1fbf15f97bc9a84d7f76d2c&oe=5702AAC8"
       },
       "linkedin": {
         "url": null,
@@ -759,9 +759,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@greenghana360",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/550275994448179201/66PcLr-m_400x400.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/550275994448179201/66PcLr-m_400x400.png"
       }
     },
     {
@@ -775,7 +775,7 @@
       "country_name": "Ghana",
       "categories": "business, development, entrepreneurship, innovation, social good, technology",
       "keywords": "entrepreneurship, startups, development, innovation, incubators, co working spaces",
-      "url": "ispacegh.com",
+      "url": "http://ispacegh.com",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1009,7 +1009,7 @@
       "country_name": "Côte d’Ivoire",
       "categories": "media, policy, culture, social good",
       "keywords": null,
-      "url": null,
+      "url": "http://circumspecte.com/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1033,8 +1033,8 @@
       },
       "twitter": {
         "screen_name": "@jabdulai",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/673664086815735808/Evmrsa9c_400x400.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/673664086815735808/Evmrsa9c_400x400.jpg"
+        "profile_image_url": "http://pbs.twimg.com/profile_images/679957234927955969/Ry6ZciJY_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/679957234927955969/Ry6ZciJY_400x400.jpg"
       }
     },
     {
@@ -1086,22 +1086,26 @@
       "city_name": "Dakar",
       "country_name": "Senegal",
       "categories": "technology, design, innovation",
-      "keywords": null,
-      "url": null,
+      "keywords": "design, innovation, startups",
+      "url": "http://www.ker-thiossane.org/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "How the Fablab uses e-waste to teach kids about sustainable tech",
+          "url": "https://africa.rizing.org/how-the-fablab-uses-e-waste-to-teach-kids-about-sustainable-tech"
+        },
+        {
+          "title": "How a textile workshop in Dakar brings new tech to traditional culture",
+          "url": "https://africa.rizing.org/how-one-dakar-textile-workshop-is-incorporating-tech-into-culture"
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
+        "object_name": "ker.thiossane",
+        "url": "https://www.facebook.com/ker.thiossane",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xpt1/v/t1.0-1/c33.0.200.200/p200x200/11223552_946964408659208_5575668642565172563_n.jpg?oh=ea2bff96119d2279aaf385c11eab0f99&oe=573C191B"
       },
       "linkedin": {
         "url": null,
@@ -1110,9 +1114,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@kerthiossane",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/457193309111201792/RQoJm90Z_400x400.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/457193309111201792/RQoJm90Z_400x400.jpeg"
       }
     },
     {
@@ -1140,18 +1144,18 @@
       "facebook": {
         "object_name": "kofi.yeboah.547",
         "url": "https://www.facebook.com/kofi.yeboah.547",
-        "profile_image": null
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p200x200/11044523_433928506764128_7269434927468492220_n.jpg?oh=4cee7c1213430448fdf20d4c21db72f0&oe=5702CD34"
       },
       "linkedin": {
-        "url": null,
+        "url": "https://gh.linkedin.com/in/kofiyeboah",
         "job_title": null,
         "organization": null,
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "https://twitter.com/kofiemeritus",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/644851853935570944/SJRW-Ysd_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/644851853935570944/SJRW-Ysd_400x400.jpg"
       }
     },
     {
@@ -1161,10 +1165,10 @@
       "display_name": "Makhtar Ndiaye",
       "last_name": "Ndiaye",
       "first_name": "Makhtar",
-      "city_name": "Saint-Louis",
+      "city_name": "Saint Louis",
       "country_name": "Senegal",
-      "categories": "media, policy, culture",
-      "keywords": null,
+      "categories": "culture, media, policy, social good",
+      "keywords": "blogging, networking, social entrepreneurship",
       "url": null,
       "instagram_url": null,
       "youtube_url": null,
@@ -1172,13 +1176,13 @@
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Turning words into action, blogging in northern Senegal",
+          "url": "https://africa.rizing.org/turning-words-into-action-blogging-in-northern-senegal"
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
+        "object_name": "?fref=nf",
+        "url": "https://www.facebook.com/groups/248034282064413/?fref=nf",
         "profile_image": null
       },
       "linkedin": {
@@ -1188,9 +1192,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@makhtarjr",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/665180813227638784/29SEpr39_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/665180813227638784/29SEpr39_400x400.jpg"
       }
     },
     {
@@ -1202,23 +1206,23 @@
       "first_name": null,
       "city_name": "Accra",
       "country_name": "Ghana",
-      "categories": "entrepreneurship,design, innovation",
+      "categories": "design, innovation",
       "keywords": "entrepreneurship, startups, design, design thinking, innovation",
-      "url": null,
+      "url": "http://meshgh.com/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
-      "rize_summary": null,
+      "rize_summary": "Mesh is a platform for meeting, exploring and sharing of Ghanaian creativity wherever it may be. We seek to for the first time, bring together the very wide spectrum of Ghanaian creatives to not only share what they do, but to foster cross disciplinary collaborative work geared towards social cause.",
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "#MESHConfab and @1776 Challenge Cup Come to Accra",
+          "url": "https://africa.rizing.org/meshconfab-and-1776-challenge-cup-come-to-accra"
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
+        "object_name": "meshgh",
+        "url": "https://www.facebook.com/meshgh/",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/p200x200/10270588_730542860349123_2938083413959933550_n.jpg?oh=fb4fc9cbc4f8b0f4c2762014a5be9165&oe=574792F4"
       },
       "linkedin": {
         "url": null,
@@ -1227,9 +1231,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@MESHGhana",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/535090781472952320/eeLch4N9_400x400.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/535090781472952320/eeLch4N9_400x400.jpeg"
       }
     },
     {
@@ -1243,11 +1247,11 @@
       "country_name": "Ghana",
       "categories": "entrepreneurship",
       "keywords": "entrepreneurship, startups, development, innovation, incubators, co working spaces",
-      "url": null,
+      "url": "http://meltwater.org/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
-      "rize_summary": null,
+      "rize_summary": "The Meltwater Entrepreneurial School of Technology (MEST) and the MEST Incubator program provide training, investment and mentoring for aspiring technology entrepreneurs with the goal of creating globally successful companies that create wealth and jobs locally in Africa.",
       "rize_links": [
         {
           "title": null,
@@ -1260,7 +1264,7 @@
         "profile_image": null
       },
       "linkedin": {
-        "url": null,
+        "url": "https://www.linkedin.com/company/meltwater-entrepreneurial-school-of-technology",
         "job_title": null,
         "organization": null,
         "summary": null
@@ -1278,11 +1282,11 @@
       "display_name": "Modupe Odele",
       "last_name": "Odele",
       "first_name": "Modupe",
-      "city_name": "NYC",
-      "country_name": "United States",
-      "categories": null,
-      "keywords": null,
-      "url": null,
+      "city_name": "Lagos",
+      "country_name": "Nigeria",
+      "categories": "justice, policy, social good",
+      "keywords": "human rights, law, development",
+      "url": "https://about.me/modupeodele",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1299,15 +1303,15 @@
         "profile_image": null
       },
       "linkedin": {
-        "url": null,
+        "url": "http://www.linkedin.com/in/moeodele",
         "job_title": null,
         "organization": null,
         "summary": null
       },
       "twitter": {
         "screen_name": "@moeodele",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/662057891483025409/YBsMM9KQ_400x400.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/662057891483025409/YBsMM9KQ_400x400.jpg"
+        "profile_image_url": "http://pbs.twimg.com/profile_images/680347751415214080/8hfqt7mQ_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/680347751415214080/8hfqt7mQ_400x400.jpg"
       }
     },
     {
@@ -1317,11 +1321,11 @@
       "display_name": "Omar Mohammed",
       "last_name": "Mohammed",
       "first_name": "Omar",
-      "city_name": null,
-      "country_name": null,
+      "city_name": "Dar es Salaam",
+      "country_name": "Tanzania",
       "categories": "media, journalism",
-      "keywords": null,
-      "url": null,
+      "keywords": "media, journalism,",
+      "url": "https://www.clippings.me/users/shurufu",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1338,15 +1342,15 @@
         "profile_image": null
       },
       "linkedin": {
-        "url": null,
+        "url": "https://www.linkedin.com/in/omar-mohammed-02462613",
         "job_title": null,
         "organization": null,
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@shurufu",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/517395098472939522/hyp4fbKO_400x400.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/517395098472939522/hyp4fbKO_400x400.jpeg"
       }
     },
     {
@@ -1360,15 +1364,15 @@
       "country_name": "Ghana",
       "categories": "media, journalism, technology",
       "keywords": "media, journalism, development technology",
-      "url": null,
+      "url": "http://penplusbytes.net/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
-      "rize_summary": null,
+      "rize_summary": "Penplusbytes is committed to enhancing governance by deepening citizen’s participation through ICT. Penplusbytes’ overarching philosophy is that establishing effective working relationships with governments, parliaments, corporate organisations, donors, international organisations, non-profits organisations and citizens is the key to being relevant and delivering value.",
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Ghana’s Future of News: How do we connect with ‘the 7 Billion’?",
+          "url": "https://africa.rizing.org/ghanas-future-of-news-how-do-we-connect-with-the-7-billion"
         }
       ],
       "facebook": {
@@ -1383,9 +1387,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@penplusbytes",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/640210601973837824/dqYyMrqY_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/640210601973837824/dqYyMrqY_400x400.jpg"
       }
     },
     {
@@ -1398,22 +1402,22 @@
       "city_name": "Accra",
       "country_name": "Ghana",
       "categories": "environment,  entrepreneurship",
-      "keywords": null,
-      "url": null,
+      "keywords": "volunteering, social entrepreneurship,",
+      "url": "https://pilologh.wordpress.com/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Pilolo-GH brings light to Takoradi’s hidden problems",
+          "url": "https://africa.rizing.org/pilolo-gh-brings-light-to-takoradis-hidden-problems"
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
+        "object_name": "pilologh",
+        "url": "https://www.facebook.com/pilologh",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xap1/v/l/t1.0-1/c78.0.200.200/p200x200/1937421_549481291899879_4865837296367394685_n.png?oh=64b7b8830e53c6123f69801b210ac5cf&oe=573EA6B8"
       },
       "linkedin": {
         "url": null,
@@ -1422,9 +1426,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@pilolo_gh",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/645300913859600384/gcg3OhSd_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/645300913859600384/gcg3OhSd_400x400.jpg"
       }
     },
     {
@@ -1438,7 +1442,7 @@
       "country_name": "United States",
       "categories": "business, entrepreneurship, sustainability",
       "keywords": "women in business, startups, entrepreneurship",
-      "url": "sheayeleen.com",
+      "url": "http://sheayeleen.com",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1455,15 +1459,15 @@
         "profile_image": null
       },
       "linkedin": {
-        "url": null,
+        "url": "https://www.linkedin.com/in/rahamawright",
         "job_title": null,
         "organization": null,
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@rahamatuwright",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/617867449233358848/-BaFWNCV_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/617867449233358848/-BaFWNCV_400x400.jpg"
       }
     },
     {
@@ -1475,13 +1479,13 @@
       "first_name": null,
       "city_name": "Accra",
       "country_name": "Ghana",
-      "categories": null,
-      "keywords": null,
+      "categories": "development, entrepreneurship, health, justice, social good",
+      "keywords": "education, children, sustainability, anti-poverty,",
       "url": "http://ghana.reachforchange.org/",
       "instagram_url": null,
-      "youtube_url": null,
       "is_active": true,
-      "rize_summary": null,
+      "rize_summary": "Reach for Change believes that local solutions from Ghanaians are the best way to effectively combat poverty and other socio- economic problems. Supporting social entrepreneurs in Ghana aligns with our mission to mobilize a global movement of smart, brave and passionate change agents, building a better world for children.",
+      "youtube": "https://youtu.be/hjomL7VytC0",
       "rize_links": [
         {
           "title": null,
@@ -1489,9 +1493,9 @@
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
+        "object_name": "R4CGhana",
+        "url": "https://www.facebook.com/R4CGhana",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xaf1/v/t1.0-1/c0.0.180.180/1530381_138029643034191_2063115713_n.jpg?oh=12206128a907893f7fdbc7ba04f33089&oe=56FC6107"
       },
       "linkedin": {
         "url": null,
@@ -1500,9 +1504,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@r4c_ghana",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/652521789801697280/eNU9hxtB_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/652521789801697280/eNU9hxtB_400x400.jpg"
       }
     },
     {
@@ -1512,10 +1516,10 @@
       "display_name": "Saint-Louis Blogging Network",
       "last_name": null,
       "first_name": null,
-      "city_name": "Saint-Louis",
+      "city_name": "Saint Louis",
       "country_name": "Senegal",
-      "categories": "media, journalism, policy",
-      "keywords": null,
+      "categories": "culture, journalism, media, policy",
+      "keywords": "blogging, networking, social entrepreneurship",
       "url": null,
       "instagram_url": null,
       "youtube_url": null,
@@ -1523,12 +1527,12 @@
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Turning words into action, blogging in northern Senegal",
+          "url": "https://africa.rizing.org/turning-words-into-action-blogging-in-northern-senegal"
         }
       ],
       "facebook": {
-        "object_name": null,
+        "object_name": "?fref=nf",
         "url": "https://www.facebook.com/groups/248034282064413/?fref=nf",
         "profile_image": null
       },
@@ -1555,7 +1559,7 @@
       "country_name": "South Africa",
       "categories": "media, journalism",
       "keywords": "media, journalism",
-      "url": null,
+      "url": "http://qz.com/author/stshabalalaqz/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1572,7 +1576,7 @@
         "profile_image": null
       },
       "linkedin": {
-        "url": null,
+        "url": "https://www.linkedin.com/in/sibusiso-tshabalala-8a16b640",
         "job_title": null,
         "organization": null,
         "summary": null
@@ -1581,45 +1585,6 @@
         "screen_name": "@sbutshabs",
         "profile_image_url": "http://pbs.twimg.com/profile_images/660585962028834816/DGqHhODt_400x400.jpg",
         "profile_image_url_https": "https://pbs.twimg.com/profile_images/660585962028834816/DGqHhODt_400x400.jpg"
-      }
-    },
-    {
-      "id": 42,
-      "uuid": "ed515b02-feb8-56fd-bed8-3d8859f65764",
-      "account_type": "Person",
-      "display_name": "Tayib Fall",
-      "last_name": "Fall",
-      "first_name": "Tayib",
-      "city_name": "Saint-Louis",
-      "country_name": "Senegal",
-      "categories": "media, journalism, policy",
-      "keywords": null,
-      "url": null,
-      "instagram_url": null,
-      "youtube_url": null,
-      "is_active": true,
-      "rize_summary": null,
-      "rize_links": [
-        {
-          "title": null,
-          "url": null
-        }
-      ],
-      "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
-      },
-      "linkedin": {
-        "url": null,
-        "job_title": null,
-        "organization": null,
-        "summary": null
-      },
-      "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
       }
     },
     {
@@ -1632,8 +1597,8 @@
       "city_name": "Abuja",
       "country_name": "Nigeria",
       "categories": "media, journalism, policy",
-      "keywords": null,
-      "url": null,
+      "keywords": "politics, media, social media, culture,",
+      "url": "https://toluogunlesi.wordpress.com/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1668,7 +1633,7 @@
       "display_name": "U.S.-Africa Chamber of Commerce",
       "last_name": null,
       "first_name": null,
-      "city_name": "Washington, D.C.",
+      "city_name": ".UNITED STATES",
       "country_name": "United States",
       "categories": "business, development, economics, finance",
       "keywords": "business, business development, economics, finance",
@@ -1679,8 +1644,8 @@
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "5 Pro-tips from #GDW15 African diaspora SME workshop",
+          "url": "https://africa.rizing.org/5-pro-tips-from-gdw15-african-diaspora-sme-pitch-workshop"
         }
       ],
       "facebook": {
@@ -1695,9 +1660,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@uschamberafrica",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/463406747663601664/KdkcuwoC_400x400.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/463406747663601664/KdkcuwoC_400x400.jpeg"
       }
     },
     {
@@ -1734,9 +1699,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@vc4africa",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/529354898928705536/wHddGltI_400x400.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/529354898928705536/wHddGltI_400x400.png"
       }
     },
     {
@@ -1749,22 +1714,22 @@
       "city_name": "Accra",
       "country_name": "Ghana",
       "categories": "social good",
-      "keywords": null,
-      "url": null,
+      "keywords": "volunteering, social entrepreneurship,",
+      "url": "http://volunteeringh.org/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Kicking off #NVDay15 on the streets of Adjiriganor",
+          "url": "https://africa.rizing.org/kicking-off-nvday15-with-a-young-bunch-on-the-streets-of-adjirigano"
         }
       ],
       "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
+        "object_name": "ghanavolunteerprogram",
+        "url": "http://facebook.com/ghanavolunteerprogram",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xlf1/v/t1.0-1/p200x200/10553458_797949340243290_9196222572466098824_n.jpg?oh=a9d8eb0fbdb1322e210d6857ceaad66f&oe=56FDACCB"
       },
       "linkedin": {
         "url": null,
@@ -1773,9 +1738,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@volunteeringh",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/650837748786593792/RT2slrfI_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/650837748786593792/RT2slrfI_400x400.jpg"
       }
     },
     {
@@ -1785,19 +1750,19 @@
       "display_name": "YAP DC",
       "last_name": null,
       "first_name": null,
-      "city_name": "Washington, D.C.",
+      "city_name": ".UNITED STATES",
       "country_name": "United States",
-      "categories": "business, development",
-      "keywords": null,
+      "categories": "business, development, entrepreneurship, innovation",
+      "keywords": "startups, entrepreneurship, diaspora,",
       "url": "http://yapdc.org/",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
-      "rize_summary": null,
+      "rize_summary": "",
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "5 Pro-tips from #GDW15 African diaspora SME workshop",
+          "url": "https://africa.rizing.org/5-pro-tips-from-gdw15-african-diaspora-sme-pitch-workshop"
         }
       ],
       "facebook": {
@@ -1812,9 +1777,9 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@yapdc",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/685216440077692928/7Cskdl2W_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/685216440077692928/7Cskdl2W_400x400.jpg"
       }
     },
     {
@@ -1827,7 +1792,7 @@
       "city_name": "Lagos",
       "country_name": "Nigeria",
       "categories": "media, journalism, policy",
-      "keywords": null,
+      "keywords": "media, journalism,",
       "url": "http://qz.com/africa",
       "instagram_url": null,
       "youtube_url": null,
@@ -1846,8 +1811,8 @@
       },
       "linkedin": {
         "url": "https://www.linkedin.com/in/yinkaadegoke",
-        "job_title": "Africa Editor, Quartz",
-        "organization": "Quartz",
+        "job_title": null,
+        "organization": null,
         "summary": null
       },
       "twitter": {
@@ -1867,7 +1832,7 @@
       "country_name": "Ghana",
       "categories": "culture",
       "keywords": "media, innovation, culture, art, music",
-      "url": "accradotaltradio.com",
+      "url": "http://accradotaltradio.com",
       "instagram_url": null,
       "youtube_url": null,
       "is_active": true,
@@ -1961,7 +1926,12 @@
         }
       ],
       "facebook": null,
-      "linkedin": null,
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/yormackuaku",
+        "job_title": null,
+        "organization": null,
+        "summary": null
+      },
       "twitter": {
         "screen_name": "yorm_a",
         "profile_image_url": "http://pbs.twimg.com/profile_images/482800138587758592/69Tf544c_400x400.png",

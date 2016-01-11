@@ -28,11 +28,12 @@
 @color-medium-gray:       #999;
 @color-light-gray:        #CCC;
 @color-accent-primary:    #FFA500;
-@color-accent-secondary:  green;
+@color-accent-secondary:  #57ad68;
 @color-fade:              70%;
 @color-facebook:          #3d5a98;
 @color-linkedin:          #1985bd;
 @color-twitter:           #55acee;
+@color-website:           @color-accent-secondary;
 
 // Mobile First Breakpoints
 @small-screen:            320px;
@@ -488,29 +489,30 @@ a {
 
 
 
+
 .rize-icon-facebook:hover {
 	background-color: @color-facebook;
-	background-image: url(../img/social_icons/facebook-color.png);
+	background-image: url(../img/social_icons/facebook.png);
 }
 .rize-icon-instagram:hover {
 	background-color: @color-twitter;
-	background-image: url(../img/social_icons/instagram-color.png);
+	background-image: url(../img/social_icons/instagram.png);
 }
 .rize-icon-linkedin:hover {
 	background-color: @color-linkedin;
-	background-image: url(../img/social_icons/linkedin-color.png);
+	background-image: url(../img/social_icons/linkedin.png);
 }
 .rize-icon-twitter:hover {
 	background-color: @color-twitter;
-	background-image: url(../img/social_icons/twitter-color.png);
+	background-image: url(../img/social_icons/twitter.png);
 }
 .rize-icon-website:hover {
-	background-color: @color-twitter;
-	background-image: url(../img/social_icons/website-color.png);
+	background-color: @color-website;
+	background-image: url(../img/social_icons/website.png);
 }
 .rize-icon-youtube:hover {
 	background-color: @color-twitter;
-	background-image: url(../img/social_icons/youtube-color.png);
+	background-image: url(../img/social_icons/youtube.png);
 }
 
 
@@ -602,3 +604,13 @@ a {
 }
 
 
+/* Category detail page */
+.rize-list-category-detail-header{
+	padding: 2rem @margin-small;
+}
+.rize-list-category-detail-name {
+	margin: 0;
+}
+.rize-list-category-detail-description {
+	font-size: 1.5rem;
+}
