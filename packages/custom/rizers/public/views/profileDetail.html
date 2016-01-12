@@ -36,7 +36,7 @@
 					}
 				</style>
 				<div class="rize-profiles-banner-box">
-					<a href="/categories/{{ account.profile.category }}/"><div class="rize-profiles-category">{{ account.profile.category }}</div></a>
+					<a href="/categories/{{ account.profile.category.id }}/{{account.profile.category.name | linkSafeString}}"><div class="rize-profiles-category">{{ account.profile.category.name }}</div></a>
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
