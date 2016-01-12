@@ -48,52 +48,62 @@ function buildRizers(apiStr,profileStr,profileObj) {
 	for (i = 0; i < allRizerJson.length; i++) {
 		var oneRizer = allRizerJson[i];
 		rizersById[oneRizer.id] = oneRizer;
-		oneRizer.profile = profilesById[oneRizer.id];
-		oneRizer.location = oneRizer.city_name + ', ' + oneRizer.country_name;
-
-		oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
-
-		//Trying to split the categories into an array and return the first value
-		/*
-		oneRizer.categories = (oneRizer.categories === null) ? '' : oneRizer.categories;
-		oneRizer.categories = oneRizer.categories.split(', ');
-		oneRizer.categories = oneRizer.categories[0];
-		*/
-
-		//Add responsive featured image base.
-		/*
-		oneRizer.profile.image_base = oneRizer.profile.image;
-		oneRizer.profile.image_base = oneRizer.profile.image_base.replace(".jpeg", "");
-		*/
-
-		/*
-		oneRizer.person = false;
-		if (oneRizer.account_type === 'Person') {
-			oneRizer.person = true;
-		} else {
-		}
-		*/
-
-
-
-		//Order should be Spreadsheet -> Twitter -> Facebook
-		oneRizer.profile_image = '';
 		
-		if (oneRizer.profile.profileImage != ""){
-			oneRizer.profile_image = oneRizer.profile.profileImage;
-		} else if (oneRizer.twitter.profile_image_url_https !== null){
-			oneRizer.profile_image = oneRizer.twitter.profile_image_url_https;
-		} else if (oneRizer.facebook.profile_image !== null){
-			oneRizer.profile_image = oneRizer.facebook.profile_image;
-		} else {
-			//
-		}
+		if (profilesById[oneRizer.id]) {
 
-		oneRizer.tagline = "";
-		if (oneRizer.profile.job != "") {
-			oneRizer.tagline = oneRizer.profile.job;
+
+			oneRizer.profile = profilesById[oneRizer.id];
+
+
+
+			oneRizer.location = oneRizer.city_name + ', ' + oneRizer.country_name;
+
+			oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
+
+			//Trying to split the categories into an array and return the first value
+			/*
+			oneRizer.categories = (oneRizer.categories === null) ? '' : oneRizer.categories;
+			oneRizer.categories = oneRizer.categories.split(', ');
+			oneRizer.categories = oneRizer.categories[0];
+			*/
+
+			//Add responsive featured image base.
+			/*
+			oneRizer.profile.image_base = oneRizer.profile.image;
+			oneRizer.profile.image_base = oneRizer.profile.image_base.replace(".jpeg", "");
+			*/
+
+			/*
+			oneRizer.person = false;
+			if (oneRizer.account_type === 'Person') {
+				oneRizer.person = true;
+			} else {
+			}
+			*/
+
+
+
+			//Order should be Spreadsheet -> Twitter -> Facebook
+			oneRizer.profile_image = '';
+			
+			if (oneRizer.profile.profileImage != ""){
+				oneRizer.profile_image = oneRizer.profile.profileImage;
+			} else if (oneRizer.twitter.profile_image_url_https !== null){
+				oneRizer.profile_image = oneRizer.twitter.profile_image_url_https;
+			} else if (oneRizer.facebook.profile_image !== null){
+				oneRizer.profile_image = oneRizer.facebook.profile_image;
+			} else {
+				//
+			}
+
+			oneRizer.tagline = "";
+			if (oneRizer.profile.job != "") {
+				oneRizer.tagline = oneRizer.profile.job;
+			} else {
+				oneRizer.tagline = oneRizer.linkedin.job_title;
+			}
 		} else {
-			oneRizer.tagline = oneRizer.linkedin.job_title;
+			console.log("id " + oneRizer.id + " has no profile");
 		}
 
 	}
