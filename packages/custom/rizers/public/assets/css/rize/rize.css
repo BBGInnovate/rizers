@@ -239,6 +239,7 @@ a {
   vertical-align: middle;
 }
 .rize-profiles-mugshot-photo {
+  background-color: #FFF;
   border: 5px solid #FFF;
   border-radius: 50%;
   max-width: 100%;
@@ -378,7 +379,7 @@ a {
   background-image: url(../img/social_icons/facebook.png);
 }
 .rize-icon-instagram:hover {
-  background-color: #55acee;
+  background-color: #458eff;
   background-image: url(../img/social_icons/instagram.png);
 }
 .rize-icon-linkedin:hover {
@@ -394,7 +395,7 @@ a {
   background-image: url(../img/social_icons/website.png);
 }
 .rize-icon-youtube:hover {
-  background-color: #55acee;
+  background-color: #e52d27;
   background-image: url(../img/social_icons/youtube.png);
 }
 .rize-profile-social-link a {

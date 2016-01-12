@@ -1,6 +1,6 @@
 {
   "page_info": {
-    "total_accounts": 46,
+    "total_accounts": 45,
     "total_pages": 1,
     "first_page": true,
     "last_page": true,
@@ -8,7 +8,7 @@
     "next_page": null,
     "out_of_bounds": false,
     "offset": 0,
-    "per_page": 46
+    "per_page": 45
   },
   "accounts": [
     {
@@ -294,45 +294,6 @@
         "screen_name": "@startupbaobab",
         "profile_image_url": "http://pbs.twimg.com/profile_images/457862392437678080/SJ7f1K-__400x400.jpeg",
         "profile_image_url_https": "https://pbs.twimg.com/profile_images/457862392437678080/SJ7f1K-__400x400.jpeg"
-      }
-    },
-    {
-      "id": 8,
-      "uuid": "910e8d24-6623-51f4-a480-53c5257c9bd3",
-      "account_type": "Organization",
-      "display_name": "BarCamp Ghana",
-      "last_name": null,
-      "first_name": null,
-      "city_name": "Accra",
-      "country_name": "Ghana",
-      "categories": "entrepreneurship, innovation",
-      "keywords": "barcamps, entrepreneurship, technology, startups, development, training, workshops",
-      "url": "http://www.barcampghana.org/",
-      "instagram_url": null,
-      "youtube_url": null,
-      "is_active": true,
-      "rize_summary": null,
-      "rize_links": [
-        {
-          "title": "Cape Coast youths’ plans to beat the odds",
-          "url": "https://africa.rizing.org/young-and-ready-cape-coast-youths-plans-to-beat-the-odds"
-        }
-      ],
-      "facebook": {
-        "object_name": "BarCampGhana",
-        "url": "https://www.facebook.com/BarCampGhana/",
-        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p200x200/1174901_738919592796391_2514957852326009814_n.jpg?oh=8d25e85a17d7c697f5efc83ba3755b04&oe=570D0DBB"
-      },
-      "linkedin": {
-        "url": null,
-        "job_title": null,
-        "organization": null,
-        "summary": null
-      },
-      "twitter": {
-        "screen_name": "@barcampghana",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/684773097975754752/qP7cLhNa_400x400.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/684773097975754752/qP7cLhNa_400x400.jpg"
       }
     },
     {
@@ -729,9 +690,9 @@
       "id": 20,
       "uuid": "bc185a39-b73e-51e6-8ac2-ef4964d812da",
       "account_type": "Person",
-      "display_name": "Fiifi Biadoo",
-      "last_name": "Fiifi",
-      "first_name": "Baidoo",
+      "display_name": "Fiifi Baidoo",
+      "last_name": "Baidoo",
+      "first_name": "Fiifi",
       "city_name": "Accra",
       "country_name": "Ghana",
       "categories": "business, development, entrepreneurship, innovation, social good, technology",
@@ -743,8 +704,8 @@
       "rize_summary": "Entrepreneur & CTO at iSpace Ghana Foundation doing social good.",
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "",
+          "url": ""
         }
       ],
       "facebook": {
@@ -754,9 +715,9 @@
       },
       "linkedin": {
         "url": "https://www.linkedin.com/in/fiifibaidoo",
-        "job_title": "Co-Founder and Chief Technology Officer",
-        "organization": "iSpace Foundation",
-        "summary": "A member of ISACA and a professional manager who co-ordinates resources effectively to achieve targets within stringent deadlines. Expert in analyzing user needs and developing software solutions; design software or customize software for client use with the aim of optimizing efficiency.• Technical documentation skills.• Excellent interpersonal skills with a focus on motivational skills and a positive attitude.• Ability to conduct research.• Ability to present ideas in educational-friendly and user-friendly language.• Ability to absorb new ideas and concepts quickly.• Keen attention to detail.• Strong customer service orientation.• Experience working in a team-oriented, collaborative environment."
+        "job_title": null,
+        "organization": null,
+        "summary": null
       },
       "twitter": {
         "screen_name": "@fiifibaidoo",
@@ -771,10 +732,10 @@
       "display_name": "Herbert Acheampong",
       "last_name": "Acheampong",
       "first_name": "Herbert",
-      "city_name": "Accra",
+      "city_name": "Takoradi",
       "country_name": "Ghana",
       "categories": "entrepreneurship, development, innovation",
-      "keywords": "entrepreneurship, startups, development, innovation, incubators, co working spaces",
+      "keywords": "barcamps, entrepreneurship, technology, startups, development, training, workshops",
       "url": null,
       "instagram_url": null,
       "youtube_url": null,
@@ -782,25 +743,25 @@
       "rize_summary": "Co-founder @vmincorp Blogger, Educationist, and DigitalMarketer.",
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Cape Coast youths’ plans to beat the odds",
+          "url": "https://africa.rizing.org/young-and-ready-cape-coast-youths-plans-to-beat-the-odds"
         }
       ],
       "facebook": {
         "object_name": "VMincorp",
-        "url": "facebook.com/VMincorp",
-        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xpl1/v/t1.0-1/c0.0.200.200/p200x200/11057206_381354398722249_7559350152578980653_n.jpg?oh=6ad591107b2bc952cb07b5dc048b78b9&oe=5714849B"
+        "url": "https://facebook.com/VMincorp",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xpl1/v/t1.0-1/c0.0.200.200/p200x200/11057206_381354398722249_7559350152578980653_n.jpg?oh=b424b53511433afc8abdd7a1b2ae20a8&oe=573C119B"
       },
       "linkedin": {
-        "url": null,
+        "url": "https://gh.linkedin.com/in/herbert-acheampong-86a08751",
         "job_title": null,
         "organization": null,
         "summary": null
       },
       "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
+        "screen_name": "@akyherb",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/686850822664237056/cmFrujzn_400x400.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/686850822664237056/cmFrujzn_400x400.jpg"
       }
     },
     {
@@ -1050,8 +1011,8 @@
       "first_name": "Kofi",
       "city_name": "Accra",
       "country_name": "Ghana",
-      "categories": "entrepreneurship, development, innovation",
-      "keywords": null,
+      "categories": "development, entrepreneurship, innovation, social good",
+      "keywords": "barcamps, entrepreneurship, technology, startups, development, training, workshops",
       "url": "http://kofiyeboah.com/",
       "instagram_url": null,
       "youtube_url": null,
@@ -1059,14 +1020,14 @@
       "rize_summary": null,
       "rize_links": [
         {
-          "title": null,
-          "url": null
+          "title": "Cape Coast youths’ plans to beat the odds",
+          "url": "https://africa.rizing.org/young-and-ready-cape-coast-youths-plans-to-beat-the-odds"
         }
       ],
       "facebook": {
-        "object_name": "kofi.yeboah.547",
-        "url": "https://www.facebook.com/kofi.yeboah.547",
-        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p200x200/11044523_433928506764128_7269434927468492220_n.jpg?oh=4cee7c1213430448fdf20d4c21db72f0&oe=5702CD34"
+        "object_name": "BarCampGhana",
+        "url": "https://www.facebook.com/BarCampGhana/",
+        "profile_image": "https://scontent.xx.fbcdn.net/hprofile-xap1/v/t1.0-1/p200x200/1174901_738919592796391_2514957852326009814_n.jpg?oh=8d25e85a17d7c697f5efc83ba3755b04&oe=570D0DBB"
       },
       "linkedin": {
         "url": "https://gh.linkedin.com/in/kofiyeboah",
@@ -1075,7 +1036,7 @@
         "summary": null
       },
       "twitter": {
-        "screen_name": "https://twitter.com/kofiemeritus",
+        "screen_name": "@kofiemeritus",
         "profile_image_url": "http://pbs.twimg.com/profile_images/644851853935570944/SJRW-Ysd_400x400.jpg",
         "profile_image_url_https": "https://pbs.twimg.com/profile_images/644851853935570944/SJRW-Ysd_400x400.jpg"
       }

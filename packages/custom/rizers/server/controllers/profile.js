@@ -67,21 +67,6 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			oneRizer.categories = oneRizer.categories[0];
 			*/
 
-			//Add responsive featured image base.
-			/*
-			oneRizer.profile.image_base = oneRizer.profile.image;
-			oneRizer.profile.image_base = oneRizer.profile.image_base.replace(".jpeg", "");
-			*/
-
-			/*
-			oneRizer.person = false;
-			if (oneRizer.account_type === 'Person') {
-				oneRizer.person = true;
-			} else {
-			}
-			*/
-
-
 
 			//Order should be Spreadsheet -> Twitter -> Facebook
 			oneRizer.profile_image = '';
@@ -96,6 +81,7 @@ function buildRizers(apiStr,profileStr,profileObj) {
 				//
 			}
 
+			//Replace linkedin job title with the spreadsheet title (or add a tagline for organizations)
 			oneRizer.tagline = "";
 			if (oneRizer.profile.job != "") {
 				oneRizer.tagline = oneRizer.profile.job;
