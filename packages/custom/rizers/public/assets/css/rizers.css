@@ -357,16 +357,21 @@ th {
 html {
   font-family: 'Arial', sans-serif;
   font-size: 10px;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 body {
   background-color: #FFA500;
+  background-color: #ECECEC;
+  background-image: linear-gradient(transparent 0%, #333 300%);
   margin: 0;
   padding: 0;
 }
 .rize-main-content {
   background-color: #FFF;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
   margin: 0 auto;
   max-width: 1024px;
   padding: 0;
@@ -595,6 +600,7 @@ a {
   vertical-align: middle;
 }
 .rize-profiles-mugshot-photo {
+  background-color: #FFF;
   border: 5px solid #FFF;
   border-radius: 50%;
   max-width: 100%;
@@ -734,7 +740,7 @@ a {
   background-image: url(../img/social_icons/facebook.png);
 }
 .rize-icon-instagram:hover {
-  background-color: #55acee;
+  background-color: #458eff;
   background-image: url(../img/social_icons/instagram.png);
 }
 .rize-icon-linkedin:hover {
@@ -750,7 +756,7 @@ a {
   background-image: url(../img/social_icons/website.png);
 }
 .rize-icon-youtube:hover {
-  background-color: #55acee;
+  background-color: #e52d27;
   background-image: url(../img/social_icons/youtube.png);
 }
 .rize-profile-social-link a {

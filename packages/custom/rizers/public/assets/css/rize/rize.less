@@ -32,9 +32,11 @@
 @color-accent-secondary:  #57ad68;
 @color-fade:              70%;
 @color-facebook:          #3d5a98;
+@color-instagram:         #458eff;
 @color-linkedin:          #1985bd;
 @color-twitter:           #55acee;
 @color-website:           @color-accent-secondary;
+@color-youtube:           #e52d27;
 
 // Mobile First Breakpoints
 @small-screen:            320px;
@@ -54,17 +56,22 @@
 html {
 	font-family: @font-sans;
 	font-size: 10px;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 body {
 	background-color: @color-accent-primary;
+	background-color: @color-light-light-gray;
+	background-image: linear-gradient(transparent 0%,#333 300%);
 	margin: 0;
 	padding: 0;
 }
 
 .rize-main-content {
 	background-color: #FFF;
+	border-left: 1px solid @color-light-gray;
+	border-right: 1px solid @color-light-gray;
 	margin: 0 auto;
 	max-width: @max-width;
 	padding: 0;
@@ -327,6 +334,7 @@ a {
 }
 
 .rize-profiles-mugshot-photo {
+	background-color: #FFF;
 	border: 5px solid #FFF;
 	border-radius: 50%;
 	max-width: 100%;
@@ -496,7 +504,7 @@ a {
 	background-image: url(../img/social_icons/facebook.png);
 }
 .rize-icon-instagram:hover {
-	background-color: @color-twitter;
+	background-color: @color-instagram;
 	background-image: url(../img/social_icons/instagram.png);
 }
 .rize-icon-linkedin:hover {
@@ -512,7 +520,7 @@ a {
 	background-image: url(../img/social_icons/website.png);
 }
 .rize-icon-youtube:hover {
-	background-color: @color-twitter;
+	background-color: @color-youtube;
 	background-image: url(../img/social_icons/youtube.png);
 }
 
