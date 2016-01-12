@@ -50,7 +50,7 @@ function getOneProfile(profileId) {
 	if (rizerData && rizerData.rd && rizerData.rd.rizersById) {
 		var oneRizer=rizerData.rd.rizersById[profileId];
 		var profileCategoryID=oneRizer.profile.category;
-		oneRizer.profile.category=categoriesById[profileCategoryID];
+		oneRizer.profile.categoryData=categoriesById[profileCategoryID];
 		return oneRizer;
 	} else {
 		return {};
@@ -83,6 +83,7 @@ exports.getOneCategory=getOneCategory;
 
 /* *************************** Private Methods ***************************** */
 function loadDataLive(renderMessage,res) {
+	console.log("requesting api from " + config.accounts_api_URL);
 	request(config.accounts_api_URL, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			rizerData.apiStr=body;
@@ -108,6 +109,9 @@ function loadDataLive(renderMessage,res) {
 					}
 					fs.writeFile(process.cwd() + config.categoryFlatPath, JSON.stringify(categoryData));
 					console.log("LIVE DATA HAS FINISHED LOADING FOR THE APP!")
+					if (res) {
+						res.json({status:"Data updated successfully."});
+					}
 				}
 			};
 			Tabletop.init(options); 

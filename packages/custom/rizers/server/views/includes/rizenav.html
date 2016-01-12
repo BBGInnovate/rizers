@@ -1,10 +1,7 @@
 			<div id="dropdown-nav" class="rize-nav-categories">
 				<ul class="rize-nav-categories-list">
-					<li class="rize-nav-categories-list-item"><a href="/categories/1/" class="rize-nav-categories-list-item-link">Design thinkers</a></li>
-					<li class="rize-nav-categories-list-item"><a href="/categories/2/" class="rize-nav-categories-list-item-link">Writers</a></li>
-					<li class="rize-nav-categories-list-item"><a href="/categories/3/" class="rize-nav-categories-list-item-link">Igniters</a></li>
-					<li class="rize-nav-categories-list-item"><a href="/categories/4/" class="rize-nav-categories-list-item-link">Biz Dev</a></li>
-					<li class="rize-nav-categories-list-item"><a href="/categories/5/" class="rize-nav-categories-list-item-link">Do gooders</a></li>
-					<li class="rize-nav-categories-list-item"><a href="/categories/6/" class="rize-nav-categories-list-item-link">Our conscience</a></li>
+					{% for category in categories %}
+						<li class="rize-nav-categories-list-item"><a href="/categories/{{category.id}}/{{category.safeName}}">{{category.name}}</a></li>
+					{% endfor %}
 				</ul>
 			</div>
