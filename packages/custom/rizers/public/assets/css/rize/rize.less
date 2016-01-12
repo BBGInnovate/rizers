@@ -40,7 +40,7 @@
 
 // Mobile First Breakpoints
 @small-screen:            320px;
-@medium-screen:           600px;
+@medium-screen:           700px;
 @medium-large-screen:     900px;
 @large-screen:            1024px;
 
@@ -50,6 +50,7 @@
 @margin-small:            5%;
 @margin-large:            2%;
 @column-width-side:       20%;
+@top-nav-width:           200px;
 
 
 
@@ -63,7 +64,7 @@ html {
 body {
 	background-color: @color-accent-primary;
 	background-color: @color-light-light-gray;
-	background-image: linear-gradient(transparent 0%,#333 300%);
+	background-image: linear-gradient(transparent 0%,#999 300%);
 	margin: 0;
 	padding: 0;
 }
@@ -123,13 +124,10 @@ a {
 .rize-profiles-header-box {
 	background-color: @color-dark-gray;
 	border-bottom: 1px solid #000;
-	/*
-	border-left: 1px solid @color-medium-gray;
-	border-right: 1px solid @color-medium-gray;
-	*/
 	margin: 0 auto;
 	max-width: @max-width;
 	padding:5px 0;
+	position: relative;
 }
 .rize-profiles-header-logo {
 	padding: 0 0 5px 0;
@@ -153,7 +151,14 @@ a {
 .rize-profiles-navigation-top {
 	float: right;
 }
-
+#menu_btn {
+	color: #FFF;
+	padding-right: @margin-small;
+	position: absolute;
+	right: 0;
+	text-transform: uppercase;
+	top: 0;
+}
 
 
 /***************/
@@ -198,6 +203,52 @@ a {
 	border-right: none;
 }
 
+
+
+/****************************/
+/* Site category navigation */
+.rize-nav-categories {
+	position: absolute;
+	right: -@top-nav-width;
+	width: @top-nav-width;
+	z-index: 9999;
+}
+.rize-nav-categories-list {
+	list-style: none;
+	margin: 0;
+}
+
+.rize-nav-categories-list-item {
+	border-bottom: 1px solid @color-medium-gray;
+	margin: 0;
+	padding: 0;
+}
+
+.rize-nav-categories-list-item a {
+	background-color: @color-light-gray;
+	color: #333;
+	display: block;
+	font-size: 1.5rem;
+	padding: 10px @margin-small;
+	text-decoration: none;
+}
+.rize-nav-categories-list-item a:hover {
+	background-color: @color-light-light-gray;
+}
+
+.rize-nav-categories.show {
+	animation: pulse .2s forwards;
+}
+
+@keyframes pulse {
+	0% {
+		right: -@top-nav-width;
+	}
+
+	100% {
+		right: 0;
+	}
+}
 
 
 /********/
@@ -469,6 +520,7 @@ a {
 	display: inline-block;
 	height: 20px;
 	line-height: 2.2;
+	margin-bottom: 5px;
 	margin-right: 3px;
 	width: auto;
 }
@@ -548,7 +600,7 @@ a {
 		background-color: @color-medium-gray;
 		//display: block;
 		height: 40px;
-		margin-top: 5px;
+		margin-bottom: 5px;
 		padding-left: 0;
 		width: 40px;
 	}
