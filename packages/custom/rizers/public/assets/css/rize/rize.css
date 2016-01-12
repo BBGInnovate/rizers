@@ -109,7 +109,7 @@ a {
   width: 24%;
 }
 .rize-footer-nav-links li a {
-  border-right: 1px solid #666;
+  border-right: 1px solid #999;
   color: #FFF;
   display: inline-block;
   margin: 0;
@@ -436,8 +436,10 @@ a {
     font-size: 1.4rem;
   }
 }
+/********************/
 /* List page styles */
 .rize-list {
+  margin: 0;
   padding-left: 0;
 }
 .rize-list-profile {
@@ -449,34 +451,64 @@ a {
   display: block;
   font-size: 1.5rem;
   height: 100%;
-  padding: 10px 3rem 10px 3rem;
-  width: 100%;
+  padding: 10px 5%;
+  text-decoration: none;
+  width: 90%;
 }
 .rize-list-photo-small {
   display: none;
 }
+.rize-list-profile-organization,
+.rize-list-profile-person {
+  display: inline-block;
+}
+.rize-list-profile-tagline {
+  display: none;
+}
 @media screen and (min-width: 600px) {
+  .rize-list-profile {
+    border-bottom: none;
+  }
   .rize-list-photo-small {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    border: 1px solid #ECECEC;
     border-radius: 50%;
     display: inline-block;
-    height: 45px;
-    vertical-align: middle;
-    width: 45px;
+    height: 60px;
+    vertical-align: top;
+    width: 60px;
   }
-  .rize-list-profile {
-    border-bottom: none;
+  .rize-list-profile-name {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .rize-list-profile-tagline {
+    color: #999;
+    display: block;
   }
 }
+/************************/
 /* Category detail page */
 .rize-list-category-detail-header {
   padding: 2rem 5%;
 }
 .rize-list-category-detail-name {
+  color: #FFA500;
+  font-size: 4rem;
   margin: 0;
+  text-transform: uppercase;
 }
 .rize-list-category-detail-description {
   font-size: 1.5rem;
+}
+@media screen and (min-width: 600px) {
+  .rize-list-category-detail-name {
+    font-size: 6rem;
+  }
+  .rize-list-category-detail-description {
+    font-size: 2.5rem;
+  }
 }
