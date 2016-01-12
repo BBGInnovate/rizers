@@ -368,6 +368,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.rizeContainer {
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 .rize-main-content {
   background-color: #FFF;
   border-left: 1px solid #CCC;
