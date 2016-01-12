@@ -9,6 +9,8 @@
 	<!-- person profile -->
 	<article class="rize-profile ">
 
+			<a style="font-size:2em" href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.profile.name | linkSafeString}}">PREV - {{account.prevAccount.display_name}}</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a style="font-size:2em" href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.profile.name | linkSafeString}}">NEXT - {{account.nextAccount.display_name}}</a><BR>
 
 			<header class="rize-profile-header">
 				<style>
