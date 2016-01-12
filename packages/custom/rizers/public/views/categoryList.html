@@ -5,7 +5,7 @@
   <div>
   <ul class="rize-list">
     <li ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories">
-        <a ng-model="organization" href="/categories/{{category.id}}/{{category.name}}">
+        <a ng-model="organization" href="/categories/{{category.id}}/{{category.name | linkSafeString}}">
         	<img src="{{category.image}}" />
 			<h2 class="rize-list-categories-name">{{category.name}}</h2>
         	<p class="rize-list-categories-description">{{category.description}}</p>
