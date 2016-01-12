@@ -192,6 +192,7 @@ a {
 }
 
 
+
 /********/
 /* Grid */
 .rize-profiles-grid {
@@ -199,6 +200,7 @@ a {
 }
 
 .rize-profiles-banner-box {
+	background-color: @color-light-light-gray;
 	.backgroundCover;
 	height: 300px;
 	position: relative;
@@ -392,9 +394,6 @@ a {
 
 
 
-
-
-
 /******************/
 /* profile styles */
 .rize-profiles-quotation-text {
@@ -427,6 +426,7 @@ a {
 	height: 250px;
 	width: 100%;
 }
+
 .mapbox-link {
 	color: @color-medium-gray;
 }
@@ -553,10 +553,12 @@ a {
 		height: 100%;
 		padding-left: 45px;
 	}
+
 	.rize-profile-social-link a span {
 		display: none;
 	}
 }
+
 @media screen and (min-width: @large-screen) {
 	.rize-profile-social-link a{
 		font-size: 1.4rem;
@@ -637,22 +639,32 @@ a {
 /************************/
 /* Category detail page */
 .rize-list-category-detail-header{
+	border-bottom: 2px dotted @color-accent-primary;
+	margin-bottom: 1rem;
 	padding: 2rem @margin-small;
 }
+
 .rize-list-category-detail-name {
 	color: @color-accent-primary;
 	font-size: 4rem;
 	margin: 0;
 	text-transform: uppercase;
 }
+
 .rize-list-category-detail-description {
 	font-size: 1.5rem;
 }
 
 @media screen and (min-width: @medium-screen) {
+	.rize-list-category-detail-header{
+		border-bottom: 4px dotted @color-accent-primary;
+		margin-bottom: 2rem;
+	}
+
 	.rize-list-category-detail-name {
 		font-size: 6rem;
 	}
+
 	.rize-list-category-detail-description {
 		font-size: 2.5rem;
 	}

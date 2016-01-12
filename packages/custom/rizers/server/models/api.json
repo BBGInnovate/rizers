@@ -1,6 +1,6 @@
 {
   "page_info": {
-    "total_accounts": 49,
+    "total_accounts": 46,
     "total_pages": 1,
     "first_page": true,
     "last_page": true,
@@ -8,7 +8,7 @@
     "next_page": null,
     "out_of_bounds": false,
     "offset": 0,
-    "per_page": 49
+    "per_page": 46
   },
   "accounts": [
     {
@@ -531,45 +531,6 @@
       }
     },
     {
-      "id": 14,
-      "uuid": "80f71e98-4471-5cdc-80a7-4c62babed26c",
-      "account_type": "Organization",
-      "display_name": "CTIC",
-      "last_name": null,
-      "first_name": null,
-      "city_name": "Dakar",
-      "country_name": "Senegal",
-      "categories": "entrepreneurship, development, innovation",
-      "keywords": "entrepreneurship, technology, startups, development, training, workshops",
-      "url": "http://www.cticdakar.com",
-      "instagram_url": null,
-      "youtube_url": null,
-      "is_active": true,
-      "rize_summary": null,
-      "rize_links": [
-        {
-          "title": null,
-          "url": null
-        }
-      ],
-      "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
-      },
-      "linkedin": {
-        "url": null,
-        "job_title": null,
-        "organization": null,
-        "summary": null
-      },
-      "twitter": {
-        "screen_name": "@cticdakar",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/1428867683/logo_CTICDAKAR_400x400.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1428867683/logo_CTICDAKAR_400x400.jpg"
-      }
-    },
-    {
       "id": 15,
       "uuid": "277d21c3-5d7b-595a-94cd-a4b4879fa0af",
       "account_type": "Person",
@@ -801,45 +762,6 @@
         "screen_name": "@fiifibaidoo",
         "profile_image_url": "http://pbs.twimg.com/profile_images/666586607185694720/yEhyBtAI_400x400.jpg",
         "profile_image_url_https": "https://pbs.twimg.com/profile_images/666586607185694720/yEhyBtAI_400x400.jpg"
-      }
-    },
-    {
-      "id": 21,
-      "uuid": "8dd76095-827f-5d10-bcb2-99c93add4edb",
-      "account_type": "Organization",
-      "display_name": "GhanaThink",
-      "last_name": null,
-      "first_name": null,
-      "city_name": "Accra",
-      "country_name": "Ghana",
-      "categories": "entrepreneurship, development, innovation",
-      "keywords": "entrepreneurship, technology, startups, development, training, workshops",
-      "url": null,
-      "instagram_url": null,
-      "youtube_url": null,
-      "is_active": true,
-      "rize_summary": null,
-      "rize_links": [
-        {
-          "title": null,
-          "url": null
-        }
-      ],
-      "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
-      },
-      "linkedin": {
-        "url": null,
-        "job_title": null,
-        "organization": null,
-        "summary": null
-      },
-      "twitter": {
-        "screen_name": null,
-        "profile_image_url": null,
-        "profile_image_url_https": null
       }
     },
     {
@@ -1312,45 +1234,6 @@
         "screen_name": "@moeodele",
         "profile_image_url": "http://pbs.twimg.com/profile_images/680347751415214080/8hfqt7mQ_400x400.jpg",
         "profile_image_url_https": "https://pbs.twimg.com/profile_images/680347751415214080/8hfqt7mQ_400x400.jpg"
-      }
-    },
-    {
-      "id": 34,
-      "uuid": "44ffb182-cec5-5610-aa2d-96a0c94e357a",
-      "account_type": "Person",
-      "display_name": "Omar Mohammed",
-      "last_name": "Mohammed",
-      "first_name": "Omar",
-      "city_name": "Dar es Salaam",
-      "country_name": "Tanzania",
-      "categories": "media, journalism",
-      "keywords": "media, journalism,",
-      "url": "https://www.clippings.me/users/shurufu",
-      "instagram_url": null,
-      "youtube_url": null,
-      "is_active": true,
-      "rize_summary": null,
-      "rize_links": [
-        {
-          "title": null,
-          "url": null
-        }
-      ],
-      "facebook": {
-        "object_name": null,
-        "url": null,
-        "profile_image": null
-      },
-      "linkedin": {
-        "url": "https://www.linkedin.com/in/omar-mohammed-02462613",
-        "job_title": null,
-        "organization": null,
-        "summary": null
-      },
-      "twitter": {
-        "screen_name": "@shurufu",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/517395098472939522/hyp4fbKO_400x400.jpeg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/517395098472939522/hyp4fbKO_400x400.jpeg"
       }
     },
     {
