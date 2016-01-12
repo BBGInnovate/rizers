@@ -55,7 +55,7 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			oneRizer.profile = profilesById[oneRizer.id];
 
 
-
+			//Create a location with 'City, Country'
 			oneRizer.location = oneRizer.city_name + ', ' + oneRizer.country_name;
 
 			oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);

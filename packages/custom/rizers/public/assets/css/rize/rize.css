@@ -1,16 +1,21 @@
 html {
   font-family: 'Arial', sans-serif;
   font-size: 10px;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 body {
   background-color: #FFA500;
+  background-color: #ECECEC;
+  background-image: linear-gradient(transparent 0%, #333 300%);
   margin: 0;
   padding: 0;
 }
 .rize-main-content {
   background-color: #FFF;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
   margin: 0 auto;
   max-width: 1024px;
   padding: 0;
