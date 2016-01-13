@@ -181,7 +181,7 @@ a {
 	display: none;
 }
 
-@media screen and (min-width: @small-screen) {
+@media screen and (min-width: @medium-screen) {
 	.menu-button {
 		background-position: center right;
 		padding-left: 1rem;
@@ -269,13 +269,14 @@ a {
 }
 
 .rize-nav-categories-list-item {
-	border-bottom: 1px solid @color-medium-gray;
+	border-bottom: 1px solid @color-light-light-gray;
+	border-left: 1px solid @color-light-light-gray;
 	margin: 0;
 	padding: 0;
 }
 
 .rize-nav-categories-list-item a {
-	background-color: @color-light-gray;
+	background-color: #FFF;
 	color: #333;
 	display: block;
 	font-size: 1.5rem;
@@ -326,8 +327,8 @@ a {
 
 .rize-profiles-article-text {
 	display: block;
-	font-size: 1.25rem;
-	line-height: 2rem;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
 	margin: 0 @margin-small;
 	max-width: @max-width;
 	padding: 0;
@@ -356,7 +357,7 @@ a {
 @media screen and (min-width: @medium-screen) {
 	.rize-profiles-article-text {
 		display: inline-block;
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 		line-height: 2.5rem;
 		margin: 0 auto;
 		max-width: @max-width;
@@ -386,6 +387,66 @@ a {
 	}
 }
  
+
+/***************************/
+/* Next / previous buttons */
+.rize-profiles-nav-buttons{
+	background-color: @color-dark-gray;
+	position: absolute;
+		bottom: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.rize-profiles-nav-buttons-container{
+}
+
+.rize-profiles-nav-buttons a {
+	width: 40%;
+}
+
+.rize-profiles-nav-buttons-previous{
+	float: left;
+}
+
+.rize-profiles-nav-buttons-next{
+	float: right;
+	text-align: right;
+}
+
+@media screen and (min-width: @large-screen) {
+	.rize-profiles-nav-buttons{
+		background-color: transparent;
+		position: fixed;
+			left:0;
+			top: 50%;
+		width: 100%;
+		z-index: 9999;
+	}
+
+	.rize-profiles-nav-buttons-container{
+		margin: 0 auto;
+		max-width: @max-width + 150px;
+	}
+
+	.rize-profiles-nav-buttons a {
+		width: 70px;
+	}
+
+	.rize-profiles-nav-buttons-previous{
+		float: left;
+		text-align: right;
+	}
+
+	.rize-profiles-nav-buttons-next{
+		float: right;
+		text-align: left;
+	}
+
+}
+
+
+
 
 
 /******************/
@@ -492,7 +553,7 @@ a {
 		margin: -75px @margin-large auto @margin-large;
 		position: relative;
 		width: @column-width-side;
-		z-index: 9999;
+		z-index: 9990;
 	}
 
 	.rize-profiles-person {

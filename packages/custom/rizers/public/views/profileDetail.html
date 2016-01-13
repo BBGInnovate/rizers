@@ -8,10 +8,12 @@
 
 	<!-- person profile -->
 	<article class="rize-profile ">
-
-			<a style="font-size:2em" href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}">PREV - {{account.prevAccount.display_name}}</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a style="font-size:2em" href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}">NEXT - {{account.nextAccount.display_name}}</a><BR>
-
+			<div class="rize-profiles-nav-buttons">
+				<div class="rize-profiles-nav-buttons-container">
+					<a style="font-size:2em" href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous">PREV - {{account.prevAccount.display_name}}</a> 
+					<a style="font-size:2em" href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next">NEXT - {{account.nextAccount.display_name}}</a>
+				</div>
+			</div>
 			<header class="rize-profile-header">
 				<style>
 					.rize-profiles-banner-box {
@@ -92,10 +94,10 @@
 
 						<style>
 						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/400x250.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; }
-						@media (min-width: 401px) and (max-width: 600px) {
-							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/600x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px; }
+						@media (min-width: 401px) and (max-width: 700px) {
+							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/700x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px; }
 						}
-						@media (min-width: 601px){
+						@media (min-width: 701px){
 							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.high-contrast/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,4/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;  
 						}
 					</style>
