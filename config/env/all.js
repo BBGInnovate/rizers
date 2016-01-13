@@ -4,8 +4,10 @@ var path = require('path'),
   rootPath = path.normalize(__dirname + '/../..');
 
 var applicationPort=3000;
+var applicationUrl="http://localhost:3000/";
 if ( process.env.NODE_ENV === 'production' ){
   applicationPort=80;
+  applicationUrl="http://54.83.55.140/";
 }
 
 module.exports = {
@@ -71,5 +73,6 @@ module.exports = {
   profileFlatPath:'/packages/custom/rizers/server/models/profiles.json',
   apiFlatPath:'/packages/custom/rizers/server/models/api.json',
   categoryFlatPath:'/packages/custom/rizers/server/models/categories.json',
-  useLiveData:true
+  useLiveData:true,
+  applicationUrl:applicationUrl
 };
