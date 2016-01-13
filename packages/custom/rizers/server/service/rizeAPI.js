@@ -184,7 +184,12 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			//Create a location with 'City, Country'
 			oneRizer.location = oneRizer.city_name + ', ' + oneRizer.country_name;
 
-			oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
+
+			if (oneRizer.profile.summary != ""){
+				oneRizer.rize_summary = splitParagraphs(oneRizer.profile.summary);
+			} else {
+				oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
+			}
 
 			//Trying to split the categories into an array and return the first value
 			/*

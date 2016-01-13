@@ -167,6 +167,8 @@ a {
 	background-position: center center;
 	background-image: url(../img/menu.png);
 	border-left: 1px solid #666;
+	cursor: pointer;
+	cursor: hand;
 	height: 100%;
 	margin-top: 0;
 	padding-right: @margin-large;
@@ -189,9 +191,8 @@ a {
 	.menu-button-label{
 		color: #999;
 		display: block;
-		padding-top: 1.5rem;
+		padding-top: 1.4rem;
 		text-transform: uppercase;
-		vertical-align: middle;
 	}
 }
 
@@ -254,12 +255,10 @@ a {
 
 @keyframes toggleNav {
 	0% {
-		/*margin-top: -200px;*/
 		top: -100%;
 	}
 
 	100% {
-		/*margin-top: 0;*/
 		top: 0px;
 	}
 }
@@ -471,6 +470,23 @@ a {
 	text-transform: uppercase;
 }
 
+.rize-profile-description-related-list {
+	margin: 2rem -@margin-small;
+}
+.rize-profile-description-related-list-item{
+	list-style-type: none;
+	border-bottom: 1px solid @color-light-gray;
+}
+.rize-profile-description-related-list-item:first-of-type{
+	border-top: 1px solid @color-light-gray;
+}
+.rize-profile-description-related-list-item a {
+	display: block;
+	padding: 10px @margin-small;
+	text-decoration: none;
+}
+
+
 @media screen and (min-width: @medium-screen) {
 	.rize-profiles-mugshot {
 		margin: -75px @margin-large auto @margin-large;
@@ -489,9 +505,31 @@ a {
 	}
 
 	.rize-profiles-person-job_title {
+		color: @color-accent-primary;
 		font-size: 1.7rem;
 		margin-top: 0;
 	}
+
+	.rize-profile-description-related-list {
+		margin: 2rem 0 0 0;
+		padding-left: 2rem;
+	}
+
+	.rize-profile-description-related-list-item{
+		border: none;
+		list-style-type: disc;
+		padding: 0;
+	}
+	
+	.rize-profile-description-related-list-item:first-of-type{
+		border-top: none;
+	}
+
+	.rize-profile-description-related-list-item a {
+		padding: 0;
+		text-decoration: underline;
+	}
+
 }
 
 @media screen and (min-width: @large-screen) {
@@ -551,13 +589,14 @@ a {
 }
 
 .rize-profile-label {
+	font-size: 1.5rem;
 	margin-top: 0;
 	text-transform: uppercase;
 }
 
 @media screen and (min-width: @large-screen) {
 	.rize-profile-label {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 }
 
@@ -642,6 +681,7 @@ a {
 	padding-left: 22px;
 	padding-right: 5px;
 	text-decoration: none;
+	text-transform: uppercase;
 	vertical-align: middle;
 }
 

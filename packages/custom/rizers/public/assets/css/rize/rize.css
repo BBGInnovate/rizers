@@ -96,6 +96,8 @@ a {
   background-position: center center;
   background-image: url(../img/menu.png);
   border-left: 1px solid #666;
+  cursor: pointer;
+  cursor: hand;
   height: 100%;
   margin-top: 0;
   padding-right: 2%;
@@ -117,9 +119,8 @@ a {
   .menu-button-label {
     color: #999;
     display: block;
-    padding-top: 1.5rem;
+    padding-top: 1.4rem;
     text-transform: uppercase;
-    vertical-align: middle;
   }
 }
 /***************/
@@ -177,11 +178,9 @@ a {
 }
 @keyframes toggleNav {
   0% {
-    /*margin-top: -200px;*/
     top: -100%;
   }
   100% {
-    /*margin-top: 0;*/
     top: 0px;
   }
 }
@@ -363,6 +362,21 @@ a {
   margin-top: .5rem;
   text-transform: uppercase;
 }
+.rize-profile-description-related-list {
+  margin: 2rem -5%;
+}
+.rize-profile-description-related-list-item {
+  list-style-type: none;
+  border-bottom: 1px solid #CCC;
+}
+.rize-profile-description-related-list-item:first-of-type {
+  border-top: 1px solid #CCC;
+}
+.rize-profile-description-related-list-item a {
+  display: block;
+  padding: 10px 5%;
+  text-decoration: none;
+}
 @media screen and (min-width: 700px) {
   .rize-profiles-mugshot {
     margin: -75px 2% auto 2%;
@@ -378,8 +392,25 @@ a {
     line-height: 4.5rem;
   }
   .rize-profiles-person-job_title {
+    color: #FFA500;
     font-size: 1.7rem;
     margin-top: 0;
+  }
+  .rize-profile-description-related-list {
+    margin: 2rem 0 0 0;
+    padding-left: 2rem;
+  }
+  .rize-profile-description-related-list-item {
+    border: none;
+    list-style-type: disc;
+    padding: 0;
+  }
+  .rize-profile-description-related-list-item:first-of-type {
+    border-top: none;
+  }
+  .rize-profile-description-related-list-item a {
+    padding: 0;
+    text-decoration: underline;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -429,12 +460,13 @@ a {
   color: #999;
 }
 .rize-profile-label {
+  font-size: 1.5rem;
   margin-top: 0;
   text-transform: uppercase;
 }
 @media screen and (min-width: 1024px) {
   .rize-profile-label {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 /****************/
@@ -506,6 +538,7 @@ a {
   padding-left: 22px;
   padding-right: 5px;
   text-decoration: none;
+  text-transform: uppercase;
   vertical-align: middle;
 }
 @media screen and (min-width: 700px) {
