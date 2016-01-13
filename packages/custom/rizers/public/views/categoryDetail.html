@@ -21,7 +21,7 @@
 					<!--https://twitter.com/@name/profile_image?size=original -->
 
 					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}">
-						<div style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
+						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-organization">
 							<div class="rize-list-profile-name">{{ account.display_name }}</div>
 							<div class="rize-list-profile-tagline">{{ account.tagline }}</div>
