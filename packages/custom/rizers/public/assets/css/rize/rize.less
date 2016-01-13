@@ -43,6 +43,7 @@
 @medium-screen:           700px;
 @medium-large-screen:     900px;
 @large-screen:            1024px;
+@extra-large-screen:      1200px;
 
 // Magic Numbers
 @max-width:               1024px;
@@ -392,6 +393,7 @@ a {
 /* Next / previous buttons */
 .rize-profiles-nav-buttons{
 	background-color: @color-dark-gray;
+	pointer-events: none;
 	position: absolute;
 		bottom: 0;
 	width: 100%;
@@ -402,6 +404,9 @@ a {
 }
 
 .rize-profiles-nav-buttons a {
+	font-size: 1.3rem;
+	padding: 10px @margin-large;
+	pointer-events: all;
 	width: 40%;
 }
 
@@ -414,35 +419,52 @@ a {
 	text-align: right;
 }
 
-@media screen and (min-width: @large-screen) {
+@media screen and (min-width: @extra-large-screen) {
 	.rize-profiles-nav-buttons{
 		background-color: transparent;
 		position: fixed;
 			left:0;
-			top: 50%;
+			top: 40%;
 		width: 100%;
 		z-index: 9999;
 	}
 
 	.rize-profiles-nav-buttons-container{
 		margin: 0 auto;
-		max-width: @max-width + 150px;
+		max-width: @max-width + 190px;
 	}
 
 	.rize-profiles-nav-buttons a {
-		width: 70px;
+		background-repeat: no-repeat;
+		background-size: 45px 90px;
+		color: #999;
+		height: 70px;
+		padding: 95px 0 0 0;
+		text-decoration: none;
+		width: 90px;
 	}
 
 	.rize-profiles-nav-buttons-previous{
+		background-position: right top;
+		background-image: url(../img/button_previous_gray.png);
 		float: left;
+		padding-right: 5px !important;
 		text-align: right;
 	}
 
 	.rize-profiles-nav-buttons-next{
+		background-position: left top;
+		background-image: url(../img/button_next_gray.png);
 		float: right;
+		padding-left: 5px !important;
 		text-align: left;
 	}
-
+	.rize-profiles-nav-buttons-previous:hover{
+		background-image: url(../img/button_previous.png);
+	}
+	.rize-profiles-nav-buttons-next:hover{
+		background-image: url(../img/button_next.png);
+	}
 }
 
 
@@ -526,6 +548,7 @@ a {
 }
 
 .rize-profiles-person-job_title {
+	font-family: @font-sans;
 	font-size: 1.25rem;
 	margin-top: .5rem;
 	text-transform: uppercase;
@@ -568,7 +591,6 @@ a {
 	.rize-profiles-person-job_title {
 		color: @color-accent-primary;
 		font-size: 1.7rem;
-		margin-top: 0;
 	}
 
 	.rize-profile-description-related-list {
@@ -605,7 +627,6 @@ a {
 
 	.rize-profiles-person-job_title {
 		font-size: 2rem;
-		margin-top: 0;
 	}
 }
 

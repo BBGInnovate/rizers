@@ -10,8 +10,8 @@
 	<article class="rize-profile ">
 			<div class="rize-profiles-nav-buttons">
 				<div class="rize-profiles-nav-buttons-container">
-					<a style="font-size:2em" href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous">PREV - {{account.prevAccount.display_name}}</a> 
-					<a style="font-size:2em" href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next">NEXT - {{account.nextAccount.display_name}}</a>
+					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous">{{account.prevAccount.display_name}}</a> 
+					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next">{{account.nextAccount.display_name}}</a>
 				</div>
 			</div>
 			<header class="rize-profile-header">
