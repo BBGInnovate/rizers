@@ -10,7 +10,12 @@ module.exports = function(System){
       //OPTIMIZE: this logic is currently duplicated on the frontend in the linkSafeString filter
       var categories = rizeAPI.getAllCategories();
       for (var i=0; i < categories.length; i++) {
-      	categories[i].safeName=categories[i].name.replace(" ", "-").toLowerCase().replace("&","-");
+      	
+        var str2=categories[i].name.toLowerCase();
+        str2=str2.split(" ").join("-");
+        str2=str2.split("&").join("-");
+
+        categories[i].safeName=str2;
       }
       res.render('index',{ locals: { categories:categories, config: System.config.clean,  }});
     },
