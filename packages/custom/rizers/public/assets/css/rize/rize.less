@@ -161,15 +161,39 @@ a {
 .rize-profiles-navigation-top {
 	float: right;
 }
-#menu_btn {
-	color: #FFF;
-	padding-right: @margin-small;
+.menu-button {
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(../img/menu.png);
+	border-left: 1px solid #666;
+	height: 100%;
+	margin-top: 0;
+	padding-right: @margin-large;
 	position: absolute;
-	right: 0;
-	text-transform: uppercase;
-	top: 0;
+		right: 0;
+		top: 0;
+	width: 30px;
+}
+.menu-button-label{
+	display: none;
 }
 
+@media screen and (min-width: @small-screen) {
+	.menu-button {
+		background-position: center right;
+		padding-left: 1rem;
+		padding-right: 30px;
+		width: auto;
+	}
+	.menu-button-label{
+		color: #999;
+		display: block;
+		padding-top: 1.5rem;
+		text-transform: uppercase;
+		vertical-align: middle;
+	}
+}
 
 /***************/
 /* Site footer */
@@ -218,11 +242,28 @@ a {
 /****************************/
 /* Site category navigation */
 .rize-nav-categories {
+	max-width: @max-width;
 	position: absolute;
-	right: -@top-nav-width;
-	width: @top-nav-width;
+		top: -100%;
+	width: 100%;
 	z-index: 9999;
 }
+.rize-nav-categories.show {
+	animation: toggleNav .5s forwards;
+}
+
+@keyframes toggleNav {
+	0% {
+		/*margin-top: -200px;*/
+		top: -100%;
+	}
+
+	100% {
+		/*margin-top: 0;*/
+		top: 0px;
+	}
+}
+
 .rize-nav-categories-list {
 	list-style: none;
 	margin: 0;
@@ -246,20 +287,29 @@ a {
 	background-color: @color-light-light-gray;
 }
 
-.rize-nav-categories.show {
-	animation: pulse .2s forwards;
-}
+@media screen and (min-width: @medium-screen) {
 
-@keyframes pulse {
-	0% {
-		right: -@top-nav-width;
+	.rize-nav-categories {
+		position: absolute;
+			right: -@top-nav-width;
+			top: 0;
+		width: @top-nav-width;
 	}
 
-	100% {
-		right: 0;
+	.rize-nav-categories.show {
+		animation: toggleNav .2s forwards;
+	}
+
+	@keyframes toggleNav {
+		0% {
+			right: -@top-nav-width;
+		}
+
+		100% {
+			right: 0;
+		}
 	}
 }
-
 
 /********/
 /* Grid */
@@ -676,16 +726,24 @@ a {
 	display: none;
 }
 
+@media screen and (min-width: @small-screen) {
+	.rize-list-photo-small {
+		.backgroundCover;
+		border: 1px solid @color-light-light-gray;
+		border-radius: 50%;
+		display: inline-block;
+		height: 45px;
+		vertical-align: middle;
+		width: 45px;
+	}
+}
+
 @media screen and (min-width: @medium-screen) {
 	.rize-list-profile {
 		border-bottom: none;
 	}
 
 	.rize-list-photo-small {
-		.backgroundCover;
-		border: 1px solid @color-light-light-gray;
-		border-radius: 50%;
-		display: inline-block;
 		height: 60px;
 		vertical-align: top;
 		width: 60px;
@@ -695,6 +753,7 @@ a {
 		color: #333;
 		font-size: 2rem;
 		font-weight: 700;
+		padding-top: 1rem;
 	}
 
 	.rize-list-profile-tagline {
@@ -717,6 +776,7 @@ a {
 .rize-list-category-detail-name {
 	color: @color-accent-primary;
 	font-size: 4rem;
+	line-height: 1.1;
 	margin: 0;
 	text-transform: uppercase;
 }
