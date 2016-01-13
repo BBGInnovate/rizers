@@ -196,13 +196,18 @@ function buildRizers(apiStr,profileStr,profileObj) {
 
 			//Order should be Spreadsheet -> Twitter -> Facebook
 			oneRizer.profile_image = '';
+			oneRizer.profile_image_small = '';
 			
 			if (oneRizer.profile.profileImage != ""){
 				oneRizer.profile_image = oneRizer.profile.profileImage;
+				oneRizer.profile_image_small = oneRizer.profile.profileImage;
 			} else if (oneRizer.twitter.profile_image_url_https !== null){
+				//oneRizer.profile_image = "https://twitter.com/" + [screen_name] + "/profile_image?size=normal";
 				oneRizer.profile_image = oneRizer.twitter.profile_image_url_https;
+				oneRizer.profile_image_small = oneRizer.twitter.profile_image_url_https.replace("400x400","bigger");
 			} else if (oneRizer.facebook.profile_image !== null){
 				oneRizer.profile_image = oneRizer.facebook.profile_image;
+				oneRizer.profile_image_small = oneRizer.facebook.profile_image;
 			} else {
 				//
 			}
