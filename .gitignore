@@ -72,5 +72,4 @@ modules/views/
 # vim Files
 # --------------------
 *.swp
-
-packages/custom/rizers/server/models/profiles.json
+packages/custom/rizers/server/models/*.json
