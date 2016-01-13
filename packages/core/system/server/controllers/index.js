@@ -17,7 +17,14 @@ module.exports = function(System){
 
         categories[i].safeName=str2;
       }
-      res.render('index',{ locals: { categories:categories, config: System.config.clean,  }});
+      if (categories.length > 0) {
+        res.render('index',{ locals: {categories:categories, config: System.config.clean,  }});  
+      } else {
+        //swig templates are cached.  
+        //we don't want to render that index view until our categories are ready or our navigation breaks
+        res.json({status:'site is reloading'});  
+      }
+      
     },
     aggregatedList:function(req,res) {
       res.send(res.locals.aggregatedassets);
