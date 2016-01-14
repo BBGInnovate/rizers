@@ -182,7 +182,7 @@ function buildRizers(apiStr,profileStr,profileObj) {
 
 
 			//Create a location with 'City, Country'
-			oneRizer.location = oneRizer.city_name + ', ' + oneRizer.country_name;
+			oneRizer.location = oneRizer.city.city_name + ', ' + oneRizer.country_name;
 
 
 			if (oneRizer.profile.summary != ""){

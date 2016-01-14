@@ -1,6 +1,35 @@
 'use strict';
 
 
+// Directive for Facebook Share
+angular.module('mean.rizers').directive('fbShare', [
+	function() {
+		return {
+			restrict: 'A',
+			link: function(scope, element) {
+				element.on('click', function() {
+					console.log("fbShare directive called");
+					var link = '';
+					var name = '';
+					var picture = '';
+					var description = '  ';
+					/* if (scope.news) {
+						link = scope.news.shareURL; */
+					FB.ui({
+						method: 'feed',
+						name: name,
+						link: link,
+						picture: picture,
+						caption: ' ',
+						description: description,
+						message: ' '
+					});
+				});
+			}
+		};
+	}
+]);
+
 // Directive for the profile list
 angular.module('mean.rizers').directive('description', function ($compile) {
 

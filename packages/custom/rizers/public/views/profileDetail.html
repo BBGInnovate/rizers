@@ -1,10 +1,9 @@
 
 
 
-<section data-ng-controller="RizersController" data-ng-init="findOne()">
+<section data-ng-controller="RizersController" data-ng-init="findOneAccount()">
 
 <div id="main" class="rize-main-content" role="main">
-
 
 	<!-- person profile -->
 	<article class="rize-profile ">
@@ -85,6 +84,8 @@
 				</aside>
 
 				<div class="rize-profiles-article-text">
+<a fb-share class="share">SHARE ON FACEBOOK</a>
+
 					<div  ng-if="account.rize_summary" class="rize-profile-description">
 						<div ng-bind-html="account.rize_summary"></div>
 						<div ng-if="account.profile.byline != ''" class="rize-profile-description-byline">—{{ account.profile.byline }}</div>
@@ -103,16 +104,16 @@
 					<h3 class="rize-profile-label">{{account.location}}</h3>
 
 						<style>
-						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/400x250.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; }
+						.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28{{account.city.longitude}},{{account.city.latitude}}%29/{{account.city.longitude}},{{account.city.latitude}},5/400x250.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; }
 						@media (min-width: 401px) and (max-width: 700px) {
-							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,5/700x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px; }
+							.rize-profiles-mwap { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28{{account.city.longitude}},{{account.city.latitude}}%29/{{account.city.longitude}},{{account.city.latitude}},5/700x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px; }
 						}
 						@media (min-width: 701px){
-							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.high-contrast/pin-m+FFA500%28-0.186964,5.603717%29/-0.186964,5.603717,4/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;  
+							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.high-contrast/pin-m+FFA500%28{{account.city.longitude}},{{account.city.latitude}}%29/{{account.city.longitude}},{{account.city.latitude}},4/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;  
 						}
 					</style>
 
-					<div class="rize-profiles-map" title="Mapbox Map of {{account.location}}}"></div>
+					<div ng-if="showMap" class="rize-profiles-map" title="Mapbox Map of {{account.location}}}"></div>
 					© <a href='https://www.mapbox.com/map-feedback/' class="mapbox-link">Mapbox</a> © <a href='http://www.openstreetmap.org/copyright' class="mapbox-link">OpenStreetMap contributors</a>
 				</aside>
 

@@ -5,6 +5,11 @@ var rizeAPI = require('../../../../custom/rizers/server/service/rizeAPI');
 var phantom = require('phantom');
 var config = mean.config.clean;
 
+var rizeConfig={
+  applicationUrl:config.applicationUrl,
+  fbAppID:config.fbAppID
+}
+
 module.exports = function(System){
   return {
     render:function(req,res){
@@ -39,7 +44,11 @@ module.exports = function(System){
             });
           // If there is no _escaped_fragment_, we return the normal index template.
           } else {
-            res.render('index',{ locals: {categories:categories, config: System.config.clean,  }});  
+            res.render('index',{
+                categories:categories, 
+                rizeConfig:JSON.stringify(rizeConfig), 
+                locals: {config: System.config.clean}
+            });  
           }
       } else {
         //swig templates are cached.  

@@ -14,9 +14,15 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
     	  });
       };
 
-      $scope.findOne = function() {
+      $scope.findOneAccount = function() {
         $http.get('/api/accounts/'+ $stateParams.accountId).success(function(data) {
-      		$scope.account=data;
+      		
+          $scope.showMap=false;
+          if (data.city.latitude) {
+            $scope.showMap=true;
+          }
+          $scope.account=data;
+
       	  });	
       };
 
