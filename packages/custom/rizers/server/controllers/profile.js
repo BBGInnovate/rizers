@@ -21,7 +21,7 @@ module.exports = function(System){
 
 			for (var i=0; i < category.accounts.length;i++) {
 				var curr = category.accounts[i];
-				var currAccount={selected:"",index:i,display_name:curr.display_name, id:curr.id, profileImage:curr.profile.profileImage, image:curr.profile.image}
+				var currAccount={selected:"",index:i,display_name:curr.display_name, id:curr.id}
 
 				if (category.accounts[i].id==account.id) {
 					currAccount.selected="selected";
