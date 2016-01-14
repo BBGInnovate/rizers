@@ -761,6 +761,11 @@ a {
   background-color: #FFA500;
   background-color: rgba(255, 165, 0, 0.7);
 }
+.rize-profiles-category-loop-list-item-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 @media screen and (min-width: 700px) {
   .rize-profiles-banner-cutline {
     padding: 10px;
