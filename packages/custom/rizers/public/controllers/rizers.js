@@ -36,3 +36,15 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
 
   }
 ]);
+
+/**** the following code make the dropdown menu hide when you click anywhere else in the doc ****/
+angular.module('mean.rizers').run(function($rootScope) {
+  angular.element(document).on("click", function(e) {
+      $rootScope.$broadcast("documentClicked", angular.element(e.target));
+  });
+  $rootScope.$on("documentClicked", function(inner, target) {
+    if (!$(target[0]).is(".menu-button") && !$(target[0]).parents(".menu-button").length > 0) {
+      document.getElementById("dropdown-nav").classList.remove("show");
+    }
+  });
+});
