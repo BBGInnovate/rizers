@@ -10,8 +10,8 @@
 	<article class="rize-profile ">
 			<div class="rize-profiles-nav-buttons">
 				<div class="rize-profiles-nav-buttons-container">
-					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous">{{account.prevAccount.display_name}}</a> 
-					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next">{{account.nextAccount.display_name}}</a>
+					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile">{{account.prevAccount.display_name}}</a> 
+					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile">{{account.nextAccount.display_name}}</a>
 				</div>
 			</div>
 			<header class="rize-profile-header">
@@ -40,7 +40,21 @@
 					}
 				</style>
 				<div class="rize-profiles-banner-box">
-					<a href="/categories/{{ account.profile.categoryData.id }}/{{account.profile.categoryData.name | linkSafeString}}"><div class="rize-profiles-category">{{ account.profile.categoryData.name }}</div></a>
+					<div class="rize-profiles-category">
+						<a href="/categories/{{ account.profile.categoryData.id }}/{{account.profile.categoryData.name | linkSafeString}}" class="rize-profiles-category-link">{{ account.profile.categoryData.name }}</a>
+
+						<div class="rize-profiles-category-loop">
+							<ul class="rize-profiles-category-loop-list">
+								<li class="rize-profiles-category-loop-list-item"><a href=""></a></li>
+								<li class="rize-profiles-category-loop-list-item"><a href=""></a></li>
+								<li class="rize-profiles-category-loop-list-item"><a href=""></a></li>
+								<li class="rize-profiles-category-loop-list-item selected"><a href=""></a></li>
+								<li class="rize-profiles-category-loop-list-item"><a href=""></a></li>
+								<li class="rize-profiles-category-loop-list-item"><a href=""></a></li>
+							</ul>
+						</div>
+					</div>
+
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
@@ -55,12 +69,14 @@
 					<h3 class="rize-profiles-person-job_title">{{ account.tagline }}</h3>
 				</div>
 			</header>
+
 			<div class="rize-profiles-grid clearfix">
+
 				<aside class="rize-profiles-aside-left">
+
 					<div class="rize-profile-social">
 						<h3 class="rize-profile-social-label rize-profile-label">Follow {{account.first_name}} online: </h3>
 						<ul class="rize-profile-social-list">
-
 							<li ng-if="account.url" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="Website"><span>Website</span></a></li>
 							<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}" title="Twitter"><span>{{account.twitter.screen_name}}</span></a></li>
 							<li ng-if="account.linkedin.url" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="LinkedIn"><span>LinkedIn</span></a></li>
@@ -68,7 +84,6 @@
 
 							<li ng-if="account.instagram_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.instagram_url}}" title="Instagram"><span>Instagram</span></a></li>
 							<li ng-if="account.youtube" class="rize-profile-social-link rize-icon-youtube"> <a href="{{account.youtube}}" title="YouTube"><span>YouTube</span></a></li>
-
 						</ul>
 					</div>
 
@@ -117,5 +132,25 @@
 	</article><!-- profile -->
 
 </div><!-- #main -->
+
+<script type="text/javascript">
+	document.onkeydown = checkKey;
+
+	function checkKey(e) {
+
+	    e = e || window.event;
+
+	    if (e.keyCode == '37') {
+			// right arrow
+			var previous = document.getElementById("previousProfile");
+			previous.click();
+	    }
+	    else if (e.keyCode == '39') {
+			// right arrow
+			var next = document.getElementById("nextProfile");
+			next.click();
+	    }
+	}
+</script>
 
 </section>

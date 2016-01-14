@@ -11,13 +11,14 @@
 </footer>
 -->
 <script type="text/javascript">
-// Get the button, and when the user clicks on it, execute myFunction
-document.getElementById("menu_btn").onclick = function() {openNav()};
+	// Get the button, and when the user clicks on it, execute myFunction
+	document.getElementById("menu_btn").onclick = function() {openMenu()};
 
-/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-function openNav() {
-  document.getElementById("dropdown-nav").classList.toggle("show");
-}
+	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+	function openMenu() {
+	  document.getElementById("dropdown-nav").classList.toggle("show");
+	  //$( "#dropdown-nav" ).toggleClass( "show" );
+	}
 </script>
 
 

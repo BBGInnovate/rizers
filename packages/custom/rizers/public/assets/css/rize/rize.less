@@ -53,6 +53,11 @@
 @column-width-side:       20%;
 @top-nav-width:           200px;
 
+// Next / previous buttons
+@button-next-width: 45px;
+@button-next-height: 90px;
+@button-next-container-width: 90px;
+@button-next-padding: 5px;
 
 
 html {
@@ -431,24 +436,24 @@ a {
 
 	.rize-profiles-nav-buttons-container{
 		margin: 0 auto;
-		max-width: @max-width + 190px;
+		max-width: @max-width + 2*@button-next-container-width + 2*@button-next-padding + 20px;
 	}
 
 	.rize-profiles-nav-buttons a {
 		background-repeat: no-repeat;
-		background-size: 45px 90px;
-		color: #999;
+		background-size: @button-next-width @button-next-height;
+		color: @color-medium-gray;
 		height: 70px;
 		padding: 95px 0 0 0;
 		text-decoration: none;
-		width: 90px;
+		width: @button-next-container-width;
 	}
 
 	.rize-profiles-nav-buttons-previous{
 		background-position: right top;
 		background-image: url(../img/button_previous_gray.png);
 		float: left;
-		padding-right: 5px !important;
+		padding-right: @button-next-padding !important;
 		text-align: right;
 	}
 
@@ -456,7 +461,7 @@ a {
 		background-position: left top;
 		background-image: url(../img/button_next_gray.png);
 		float: right;
-		padding-left: 5px !important;
+		padding-left: @button-next-padding !important;
 		text-align: left;
 	}
 	.rize-profiles-nav-buttons-previous:hover{
@@ -469,19 +474,20 @@ a {
 
 
 
-
-
 /******************/
 /* Featured image */
 .rize-profiles-category {
-	.backgroundColorTransparent(@color-accent-secondary);
-	color: #FFF;
 	font-size: 1.5rem;
-	padding: 7px 12px;
 	position: absolute;
 		left: 0;
 		top: 0;
 	text-transform: uppercase;
+}
+.rize-profiles-category-link{
+	.backgroundColorTransparent(@color-accent-secondary);
+	color: #FFF;
+	padding: 7px 12px;
+	text-decoration: none;
 }
 
 .rize-profiles-banner-cutline {
@@ -494,6 +500,30 @@ a {
 		left: 0;
 	width: 90%;
 	z-index: 9999;
+}
+
+.rize-profiles-category-loop{
+	display: inline-block;
+	margin-left: 1rem;
+}
+
+
+.rize-profiles-category-loop-list{
+	margin-top: 0;
+}
+
+.rize-profiles-category-loop-list-item{
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	display: inline-block;
+	height: 1rem;
+	list-style-type: none;
+	margin-right: 2px;
+	margin-top: 5px;
+	width: 1rem;
+}
+.rize-profiles-category-loop-list-item.selected{
+	.backgroundColorTransparent(@color-accent-primary);
 }
 
 @media screen and (min-width: @medium-screen) {
@@ -529,7 +559,7 @@ a {
 .rize-profiles-mugshot-photo {
 	background-color: #FFF;
 	border: 5px solid #FFF;
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 	max-width: 100%;
 }
 
@@ -635,6 +665,11 @@ a {
 
 /******************/
 /* profile styles */
+
+.rize-profile-description-byline{
+	text-align: right;
+}
+
 .rize-profiles-quotation-text {
 	color: #333;
 	font-size: 2rem;

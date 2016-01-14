@@ -680,7 +680,7 @@ a {
   }
   .rize-profiles-nav-buttons-container {
     margin: 0 auto;
-    max-width: 1214px;
+    max-width: 1234px;
   }
   .rize-profiles-nav-buttons a {
     background-repeat: no-repeat;
@@ -715,15 +715,18 @@ a {
 /******************/
 /* Featured image */
 .rize-profiles-category {
-  background-color: #57ad68;
-  background-color: rgba(87, 173, 104, 0.7);
-  color: #FFF;
   font-size: 1.5rem;
-  padding: 7px 12px;
   position: absolute;
   left: 0;
   top: 0;
   text-transform: uppercase;
+}
+.rize-profiles-category-link {
+  background-color: #57ad68;
+  background-color: rgba(87, 173, 104, 0.7);
+  color: #FFF;
+  padding: 7px 12px;
+  text-decoration: none;
 }
 .rize-profiles-banner-cutline {
   background-color: #333;
@@ -736,6 +739,27 @@ a {
   left: 0;
   width: 90%;
   z-index: 9999;
+}
+.rize-profiles-category-loop {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.rize-profiles-category-loop-list {
+  margin-top: 0;
+}
+.rize-profiles-category-loop-list-item {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  display: inline-block;
+  height: 1rem;
+  list-style-type: none;
+  margin-right: 2px;
+  margin-top: 5px;
+  width: 1rem;
+}
+.rize-profiles-category-loop-list-item.selected {
+  background-color: #FFA500;
+  background-color: rgba(255, 165, 0, 0.7);
 }
 @media screen and (min-width: 700px) {
   .rize-profiles-banner-cutline {
@@ -765,7 +789,7 @@ a {
 .rize-profiles-mugshot-photo {
   background-color: #FFF;
   border: 5px solid #FFF;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   max-width: 100%;
 }
 .rize-profiles-person {
@@ -850,6 +874,9 @@ a {
 }
 /******************/
 /* profile styles */
+.rize-profile-description-byline {
+  text-align: right;
+}
 .rize-profiles-quotation-text {
   color: #333;
   font-size: 2rem;
