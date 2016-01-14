@@ -17,9 +17,14 @@ module.exports = function(System){
 		showOne:function(req,res) {
 			var account= rizeAPI.getOneProfile(req.params.id);
 			var category=rizeAPI.getOneCategory(account.profile.category)
+			var categoryListing= new Array();
 
 			for (var i=0; i < category.accounts.length;i++) {
+				var curr = category.accounts[i];
+				var currAccount={selected:"",index:i,display_name:curr.display_name, id:curr.id, profileImage:curr.profile.profileImage, image:curr.profile.image}
+
 				if (category.accounts[i].id==account.id) {
+					currAccount.selected="selected";
 					var nextAccountIndex=i+1;
 					var prevAccountIndex=i-1;
 					if (i==0) {
@@ -29,10 +34,14 @@ module.exports = function(System){
 					}
 					var prev = category.accounts[prevAccountIndex];
 					var next = category.accounts[nextAccountIndex];
+					
 					account.prevAccount={display_name:prev.display_name,id:prev.id, profileImage:prev.profile.profileImage, image:prev.profile.image}
 					account.nextAccount={display_name:next.display_name,id:next.id, profileImage:next.profile.profileImage, image:next.profile.image}
+					
 				}
+				categoryListing.push(currAccount);
 			}
+			account.categoryListing=categoryListing;
 			res.json(account);
 		}
 	};
