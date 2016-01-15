@@ -25,6 +25,7 @@ module.exports = function(System){
       }
       if (categories.length > 0) {
         var userAgent = req.headers['user-agent'];
+        var fragment="";
         if (userAgent.indexOf('facebookexternalhit') >= 0) {
           fragment = req.originalUrl;
           console.log("the facebook fragment is " + fragment);
