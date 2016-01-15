@@ -24,28 +24,29 @@ module.exports = function(System){
         categories[i].safeName=str2;
       }
       if (categories.length > 0) {
+
+        /** facebook doesn't obey the meta tag about fragments, so we detect user agent and behave appropriately **/
         var userAgent = req.headers['user-agent'];
-        var fragment="";
         if (userAgent.indexOf('facebookexternalhit') >= 0) {
-          fragment = req.originalUrl;
-          console.log("the facebook fragment is " + fragment);
-          req.query._escaped_fragment_=fragment;
+          req.query._escaped_fragment_=req.originalUrl;
         }
 
-        //console.log("lets check the request");
         if(typeof(req.query._escaped_fragment_) !== 'undefined') {
-            var translatedURL=config.applicationUrl + req.query._escaped_fragment_;
-            var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + req.query._escaped_fragment_;
+            var translatedURL=config.applicationUrl;
+            if (req.query._escaped_fragment_.charAt(0)=="/") {
+              translatedURL+=req.query._escaped_fragment_.substr(1);
+            } else {
+              translatedURL+=req.query._escaped_fragment_;
+            }
             var simpleRender=false;
             if (translatedURL.indexOf("/accounts/") != -1 ) {
                var urlArray=translatedURL.split("/");
-               if (urlArray.length > 5) {
-                  var accountID=urlArray[5];
+               if (urlArray.length > 4) {
+                  var accountID=urlArray[4];
                   if (accountID != null && accountID != "") {
                     console.log("render simpleSEO for accountID " + accountID);
                     var account = rizeAPI.getOneProfile(accountID);
                     account.profileUrl=translatedURL;
-                    account.fbUrl=fbUrl;
                     simpleRender=true;
                     res.render('rizeSEO',{
                         account:account
