@@ -1,8 +1,8 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global', 'Rizers','$http','$stateParams', 
-  function($scope, Global, Rizers,$http,$stateParams) {
+angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global', 'Rizers','$http','$stateParams','$location', 
+  function($scope, Global, Rizers,$http,$stateParams,$location) {
       $scope.global = Global;
       $scope.package = {
         name: 'rizers'
@@ -17,11 +17,14 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
       $scope.findOneAccount = function() {
         $http.get('/api/accounts/'+ $stateParams.accountId).success(function(data) {
       		
-          $scope.showMap=false;
-          if (data.city.latitude) {
-            $scope.showMap=true;
-          }
-          $scope.account=data;
+            $scope.showMap=false;
+            if (data.city.latitude) {
+              $scope.showMap=true;
+            }
+            $scope.account=data;
+            $scope.shareURL = $location.$$absUrl;
+            $scope.shareURLEncoded = $location.$$absUrl;
+            $scope.twitterShareText="Check out " + data.display_name + " on 2016 Rizers";
 
       	  });	
       };
