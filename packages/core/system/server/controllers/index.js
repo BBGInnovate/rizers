@@ -76,7 +76,8 @@ module.exports = function(System){
           } else {
             res.render('index',{
                 categories:categories, 
-                rizeConfig:JSON.stringify(rizeConfig), 
+                rizeConfig:JSON.stringify(rizeConfig),
+                applicationUrl:rizeConfig.applicationUrl, 
                 locals: {config: System.config.clean}
             });  
           }
