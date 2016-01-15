@@ -33,8 +33,8 @@ module.exports = function(System){
 
         //console.log("lets check the request");
         if(fragment) {
-            var translatedURL=config.applicationUrl + req.query._escaped_fragment_;
-            var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + req.query._escaped_fragment_;
+            var translatedURL=config.applicationUrl + fragment;
+            var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + fragment;
             var simpleRender=false;
             if (translatedURL.indexOf("/accounts/") != -1 ) {
                var urlArray=translatedURL.split("/");
