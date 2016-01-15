@@ -24,8 +24,15 @@ module.exports = function(System){
         categories[i].safeName=str2;
       }
       if (categories.length > 0) {
+        var userAgent = req.headers['user-agent'];
+        var fragment = req.query._escaped_fragment_;
+        if (userAgent.indexOf('facebookexternalhit') >= 0) {
+          console.log("facebook is here!!");
+          fragment = req.url;
+        }
+
         //console.log("lets check the request");
-        if(typeof(req.query._escaped_fragment_) !== 'undefined') {
+        if(fragment) {
             var translatedURL=config.applicationUrl + req.query._escaped_fragment_;
             var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + req.query._escaped_fragment_;
             var simpleRender=false;
