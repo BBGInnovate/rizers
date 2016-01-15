@@ -1,0 +1,27 @@
+<!-- begin system/server/views/layouts/rizeIndex.html -->
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" itemscope="itemscope" itemtype="http://schema.org/Product">
+<head>
+    <title>{{account.title}}</title>
+    <meta property="description" content="{{account.summary}}'" />
+
+    <!-- for Facebook -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{account.display_name}}" />
+    <meta property="og:description" content="{{account.rize_summary}}'" />
+    <meta property="og:image" content="{{account.profile.image}}" />
+    <meta property="og:url" content="{{account.profileUrl}}" />
+
+    <!-- for Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AfricaRizing">
+    <meta property="twitter:title" content="2016 Rizers">
+    <meta property="twitter:description" content="people supporting new businesses in Africa and around the diaspora">
+    <meta property="twitter:image" content="{{account.profile.image}}">
+
+</head>
+<body>
+    {{account.content}}
+</body>
+</html>

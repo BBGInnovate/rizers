@@ -26,22 +26,40 @@ module.exports = function(System){
       if (categories.length > 0) {
         //console.log("lets check the request");
         if(typeof(req.query._escaped_fragment_) !== 'undefined') {
-            //console.log("PHANTOM JS - indexJS called!");
             var translatedURL=config.applicationUrl + req.query._escaped_fragment_;
-            phantom.create(function(ph) {
-              ph.createPage(function(page) {
-                //console.log('opening page ' + translatedURL);
-                page.open(translatedURL, function(status) {
-                  page.evaluate((function() {   // jshint ignore:line
-                    return document.getElementsByTagName('html')[0].innerHTML;
-                  }), function(result) {
-                    res.send(result);
-                    return ph.exit();
-                    //ph._phantom.kill('SIGTERM');
+            var simpleRender=false;
+            if (translatedURL.indexOf("/accounts/") != -1 ) {
+               var urlArray=translatedURL.split("/");
+               if (urlArray.length > 5) {
+                  var accountID=urlArray[5];
+                  if (accountID != null && accountID != "") {
+                    console.log("render simpleSEO for accountID " + accountID);
+                    var account = rizeAPI.getOneProfile(accountID);
+                    account.profileUrl=translatedURL;
+                    simpleRender=true;
+                    res.render('rizeSEO',{
+                        account:account
+                    });     
+                  }
+               }
+            } 
+            if (!simpleRender) {
+                console.log('running phantomJS for ' + translatedURL);
+                phantom.create(function(ph) {
+                  ph.createPage(function(page) {
+                    //console.log('opening page ' + translatedURL);
+                    page.open(translatedURL, function(status) {
+                      page.evaluate((function() {   // jshint ignore:line
+                        return document.getElementsByTagName('html')[0].innerHTML;
+                      }), function(result) {
+                        res.send(result);
+                        return ph.exit();
+                        //ph._phantom.kill('SIGTERM');
+                      });
+                    });
                   });
                 });
-              });
-            });
+            }
           // If there is no _escaped_fragment_, we return the normal index template.
           } else {
             res.render('index',{
