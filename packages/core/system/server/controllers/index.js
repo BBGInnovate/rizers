@@ -25,16 +25,16 @@ module.exports = function(System){
       }
       if (categories.length > 0) {
         var userAgent = req.headers['user-agent'];
-        var fragment = req.query._escaped_fragment_;
         if (userAgent.indexOf('facebookexternalhit') >= 0) {
-          console.log("facebook is here!!");
-          fragment = req.url;
+          fragment = req.originalUrl;
+          console.log("the facebook fragment is " + fragment);
+          req.query._escaped_fragment_=fragment;
         }
 
         //console.log("lets check the request");
-        if(fragment) {
-            var translatedURL=config.applicationUrl + fragment;
-            var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + fragment;
+        if(typeof(req.query._escaped_fragment_) !== 'undefined') {
+            var translatedURL=config.applicationUrl + req.query._escaped_fragment_;
+            var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + req.query._escaped_fragment_;
             var simpleRender=false;
             if (translatedURL.indexOf("/accounts/") != -1 ) {
                var urlArray=translatedURL.split("/");
