@@ -26,6 +26,11 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
             $scope.shareURLEncoded = $location.$$absUrl;
             $scope.twitterShareText="Check out " + data.display_name + " on 2016 Rizers";
 
+            console.log('tell google we went to ' + $location.path());
+            ga('set', 'page', $location.path());
+            ga('send', 'pageview');
+
+
       	  });	
       };
 
