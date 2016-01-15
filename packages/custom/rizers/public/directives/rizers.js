@@ -7,22 +7,30 @@ angular.module('mean.rizers').directive('fbShare', [
 		return {
 			restrict: 'A',
 			link: function(scope, element) {
-				element.on('click', function() {
-					var link = '';
-					var name = '';
-					var picture = '';
-					var description = '  ';
-					/* if (scope.news) {
-						link = scope.news.shareURL; */
-					FB.ui({
-						method: 'feed',
-						name: name,
-						link: link,
-						picture: picture,
-						caption: ' ',
-						description: description,
-						message: ' '
-					});
+				element.on('click', function(e) {
+					var link = 'http://google.com';
+					var name = 'test2';
+					var picture = 'test3';
+					var description = 'test4';
+					var shareConfig = {
+						Width: 500,
+						Height: 500
+					};
+
+				    // popup position
+				    var px = Math.floor(((screen.availWidth || 1024) - shareConfig.Width) / 2),
+				        py = Math.floor(((screen.availHeight || 700) - shareConfig.Height) / 2);
+
+				    // open popup
+				    var popup = window.open(this.href, "social", 
+				        "width="+shareConfig.Width+",height="+shareConfig.Height+
+				        ",left="+px+",top="+py+
+				        ",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1");
+				    if (popup) {
+				        popup.focus();
+				        if (e.preventDefault) e.preventDefault();
+				        e.returnValue = false;
+				    }
 				});
 			}
 		};
