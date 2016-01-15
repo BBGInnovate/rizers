@@ -25,9 +25,10 @@ module.exports = function(System){
       }
       if (categories.length > 0) {
 
-        /** facebook doesn't obey the meta tag about fragments, so we detect user agent and behave appropriately **/
+        /** facebook/twitter don't obey the meta tag about fragments, so we detect user agent and behave appropriately **/
+        /* for FB this is important for regular shares - for Twitter it's so that card detail views show images */
         var userAgent = req.headers['user-agent'];
-        if (userAgent.indexOf('facebookexternalhit') >= 0) {
+        if (userAgent.indexOf('facebookexternalhit') >= 0 || userAgent.indexOf('Twitterbot') >= 0) {
           req.query._escaped_fragment_=req.originalUrl;
         }
 
