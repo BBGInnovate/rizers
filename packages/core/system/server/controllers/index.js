@@ -27,6 +27,7 @@ module.exports = function(System){
         //console.log("lets check the request");
         if(typeof(req.query._escaped_fragment_) !== 'undefined') {
             var translatedURL=config.applicationUrl + req.query._escaped_fragment_;
+            var fbUrl=config.applicationUrl + "?_escaped_fragment_=" + req.query._escaped_fragment_;
             var simpleRender=false;
             if (translatedURL.indexOf("/accounts/") != -1 ) {
                var urlArray=translatedURL.split("/");
@@ -36,6 +37,7 @@ module.exports = function(System){
                     console.log("render simpleSEO for accountID " + accountID);
                     var account = rizeAPI.getOneProfile(accountID);
                     account.profileUrl=translatedURL;
+                    account.fbUrl=fbUrl;
                     simpleRender=true;
                     res.render('rizeSEO',{
                         account:account
