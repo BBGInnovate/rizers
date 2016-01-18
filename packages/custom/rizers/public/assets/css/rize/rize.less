@@ -74,8 +74,10 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
-.rizeContainer{
+.rizeContent {
+	margin-top: 5.1rem;
+}
+.rizeContainer {
 	margin: 0 auto;
 	max-width: @max-width;
 	position: relative;
@@ -136,6 +138,10 @@ a {
 .rize-profiles-header {
 	margin: 0;
 	padding: 0;
+	position: fixed;
+		top: 0;
+	width: 100%;
+	z-index: 9999;
 }
 .rize-profiles-header-box {
 	background-color: @color-dark-gray;
@@ -154,9 +160,11 @@ a {
 .rize-profiles-header-title {
 	color: #FFF;
 	font-size: 2.5rem;
+	height: 4rem;
 	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
+	width: 100%;
 }
 
 .rize-profiles-header-title a {
@@ -485,6 +493,7 @@ a {
 }
 .rize-profiles-category-link{
 	.backgroundColorTransparent(@color-accent-secondary);
+	background-color: @color-accent-secondary;
 	color: #FFF;
 	padding: 7px 12px;
 	text-decoration: none;
@@ -513,12 +522,13 @@ a {
 }
 
 .rize-profiles-category-loop-list-item{
-	background-color: #FFF;
-	border: 1px solid #CCC;
+	background-color: rgba(250,250,250,.5);
+	border: 1px solid #999;
+	border-radius: 50%;
 	display: inline-block;
 	height: 1rem;
 	list-style-type: none;
-	margin-right: 2px;
+	margin-right: 4px;
 	margin-top: 5px;
 	width: 1rem;
 }
@@ -746,6 +756,7 @@ a {
 }
 
 .rize-profile-social-label {
+	margin-bottom: 0;
 	margin-right: 10px;
 }
 
@@ -809,6 +820,7 @@ a {
 @media screen and (min-width: @medium-screen) {
 	.rize-profile-social-label {
 		display: block;
+		margin-bottom: 1rem;
 	}
 
 	.rize-profile-social-list {
