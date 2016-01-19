@@ -18,7 +18,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
     		  $scope.accounts=data;
 
           console.log('notify google - account list page ' + $location.path());
-          //sendGA();
+          sendGA();
           
 
     	  });
