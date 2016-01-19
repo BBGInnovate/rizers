@@ -52,6 +52,8 @@
 @margin-large:            2%;
 @column-width-side:       20%;
 @top-nav-width:           200px;
+@height-small:            400px;
+@height-large:            500px;
 
 // Next / previous buttons
 @button-next-width: 45px;
@@ -356,7 +358,7 @@ a {
 .rize-profiles-banner-box {
 	background-color: @color-light-light-gray;
 	.backgroundCover;
-	height: 300px;
+	height: @height-small;
 	position: relative;
 	width: 100%;
 }
@@ -415,7 +417,7 @@ a {
 
 @media screen and (min-width: @large-screen) {
 	.rize-profiles-banner-box {
-		height: 500px;
+		height: @height-large;
 	}
 
 	.rize-profile-header {
@@ -969,12 +971,12 @@ a {
 .rize-list-categories-featured {
 	background-color: @color-dark-gray;
 	/*background: url(/rizers/assets/img/front_grid_1.png) no-repeat top left;*/
-	height: 500px;
+	height: @height-small;
 }
 
 .rize-list-categories-link{
 	margin-bottom: 0;
-	min-height: 500px; 
+	min-height: @height-small; 
 	position: relative;
 	text-align: center;
 }
@@ -1002,6 +1004,61 @@ a {
 	margin-top: 0;
 }
 
+.rize-list-categories-menu-list {
+	text-align: center;
+}
+
+.rize-list-categories-menu-list-item {
+	display: inline-block;
+	height: auto;
+	width: auto;
+}
+
+.rize-list-categories-menu-list-item-link {
+	display: inline-block !important;
+	margin: 0 2rem;
+	padding: 0 !important;
+	width: auto !important;
+}
+.rize-list-categories-menu-list-item:after{
+	color: #666;
+	content: "|";
+}
+.rize-list-categories-menu-list-item:last-of-type:after{
+	content: ""
+}
+
+.rize-list-categories-1{
+	background-color: @color-accent-primary;
+}
+
+.rize-list-categories-2{
+	background-color: @color-medium-gray;
+}
+
+.rize-list-categories-3{
+	background-color: @color-dark-gray;
+}
+
+.rize-list-categories-4{
+	background-color: @color-light-gray;
+}
+
+.rize-list-categories-5{
+	background-color: @color-accent-secondary;
+}
+
+.rize-list-categories-6{
+	background-color: @color-medium-gray;
+}
+
+
+
+@media screen and (min-width: @large-screen) {
+	.rize-list-categories-featured {
+		height: @height-large;
+	}
+}
 
 
 

@@ -5,9 +5,18 @@
 		<article class="rize-list-profile rize-list-categories rize-list-categories-featured" style="position: relative;">
 			<div class="rize-list-categories-text" style="margin: 0 auto; width: 100%;">
 				<h1 style="color: orange; font-size: 5rem; line-height: 1.2; margin: 0 auto; text-shadow: 1px 1px 4px #333; bottom: 50%; text-align: center; width: 80%;">The movers, shakers and next generation leaders to watch in 2016</h1>
+
+				<div>
+					<ul class="rize-list-categories-menu-list">
+						<li ng-repeat="category in categoryList" class="rize-list-categories-menu-list-item">
+							<a ng-model="organization" class="rize-list-categories-menu-list-item-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">{{ category.name }}</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</article>
-		<article ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories rize-list-categories-{{category.id}}"  style="background-color: {{ category.color }};">
+		<article ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories rize-list-categories-{{category.id}}">
 			<a ng-model="organization" class="rize-list-categories-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
 				<div class="rize-list-categories-text">
 					<h2 class="rize-list-categories-title">{{ category.name }}</h2>
