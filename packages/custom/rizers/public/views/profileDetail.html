@@ -9,8 +9,8 @@
 	<article class="rize-profile ">
 			<div class="rize-profiles-nav-buttons">
 				<div class="rize-profiles-nav-buttons-container">
-					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile">{{account.prevAccount.display_name}}</a> 
-					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile">{{account.nextAccount.display_name}}</a>
+					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile" title="{{account.prevAccount.display_name}}">{{account.prevAccount.display_name}}</a> 
+					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile" title="{{account.nextAccount.display_name}}">{{account.nextAccount.display_name}}</a>
 				</div>
 			</div>
 			<header class="rize-profile-header">
@@ -40,11 +40,11 @@
 				</style>
 				<div class="rize-profiles-banner-box">
 					<div class="rize-profiles-category">
-						<a href="/categories/{{ account.profile.categoryData.id }}/{{account.profile.categoryData.name | linkSafeString}}" class="rize-profiles-category-link">{{ account.profile.categoryData.name }}</a>
+						<a href="/categories/{{ account.profile.categoryData.id }}/{{ account.profile.categoryData.name | linkSafeString }}" class="rize-profiles-category-link">{{ account.profile.categoryData.name }}</a>
 
 						<div class="rize-profiles-category-loop">
 							<ul class="rize-profiles-category-loop-list">
-								<li ng-repeat="catAccount in account.categoryListing" class="rize-profiles-category-loop-list-item {{catAccount.selected}}"><a href="/accounts/{{ catAccount.id }}/{{catAccount.display_name | linkSafeString}}" class="rize-profiles-category-loop-list-item-link"></a></li>
+								<li ng-repeat="catAccount in account.categoryListing" class="rize-profiles-category-loop-list-item {{ catAccount.selected }}"><a href="/accounts/{{ catAccount.id }}/{{ catAccount.display_name | linkSafeString }}" title="{{ catAccount.display_name }}" class="rize-profiles-category-loop-list-item-link"></a></li>
 							</ul>
 						</div>
 					</div>
