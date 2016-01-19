@@ -10,6 +10,12 @@
 	</div>
 </footer>
 -->
+<footer class="rize-footer">
+	<div class="rize-footer-site-info">
+		<div id="attribution"><a href="https://africa.rizing.org/">Africa Rizing</a> is the first publication from Project Rize, a new initiative from the <a href="http://bbg.gov/">BBG</a> to promote open discourse, democratic ideals and sustainable, civil societies throughout the world.<br/><a href="https://africa.rizing.org/about">Mission</a>, <a href="https://africa.rizing.org/privacy">Privacy Policy</a> & <a href="https://africa.rizing.org/terms">Terms</a> </div>
+	</div><!-- .site-info -->
+</footer><!-- .site-footer -->
+
 <script type="text/javascript">
 	// Get the button, and when the user clicks on it, execute myFunction
 	document.getElementById("menu_btn").onclick = function() {openMenu()};
@@ -17,25 +23,24 @@
 	/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
 	function openMenu() {
 	  document.getElementById("dropdown-nav").classList.toggle("show");
-	  //$( "#dropdown-nav" ).toggleClass( "show" );
 	}
 </script>
 
 <script>
   window.fbAsyncInit = function() {
-    FB.init({
-      appId      : rizeConfig.fbAppID,
-      xfbml      : true,
-      version    : 'v2.5'
-    });
+	FB.init({
+	  appId      : rizeConfig.fbAppID,
+	  xfbml      : true,
+	  version    : 'v2.5'
+	});
   };
 
   (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
+	 var js, fjs = d.getElementsByTagName(s)[0];
+	 if (d.getElementById(id)) {return;}
+	 js = d.createElement(s); js.id = id;
+	 js.src = "//connect.facebook.net/en_US/sdk.js";
+	 fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
 

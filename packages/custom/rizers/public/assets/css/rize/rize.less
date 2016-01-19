@@ -87,8 +87,10 @@ body {
 
 .rize-main-content {
 	background-color: #FFF;
+	/*
 	border-left: 1px solid @color-light-gray;
 	border-right: 1px solid @color-light-gray;
+	*/
 	margin: 0 auto;
 	max-width: @max-width;
 	padding: 0;
@@ -213,13 +215,26 @@ a {
 /***************/
 /* Site footer */
 .rize-footer {
-	background-color: transparent;
-	bottom: 0;
+	background-color: @color-dark-gray;
 	box-shadow: none;
+	color: @color-medium-gray;
+	margin: 0 auto;
+	max-width: @max-width;
+	padding: 0;
+	position: relative;
+	/*
 	position: fixed;
+		bottom: 0;
+	*/
 	width: 100%;
 	z-index: 9999;
 }
+
+.rize-footer-site-info {
+	padding: 2rem @margin-small;
+	text-align: center;
+}
+
 .rize-footer-nav {
 	background-color: @color-dark-gray;
 	color: #FFF;
@@ -227,17 +242,20 @@ a {
 	margin: 0 auto;
 	max-width: @max-width;
 }
+
 .rize-footer-nav-links {
 	margin: 0;
 }
-.rize-footer-nav-links li{
+
+.rize-footer-nav-links li {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 	width: 24%;
 }
-.rize-footer-nav-links li a{
+
+.rize-footer-nav-links li a {
 	border-right: 1px solid @color-medium-gray;
 	color: #FFF;
 	display: inline-block;
@@ -248,20 +266,26 @@ a {
 	text-transform: uppercase;
 	width: 100%;
 }
-.rize-footer-nav-links li:last-of-type a{
+
+.rize-footer-nav-links li:last-of-type a {
 	border-right: none;
 }
 
+@media screen and (min-width: @medium-screen) {
+	.rize-footer-site-info {
+		padding: 2rem @margin-large;
+	}
+}
 
 
 /****************************/
 /* Site category navigation */
 .rize-nav-categories {
 	max-width: @max-width;
-	position: absolute;
+	position: fixed;
 		top: -100%;
 	width: 100%;
-	z-index: 9999;
+	z-index: 9998;
 }
 .rize-nav-categories.show {
 	animation: toggleNav .5s forwards;
@@ -273,7 +297,7 @@ a {
 	}
 
 	100% {
-		top: 0px;
+		top: 5.1rem;
 	}
 }
 
@@ -304,9 +328,9 @@ a {
 @media screen and (min-width: @medium-screen) {
 
 	.rize-nav-categories {
-		position: absolute;
+		position: fixed;
 			right: -@top-nav-width;
-			top: 0;
+			top: 5.1rem;
 		width: @top-nav-width;
 	}
 

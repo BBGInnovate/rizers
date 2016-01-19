@@ -380,8 +380,10 @@ body {
 }
 .rize-main-content {
   background-color: #FFF;
-  border-left: 1px solid #CCC;
-  border-right: 1px solid #CCC;
+  /*
+	border-left: 1px solid @color-light-gray;
+	border-right: 1px solid @color-light-gray;
+	*/
   margin: 0 auto;
   max-width: 1024px;
   padding: 0;
@@ -491,12 +493,23 @@ a {
 /***************/
 /* Site footer */
 .rize-footer {
-  background-color: transparent;
-  bottom: 0;
+  background-color: #333;
   box-shadow: none;
-  position: fixed;
+  color: #999;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0;
+  position: relative;
+  /*
+	position: fixed;
+		bottom: 0;
+	*/
   width: 100%;
   z-index: 9999;
+}
+.rize-footer-site-info {
+  padding: 2rem 5%;
+  text-align: center;
 }
 .rize-footer-nav {
   background-color: #333;
@@ -529,14 +542,19 @@ a {
 .rize-footer-nav-links li:last-of-type a {
   border-right: none;
 }
+@media screen and (min-width: 700px) {
+  .rize-footer-site-info {
+    padding: 2rem 2%;
+  }
+}
 /****************************/
 /* Site category navigation */
 .rize-nav-categories {
   max-width: 1024px;
-  position: absolute;
+  position: fixed;
   top: -100%;
   width: 100%;
-  z-index: 9999;
+  z-index: 9998;
 }
 .rize-nav-categories.show {
   animation: toggleNav .5s forwards;
@@ -546,7 +564,7 @@ a {
     top: -100%;
   }
   100% {
-    top: 0px;
+    top: 5.1rem;
   }
 }
 .rize-nav-categories-list {
@@ -572,9 +590,9 @@ a {
 }
 @media screen and (min-width: 700px) {
   .rize-nav-categories {
-    position: absolute;
+    position: fixed;
     right: -200px;
-    top: 0;
+    top: 5.1rem;
     width: 200px;
   }
   .rize-nav-categories.show {
