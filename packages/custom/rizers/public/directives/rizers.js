@@ -31,6 +31,7 @@ angular.module('mean.rizers').directive('fbShare', [
 				        if (e.preventDefault) e.preventDefault();
 				        e.returnValue = false;
 				    }
+				    return !!popup;
 				});
 			}
 		};
@@ -62,6 +63,7 @@ angular.module('mean.rizers').directive('twShare', [
 				        if (e.preventDefault) e.preventDefault();
 				        e.returnValue = false;
 				    }
+				    return !!popup;
 				});
 			}
 		};
