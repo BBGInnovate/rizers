@@ -135,19 +135,18 @@
 	document.onkeydown = checkKey;
 
 	function checkKey(e) {
+		e = e || window.event;
 
-	    e = e || window.event;
-
-	    if (e.keyCode == '37') {
+		if (e.keyCode == '37') {
 			// right arrow
 			var previous = document.getElementById("previousProfile");
 			previous.click();
-	    }
-	    else if (e.keyCode == '39') {
+		}
+		else if (e.keyCode == '39') {
 			// right arrow
 			var next = document.getElementById("nextProfile");
 			next.click();
-	    }
+		}
 	}
 </script>
 
