@@ -8,13 +8,24 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
         name: 'rizers'
       };
 
+      function sendGA() {
+        ga('set', 'page', $location.path());
+        ga('send', 'pageview');
+      }
+
       $scope.findAccounts = function() {
         $http.get('/api/accounts/').success(function(data) {
     		  $scope.accounts=data;
+
+          console.log('notify google - account list page ' + $location.path());
+          //sendGA();
+          
+
     	  });
       };
 
       $scope.findOneAccount = function() {
+        /* this is called by the profile detail view */
         $http.get('/api/accounts/'+ $stateParams.accountId).success(function(data) {
       		
             $scope.showMap=false;
@@ -26,25 +37,37 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
             $scope.shareURLEncoded = $location.$$absUrl;
             $scope.twitterShareText="Check out " + data.display_name + " on 2016 Rizers";
 
-            console.log('tell google we went to ' + $location.path());
-            ga('set', 'page', $location.path());
-            ga('send', 'pageview');
+            console.log('notify google - profile detail page ' + $location.path());
+            sendGA();
 
 
       	  });	
       };
 
       $scope.findCategory = function() {
+        
+        /* this is called by the category detail page */
+        
         $http.get('/api/categories/'+$stateParams.categoryId).success(function(data) {
           $scope.accountList=data.accounts;
           $scope.category=data.category;
           $scope.categoryId=$stateParams.categoryId;
+
+          console.log('notify google - category detail page ' + $location.path());
+          sendGA();
+
+
         });
       };
 
       $scope.findCategories = function() {
+        /* this is called by the category list view */
+        
         $http.get('/api/categories/').success(function(data) {
           $scope.categoryList=data;
+
+          console.log('notify google - category list page ' + $location.path());
+          sendGA();
         });
       };
 
@@ -52,7 +75,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
 ]);
 
 /**** the following code make the dropdown menu hide when you click anywhere else in the doc ****/
-angular.module('mean.rizers').run(function($rootScope) {
+angular.module('mean.rizers').run(function($rootScope,$anchorScroll) {
   angular.element(document).on("click", function(e) {
       $rootScope.$broadcast("documentClicked", angular.element(e.target));
   });
@@ -61,4 +84,9 @@ angular.module('mean.rizers').run(function($rootScope) {
       document.getElementById("dropdown-nav").classList.remove("show");
     }
   });
+  // When the route changes, scroll user to the top of the page
+  $rootScope.$on('$locationChangeSuccess', function() {
+    $anchorScroll();
+  });
+
 });
