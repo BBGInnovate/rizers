@@ -190,6 +190,8 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			} else {
 				oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
 			}
+             oneRizer.rize_summary_stripped=oneRizer.rize_summary.replace(/(<([^>]+)>)/ig, "");
+ 
 
 
 			//Order should be Spreadsheet -> Twitter -> Facebook
