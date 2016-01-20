@@ -191,13 +191,6 @@ function buildRizers(apiStr,profileStr,profileObj) {
 				oneRizer.rize_summary = splitParagraphs(oneRizer.rize_summary);
 			}
 
-			//Trying to split the categories into an array and return the first value
-			/*
-			oneRizer.categories = (oneRizer.categories === null) ? '' : oneRizer.categories;
-			oneRizer.categories = oneRizer.categories.split(', ');
-			oneRizer.categories = oneRizer.categories[0];
-			*/
-
 
 			//Order should be Spreadsheet -> Twitter -> Facebook
 			oneRizer.profile_image = '';

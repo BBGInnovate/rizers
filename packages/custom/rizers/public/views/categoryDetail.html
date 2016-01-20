@@ -4,14 +4,14 @@
 	<section class="" data-ng-controller="RizersController" data-ng-init="findCategory()">
 		<div>
 
-			<header class="rize-list-category-detail-header rize-list-categories-{{category.id}}">
+			<header class="rize-list-category-detail-header rize-category-{{category.id}}">
 				<h1 class="rize-list-category-detail-name">{{ category.name }}</h1>
 				<p class="rize-list-category-detail-description">{{ category.description }}</p>
 			</header>
 			<ul class="rize-list">
 				<li ng-repeat="account in accountList | filter:filterByCategory" class="rize-list-profile">
 				  
-					<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}">
+					<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}" class="rize-list-profile-link">
 						<div style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-person">
 							<div class="rize-list-profile-name">{{ account.first_name + ' ' + account.last_name }}</div>
@@ -20,7 +20,7 @@
 					</a>
 					<!--https://twitter.com/@name/profile_image?size=original -->
 
-					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}">
+					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}" class="rize-list-profile-link">
 						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-organization">
 							<div class="rize-list-profile-name">{{ account.display_name }}</div>

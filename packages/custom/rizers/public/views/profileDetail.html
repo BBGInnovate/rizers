@@ -23,7 +23,7 @@
 				</style>
 				<div class="rize-profiles-banner-box" ng-class="account.profile.image=='' ? 'noBannerImage' : 'includeBanner'">
 					<div class="rize-profiles-category">
-						<a href="/categories/{{ account.profile.categoryData.id }}/{{ account.profile.categoryData.name | linkSafeString }}" class="rize-profiles-category-link rize-list-categories-{{ account.profile.categoryData.id }}">{{ account.profile.categoryData.name }}</a>
+						<a href="/categories/{{ account.profile.categoryData.id }}/{{ account.profile.categoryData.name | linkSafeString }}" class="rize-profiles-category-link rize-category-{{ account.profile.categoryData.id }}">{{ account.profile.categoryData.name }}</a>
 
 						<div class="rize-profiles-category-loop">
 							<ul class="rize-profiles-category-loop-list">

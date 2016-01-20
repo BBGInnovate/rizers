@@ -62,6 +62,24 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.rize-category-1 {
+  background-color: #FFA500;
+}
+.rize-category-2 {
+  background-color: #999;
+}
+.rize-category-3 {
+  background-color: #333;
+}
+.rize-category-4 {
+  background-color: #CCC;
+}
+.rize-category-5 {
+  background-color: #57ad68;
+}
+.rize-category-6 {
+  background-color: #999;
+}
 /***************/
 /* Site banner */
 .rize-profiles-header {
@@ -395,7 +413,7 @@ a {
   text-transform: uppercase;
 }
 .rize-profiles-category-link {
-  background-color: #57ad68;
+  /*background-color: @color-accent-secondary;*/
   color: #FFF;
   padding: 7px 12px;
   text-decoration: none;
@@ -729,6 +747,9 @@ a {
   text-decoration: none;
   width: 90%;
 }
+.rize-list-profile-link:hover {
+  background-color: #ECECEC;
+}
 .rize-list-photo-small {
   display: none;
 }
@@ -750,6 +771,9 @@ a {
     height: 45px;
     vertical-align: middle;
     width: 45px;
+  }
+  .rize-list-profile-name {
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 700px) {
@@ -807,14 +831,15 @@ a {
 }
 .rize-list-categories-title {
   color: #FFF;
-  display: inline;
-  font-size: 4.5rem;
-  line-height: 1.25;
+  display: block;
+  font-size: 6rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 .rize-list-categories-description {
   color: #FFF;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 2rem;
   line-height: 1.2;
   margin-top: 0;
@@ -844,6 +869,10 @@ a {
   background-color: #FFA500;
 }
 .rize-list-categories-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/rizers/assets/img/front_grid_1.png);
   background-color: #999;
 }
 .rize-list-categories-3 {
