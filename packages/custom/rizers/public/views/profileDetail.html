@@ -20,25 +20,8 @@
 						{{ account.profile.css }}
 					}
 					/*It'd be cool if we could grab these images from africa rizing but the size suffixes are consistant: -small, -medium, -large and the aspect ratios change. */
-					/*
-					@media (min-width: 201px) and (max-width: 300px) {
-						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-300x200.jpeg) !important; }
-					}
-					@media (min-width: 301px) and (max-width: 700px) {
-						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-700x467.jpeg) !important; }
-					}
-					@media (min-width: 701px) and (max-width: 1024px) {
-						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-1024x683.jpeg) !important; }
-					}
-					@media (min-width: 1025px) and (max-width: 1200px) {
-						.rize-profiles-banner-box { background-image: url({{ account.profile.image_base }}-1200x801.jpeg) !important; } 
-					}
-					@media (min-width: 1201px) {
-						.rize-profiles-banner-box { background-image: url({{ account.profile.image }}) !important; }
-						*/
-					}
 				</style>
-				<div class="rize-profiles-banner-box">
+				<div class="rize-profiles-banner-box" ng-class="account.profile.image=='' ? 'noBannerImage' : 'includeBanner'">
 					<div class="rize-profiles-category">
 						<a href="/categories/{{ account.profile.categoryData.id }}/{{ account.profile.categoryData.name | linkSafeString }}" class="rize-profiles-category-link rize-list-categories-{{ account.profile.categoryData.id }}">{{ account.profile.categoryData.name }}</a>
 
@@ -52,10 +35,10 @@
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
-					<div class="rize-profiles-banner-shadow"></div>
+					<div ng-if="account.profile.image != ''" class="rize-profiles-banner-shadow"></div>
 				</div>
 
-				<div class="rize-profiles-mugshot">
+				<div class="rize-profiles-mugshot" ng-class="account.profile.image=='' ? 'noBannerImage' : 'includeBanner'">
 					<img src="{{ account.profile_image }}" class="rize-profiles-mugshot-photo" />
 				</div>
 				<div class="rize-profiles-person clearfix">

@@ -263,6 +263,10 @@ a {
   position: relative;
   width: 100%;
 }
+.rize-profiles-banner-box.noBannerImage {
+  height: 2rem;
+  background: transparent;
+}
 .rize-profiles-article-text {
   display: block;
   font-size: 1.4rem;
@@ -505,6 +509,13 @@ a {
     position: relative;
     width: 20%;
     z-index: 9990;
+  }
+  .rize-profiles-mugshot.noBannerImage {
+    float: left;
+    margin: 10px 5% auto 2%;
+    position: relative;
+    width: 10%;
+    vertical-align: middle;
   }
   .rize-profiles-person {
     margin-top: 0;
@@ -856,13 +867,15 @@ a {
   }
 }
 @media screen and (min-width: 1024px) {
-  .rize-list-categories-featured {
-    height: 500px;
+  .rize-list-categories-featured,
+  .rize-list-categories-link {
+    height: 500px !important;
   }
 }
 @media screen and (min-width: 1200px) {
-  .rize-list-categories-featured {
-    height: 700px;
+  .rize-list-categories-featured,
+  .rize-list-categories-link {
+    height: 700px !important;
   }
 }
 /************************/
