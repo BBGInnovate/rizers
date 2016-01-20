@@ -74,11 +74,16 @@ module.exports = function(System){
             }
           // If there is no _escaped_fragment_, we return the normal index template.
           } else {
+            var animate=false;
+            if (req.param('animate')) {
+              animate=true;
+            }
             res.render('index',{
                 categories:categories, 
                 rizeConfig:JSON.stringify(rizeConfig),
                 applicationUrl:rizeConfig.applicationUrl, 
-                locals: {config: System.config.clean}
+                locals: {config: System.config.clean},
+                animate:animate
             });  
           }
       } else {
