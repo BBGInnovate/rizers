@@ -8,8 +8,15 @@
 to prevent collapsing during animation*/
 .ui-view-container {
   position: relative;
-  height: 1500px;
+  /*height: 1500px;*/
+  min-height: 400px;
   background:#FFF;
+}
+
+@media screen and (min-height: 600px) {
+  .ui-view-container {
+    min-height: 800px;
+  }
 }
 
 [ui-view].ng-enter, [ui-view].ng-leave {

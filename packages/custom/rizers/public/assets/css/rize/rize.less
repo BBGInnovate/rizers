@@ -21,6 +21,7 @@
 @font-normal:             400;
 @font-bold:               700;
 
+
 // Color
 @color-main:              #000;
 @color-background:        #FFF;
@@ -38,6 +39,14 @@
 @color-website:           @color-accent-secondary;
 @color-youtube:           #e52d27;
 
+@color-category-1:        @color-accent-primary;
+@color-category-2:        @color-medium-gray;
+@color-category-3:        @color-dark-gray;
+@color-category-4:        @color-light-gray;
+@color-category-5:        @color-accent-secondary;
+@color-category-6:        @color-medium-gray;
+
+
 // Mobile First Breakpoints
 @small-screen:            320px;
 @medium-screen:           700px;
@@ -54,6 +63,7 @@
 @top-nav-width:           200px;
 @height-small:            400px;
 @height-large:            500px;
+@height-extra-large:      700px;
 
 // Next / previous buttons
 @button-next-width: 45px;
@@ -517,7 +527,6 @@ a {
 	text-transform: uppercase;
 }
 .rize-profiles-category-link{
-	.backgroundColorTransparent(@color-accent-secondary);
 	background-color: @color-accent-secondary;
 	color: #FFF;
 	padding: 7px 12px;
@@ -974,6 +983,17 @@ a {
 	height: @height-small;
 }
 
+.rize-list-categories-featured-title {
+	bottom: 50%;
+	color: orange;
+	font-size: 4rem;
+	line-height: 1.2;
+	margin: 0 auto;
+	text-shadow: 1px 1px 4px #333;
+	text-align: center;
+	width: 80%;
+}
+
 .rize-list-categories-link{
 	margin-bottom: 0;
 	min-height: @height-small; 
@@ -991,7 +1011,7 @@ a {
 .rize-list-categories-title {
 	color: #FFF;
 	display: inline;
-	font-size: 6rem;
+	font-size: 4.5rem;
 	line-height: 1.25;
 	text-transform: uppercase;
 }
@@ -1029,29 +1049,38 @@ a {
 }
 
 .rize-list-categories-1{
-	background-color: @color-accent-primary;
+	background-color: @color-category-1;
 }
 
 .rize-list-categories-2{
-	background-color: @color-medium-gray;
+	background-color: @color-category-2;
 }
 
 .rize-list-categories-3{
-	background-color: @color-dark-gray;
+	background-color: @color-category-3;
 }
 
 .rize-list-categories-4{
-	background-color: @color-light-gray;
+	background-color: @color-category-4;
 }
 
 .rize-list-categories-5{
-	background-color: @color-accent-secondary;
+	background-color: @color-category-5;
 }
 
 .rize-list-categories-6{
-	background-color: @color-medium-gray;
+	background-color: @color-category-6;
 }
 
+@media screen and (min-width: @medium-screen) {
+	.rize-list-categories-featured-title {
+		font-size: 5rem;
+	}
+
+	.rize-list-categories-title {
+		font-size: 6rem;
+	}
+}
 
 
 @media screen and (min-width: @large-screen) {
@@ -1060,7 +1089,11 @@ a {
 	}
 }
 
-
+@media screen and (min-width: @extra-large-screen) {
+	.rize-list-categories-featured {
+		height: @height-extra-large;
+	}
+}
 
 /************************/
 /* Category detail page */
