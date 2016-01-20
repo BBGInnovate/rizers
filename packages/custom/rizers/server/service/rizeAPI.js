@@ -211,6 +211,11 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			} else {
 				//
 			}
+			oneRizer.social_media_image=oneRizer.profile_image;
+			if (oneRizer.social_media_image == "") {
+				oneRizer.social_media_image="https://africa.rizing.org/wp-content/uploads/2015/12/cropped-Rize-socialprofiles.png";
+			}
+
 
 			//Replace linkedin job title with the spreadsheet title (or add a tagline for organizations)
 			oneRizer.tagline = "";
