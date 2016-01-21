@@ -2,6 +2,7 @@
 
 var mean = require('meanio');
 var rizeAPI = require('../../../../custom/rizers/server/service/rizeAPI');
+var utils = require('../../../../custom/rizers/server/lib/utils');
 var phantom = require('phantom');
 var config = mean.config.clean;
 
@@ -23,14 +24,11 @@ module.exports = function(System){
     render:function(req,res){
       //OPTIMIZE: this logic is currently duplicated on the frontend in the linkSafeString filter
       var categories = rizeAPI.getAllCategories();
+      
       for (var i=0; i < categories.length; i++) {
-      	
-        var str2=categories[i].name.toLowerCase();
-        str2=str2.split(" ").join("-");
-        str2=str2.split("&").join("-");
-
-        categories[i].safeName=str2;
+        categories[i].safeName=utils.linkSafeString(categories[i].name);
       }
+
       if (categories.length > 0) {
 
         /** facebook/twitter don't obey the meta tag about fragments, so we detect user agent and behave appropriately **/
