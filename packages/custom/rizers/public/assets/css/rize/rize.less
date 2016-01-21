@@ -554,6 +554,8 @@ a {
 /* Featured image */
 .rize-profiles-category {
 	font-size: 1.5rem;
+	line-height: 2;
+	max-width: 80%;
 	position: absolute;
 		left: 0;
 		top: 0;
@@ -630,11 +632,9 @@ a {
 /**************************************/
 /* Profile image, name and job styles */
 .rize-profiles-mugshot {
-	float: left;
-	margin: 10px @margin-small auto @margin-small;
+	margin: 50px auto 10px auto;
 	position: relative;
-	width: 80px;
-	vertical-align: middle;
+	width: 120px;
 }
 
 .rize-profiles-mugshot-photo {
@@ -645,10 +645,8 @@ a {
 }
 
 .rize-profiles-person {
-	margin-left: auto;
-	margin-right: @margin-large;
-	margin-top: 20px;
-	max-width: 74%;
+	margin: 1rem auto;
+	text-align: center;
 }
 
 .rize-profiles-person-name {
@@ -681,6 +679,21 @@ a {
 	text-decoration: none;
 }
 
+@media screen and (min-width: @small-screen) {
+	.rize-profiles-mugshot {
+		float: left;
+		margin: 10px @margin-small auto @margin-small;
+		position: relative;
+		vertical-align: middle;
+	}
+
+	.rize-profiles-person {
+		margin: 2rem 5rem auto 12rem;
+		max-width: 74%;
+		text-align: left;
+	}
+
+}
 
 @media screen and (min-width: @medium-screen) {
 	.rize-profiles-mugshot {
@@ -698,7 +711,8 @@ a {
 	}
 
 	.rize-profiles-person {
-		margin-top: 0;
+		margin: 20px @margin-large auto auto;
+		max-width: 74%;
 	}
 
 	.rize-profiles-person-name {
@@ -734,10 +748,6 @@ a {
 }
 
 @media screen and (min-width: @large-screen) {
-	.rize-profiles-person {
-		margin-top: 20px;
-	}
-
 	.rize-profiles-person-name {
 		font-size: 5rem;
 		line-height: 5.5rem;
