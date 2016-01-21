@@ -6,6 +6,7 @@ var path = require('path'),
 var applicationPort=3000;
 var applicationUrl="http://localhost:3000/";
 var fbAppID="1695445710701793";
+var applicationName="2016 Rizers";  //used for html titles
 if ( process.env.NODE_ENV === 'production' ){
   fbAppID="1695437487369282";
   applicationPort=80;
@@ -77,5 +78,6 @@ module.exports = {
   categoryFlatPath:'/packages/custom/rizers/server/models/categories.json',
   useLiveData:true,
   applicationUrl:applicationUrl,
+  applicationName:applicationName,
   fbAppID:fbAppID
 };

@@ -7,7 +7,8 @@ var config = mean.config.clean;
 
 var rizeConfig={
   applicationUrl:config.applicationUrl,
-  fbAppID:config.fbAppID
+  fbAppID:config.fbAppID,
+  applicationName:config.applicationName
 }
 
 module.exports = function(System){
@@ -50,7 +51,9 @@ module.exports = function(System){
                     account.profileUrl=translatedURL;
                     simpleRender=true;
                     res.render('rizeSEO',{
-                        account:account
+                        account:account,
+                        applicationUrl:rizeConfig.applicationUrl, 
+                        applicationName:rizeConfig.applicationName
                     });     
                   }
                }
@@ -82,6 +85,7 @@ module.exports = function(System){
                 categories:categories, 
                 rizeConfig:JSON.stringify(rizeConfig),
                 applicationUrl:rizeConfig.applicationUrl, 
+                applicationName:rizeConfig.applicationName, 
                 locals: {config: System.config.clean},
                 animate:animate
             });  
