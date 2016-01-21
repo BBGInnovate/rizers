@@ -5,7 +5,14 @@ var rizeAPI = require('../../../../custom/rizers/server/service/rizeAPI');
 var phantom = require('phantom');
 var config = mean.config.clean;
 
+/*
 var rizeConfig={
+  applicationUrl:config.applicationUrl,
+  fbAppID:config.fbAppID,
+  applicationName:config.applicationName
+}*/
+var rizeConfig=config;
+var frontEndConfig={
   applicationUrl:config.applicationUrl,
   fbAppID:config.fbAppID,
   applicationName:config.applicationName
@@ -52,8 +59,7 @@ module.exports = function(System){
                     simpleRender=true;
                     res.render('rizeSEO',{
                         account:account,
-                        applicationUrl:rizeConfig.applicationUrl, 
-                        applicationName:rizeConfig.applicationName
+                        rizeConfig:rizeConfig,
                     });     
                   }
                }
@@ -83,9 +89,8 @@ module.exports = function(System){
             }
             res.render('index',{
                 categories:categories, 
-                rizeConfig:JSON.stringify(rizeConfig),
-                applicationUrl:rizeConfig.applicationUrl, 
-                applicationName:rizeConfig.applicationName, 
+                rizeConfigStr:JSON.stringify(frontEndConfig),
+                rizeConfig:rizeConfig,
                 locals: {config: System.config.clean},
                 animate:animate
             });  

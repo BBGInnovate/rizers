@@ -213,7 +213,7 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			}
 			oneRizer.social_media_image=oneRizer.profile.profileImage;
 			if (oneRizer.social_media_image == "") {
-				oneRizer.social_media_image="https://africa.rizing.org/wp-content/uploads/2015/12/cropped-Rize-socialprofiles.png";
+				oneRizer.social_media_image=config.defaultSocialImage;
 			}
 
 

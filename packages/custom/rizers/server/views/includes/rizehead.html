@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- begin system/server/views/includes/rizehead.html -->
 <head>
     <base href="/">
     <meta charset="utf-8">
@@ -7,22 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="fragment" content="!">
 
-    <title>{{applicationName}}</title>
+    <title>{{rizeConfig.applicationName}}</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta name="keywords" content="Africa,rizing">
-    <meta name="description" content="2016 Rizers Description">
+    <meta name="keywords" content="">
+    <meta name="description" content="{{rizeConfig.applicationDescription}}">
 
-    <meta property="og:title" content="2016 Rizers">
-    <meta property="og:description" content="2016 Rizers">
+    <meta property="og:title" content="{{rizeConfig.applicationName}}">
+    <meta property="og:description" content="{{rizeConfig.applicationDescription}}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{applicationUrl}}">
-    <meta property="og:image" content="https://africa.rizing.org/wp-content/uploads/2015/12/cropped-Rize-socialprofiles.png">
-    <meta property="og:site_name" content="2016 Rizers">
+    <meta property="og:url" content="{{rizeConfig.applicationUrl}}">
+    <meta property="og:image" content="{{rizeConfig.defaultSocialImage}}">
+    <meta property="og:site_name" content="{{rizeConfig.applicationName}}">
 
-    <link rel="manifest" href="/system/assets/static/manifest.json">
-
-    <!-- {{locals.config.cssFramework}} -->
-    <!--"/bower_components/bootstrap/dist/css/bootstrap.css"-->
     <link rel="stylesheet" type="text/css" href="/rizers/assets/css/rizers.css">
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
@@ -31,12 +26,8 @@
         <link rel="stylesheet" href="{{file}}">
     {% endfor %}
 
-    {% for file in aggregatedassets.header.js %}
-        <script type="text/javascript" src="{{file}}"></script>
-    {% endfor %}
-
     <script type="text/javascript">
-        var rizeConfig = {{rizeConfig | raw}};
+        var rizeConfig = {{rizeConfigStr | raw}};
     </script>
 
     <!--[if lt IE 9]>
@@ -44,4 +35,3 @@
     <![endif]-->
 
 </head>
-<!-- end system/server/views/includes/rizehead.html -->
