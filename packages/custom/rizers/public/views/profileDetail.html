@@ -32,6 +32,11 @@
 						</div>
 					</div>
 
+					<div class="rize-profiles-share">
+						<a fb-share class="rize-profiles-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ shareURLEncoded }}" style=""></a>
+						<a tw-share href="http://twitter.com/share?url={{ shareURLEncoded }}&text={{ twitterShareText }}&via=AfricaRizing" class= "rize-profiles-share-twitter" style=""></a>
+					</div>
+
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
@@ -67,7 +72,6 @@
 				</aside>
 
 				<div class="rize-profiles-article-text">
-<a fb-share class="share" href="https://www.facebook.com/sharer/sharer.php?u={{ shareURLEncoded }}">FB</a> | <a tw-share href="http://twitter.com/share?url={{ shareURLEncoded }}&text={{ twitterShareText }}&via=AfricaRizing" class= "share">Twitter</a>
 
 					<div  ng-if="account.rize_summary" class="rize-profile-description">
 						<div ng-bind-html="account.rize_summary"></div>

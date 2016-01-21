@@ -220,12 +220,13 @@ a {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url(../img/menu.png);
-	border-left: 1px solid #666;
+	border-left: 1px solid #000;
 	cursor: pointer;
 	cursor: hand;
 	height: 100%;
 	margin-top: 0;
-	padding-right: @margin-large;
+	padding-left: .5rem;
+	padding-right: 1.5rem;
 	position: absolute;
 		right: 0;
 		top: 0;
@@ -504,7 +505,7 @@ a {
 			left:0;
 			top: 40%;
 		width: 100%;
-		z-index: 9999;
+		z-index: 9990;
 	}
 
 	.rize-profiles-nav-buttons-container{
@@ -572,7 +573,7 @@ a {
 		bottom: 0;
 		left: 0;
 	width: 90%;
-	z-index: 9999;
+	z-index: 9995;
 }
 
 .rize-profiles-category-loop{
@@ -1179,4 +1180,26 @@ a {
 	.rize-list-category-detail-description {
 		font-size: 2.5rem;
 	}
+}
+
+
+.rize-profiles-share {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
+.rize-profiles-share-facebook {
+	background: @color-facebook url(/rizers/assets/img/social_icons/facebook.png)no-repeat center center / cover;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+}
+
+.rize-profiles-share-twitter {
+	background: @color-twitter url(/rizers/assets/img/social_icons/twitter.png)no-repeat center center / cover;
+	display: block;
+	height: 3rem;
+	margin-top: .5rem;
+	width: 3rem;
 }
