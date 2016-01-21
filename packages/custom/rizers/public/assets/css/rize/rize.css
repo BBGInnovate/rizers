@@ -939,21 +939,45 @@ a {
     font-size: 2.5rem;
   }
 }
+/***********************/
+/* Share profile links */
 .rize-profiles-share {
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
-.rize-profiles-share-facebook {
-  background: #3d5a98 url(/rizers/assets/img/social_icons/facebook.png) no-repeat center center / cover;
+.rize-profiles-share-link {
   display: block;
   height: 3rem;
   width: 3rem;
 }
-.rize-profiles-share-twitter {
+.rize-profiles-share-link.facebook {
+  background: #3d5a98 url(/rizers/assets/img/social_icons/facebook.png) no-repeat center center / cover;
+}
+.rize-profiles-share-link.twitter {
   background: #55acee url(/rizers/assets/img/social_icons/twitter.png) no-repeat center center / cover;
-  display: block;
-  height: 3rem;
-  margin-top: .5rem;
-  width: 3rem;
+}
+@media screen and (min-width: 700px) {
+  .rize-profiles-share-link {
+    display: block;
+    margin-bottom: .5rem;
+  }
+}
+/*****************************/
+/* Responsive YouTube embeds */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }

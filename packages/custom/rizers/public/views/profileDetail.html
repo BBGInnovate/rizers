@@ -33,8 +33,8 @@
 					</div>
 
 					<div class="rize-profiles-share">
-						<a fb-share class="rize-profiles-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ shareURLEncoded }}" style=""></a>
-						<a tw-share href="http://twitter.com/share?url={{ shareURLEncoded }}&text={{ twitterShareText }}&via=AfricaRizing" class= "rize-profiles-share-twitter" style=""></a>
+						<a fb-share class="rize-profiles-share-link facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ shareURLEncoded }}" style=""></a>
+						<a tw-share href="http://twitter.com/share?url={{ shareURLEncoded }}&text={{ twitterShareText }}&via=AfricaRizing" class= "rize-profiles-share-link twitter" style=""></a>
 					</div>
 
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">
@@ -76,6 +76,11 @@
 					<div  ng-if="account.rize_summary" class="rize-profile-description">
 						<div ng-bind-html="account.rize_summary"></div>
 						<div ng-if="account.profile.byline != ''" class="rize-profile-description-byline">—{{ account.profile.byline }}</div>
+
+						<div ng-if="account.profile.youtube != ''" class='embed-container'>
+							<iframe src="{{account.profile.youtube}}" frameborder='0' allowfullscreen></iframe>
+						</div>
+
 						<div class="rize-profile-description-related" ng-if="account.rize_links[0].title!=null">
 							<ul class="rize-profile-description-related-list">
 								<li ng-repeat="link in account.rize_links" class="rize-profile-description-related-list-item">
