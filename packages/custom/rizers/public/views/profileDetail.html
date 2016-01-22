@@ -33,9 +33,9 @@
 					</div>
 
 					<div class="rize-profiles-share">
-						<span class="rize-profiles-share-label">SHARE</span>
-						<a fb-share class="rize-profiles-share-link facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ shareURLEncoded }}" style=""></a>
-						<a tw-share href="http://twitter.com/share?url={{ shareURLEncoded }}&text={{ twitterShareText }}&via=AfricaRizing" class= "rize-profiles-share-link twitter" style=""></a>
+						<span class="rize-profiles-share-label"  ng-class="account.profile.image=='' ? 'darkLabel' : 'lightLabel'">SHARE</span>
+						<a fb-share class="rize-profiles-share-link facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ shareURLEncoded }}" title="Share on Facebook"></a>
+						<a tw-share href="http://twitter.com/share?url={{ shareURLEncoded }}&text={{ twitterShareText }}&via=AfricaRizing" class= "rize-profiles-share-link twitter" title="Share on Twitter"></a>
 					</div>
 
 					<div ng-if="account.profile.cutline != ''" class="rize-profiles-banner-cutline">

@@ -2,8 +2,9 @@
 <!-- ng-bind-html="description" OR data-ng-if -->
 <div id="main" class="rize-main-content" role="main">
 	<section class="" data-ng-controller="RizersController" data-ng-init="findCategories()">
-		<article class="rize-list-profile rize-list-categories rize-list-categories-featured" style="position: relative;">
+		<article class="rize-list-profile rize-list-categories-featured" style="position: relative;">
 			<div class="rize-list-categories-text" style="margin: 0 auto; width: 100%;">
+
 				<h1 class="rize-list-categories-featured-title">The movers, shakers and next generation leaders to watch in 2016</h1>
 
 				<div>
@@ -17,12 +18,14 @@
 			</div>
 		</article>
 		<article ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories rize-list-categories-{{category.id}}">
+
 			<a ng-model="organization" class="rize-list-categories-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
 				<div class="rize-list-categories-text">
 					<h2 class="rize-list-categories-title">{{ category.name }}</h2>
 					<p class="rize-list-categories-description">{{ category.description }}</p>
 				</div>
 			</a>
+
 		</article>
 	</section>
 </div>
