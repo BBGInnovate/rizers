@@ -434,7 +434,7 @@ a {
   background-color: #57ad68;
 }
 .rize-category-6 {
-  background-color: #999;
+  background-color: #096e2f;
 }
 /***************/
 /* Site banner */
@@ -527,6 +527,10 @@ a {
 .rize-footer-site-info {
   padding: 2rem 5%;
   text-align: center;
+}
+.rize-footer-site-info p {
+  margin: 0 auto;
+  max-width: 600px;
 }
 .rize-footer-nav {
   background-color: #333;
@@ -651,9 +655,12 @@ a {
   padding: 0;
   width: 90%;
 }
-.rize-profiles-aside-left,
-.rize-profiles-aside-right {
+.rize-profiles-aside-left {
   margin: 0 5%;
+  width: 90%;
+}
+.rize-profiles-aside-right {
+  margin: 0 5% 50px 5%;
   width: 90%;
 }
 .rize-profiles-footer {
@@ -661,7 +668,7 @@ a {
   border-top: 1px solid #ECECEC;
   box-shadow: none;
   color: #FFF;
-  margin: 50px 0 0 0;
+  margin: 0;
   padding: 2rem 0 3rem 0;
   position: static;
   width: 100%;
@@ -698,9 +705,13 @@ a {
 /* Next / previous buttons */
 .rize-profiles-nav-buttons {
   background-color: #333;
+  border-bottom: 1px solid #222;
+  display: table;
   pointer-events: none;
-  position: absolute;
-  bottom: 0;
+  /*
+	position: absolute;
+		bottom: 0;
+	*/
   width: 100%;
   z-index: 9999;
 }
@@ -720,6 +731,7 @@ a {
 @media screen and (min-width: 1200px) {
   .rize-profiles-nav-buttons {
     background-color: transparent;
+    border-bottom: none;
     position: fixed;
     left: 0;
     top: 40%;
@@ -862,7 +874,7 @@ a {
   text-transform: uppercase;
 }
 .rize-profile-description-related-list {
-  margin: 2rem -5%;
+  margin: 2rem -5% 4rem -5%;
 }
 .rize-profile-description-related-list-item {
   list-style-type: none;
@@ -916,7 +928,7 @@ a {
     font-size: 1.7rem;
   }
   .rize-profile-description-related-list {
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 2rem 0;
     padding-left: 2rem;
   }
   .rize-profile-description-related-list-item {
@@ -953,6 +965,7 @@ a {
   line-height: 2rem;
   margin: 0;
   text-align: center;
+  padding: 0 10%;
 }
 .rize-profiles-quotation-name {
   font-size: 1.5rem;
@@ -1171,28 +1184,33 @@ a {
 }
 .rize-list-categories-featured {
   background-color: #333;
-  height: 400px;
+  min-height: 400px;
 }
 .rize-list-categories-featured-title {
-  bottom: 50%;
   color: orange;
   font-size: 4rem;
   line-height: 1.2;
   margin: 0 auto;
+  padding-top: 50px;
   text-shadow: 1px 1px 4px #333;
   text-align: center;
   width: 80%;
 }
 .rize-list-categories-link {
   margin-bottom: 0;
-  min-height: 400px;
+  /*min-height: @height-small;*/
   position: relative;
   text-align: center;
 }
+.rize-list-categories-icon {
+  background-color: #FFF;
+  border-radius: 50%;
+  height: 200px;
+  margin: 2rem auto 0 auto;
+  width: 200px;
+}
 .rize-list-categories-text {
   margin: 0 auto;
-  position: absolute;
-  bottom: 5%;
   width: 90%;
 }
 .rize-list-categories-title {
@@ -1201,6 +1219,7 @@ a {
   font-size: 6rem;
   line-height: 1.1;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   text-transform: uppercase;
 }
 .rize-list-categories-description {
@@ -1251,22 +1270,42 @@ a {
   background-color: #57ad68;
 }
 .rize-list-categories-6 {
-  background-color: #999;
+  background-color: #096e2f;
 }
 @media screen and (min-width: 700px) {
+  .rize-list-categories-link:hover .rize-list-categories-icon {
+    animation: flipIcon .1s forwards;
+  }
+  @keyframes flipIcon {
+    0% {
+      height: 80px;
+      width: 80px;
+    }
+    100% {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .rize-list-categories-icon {
+    height: 80px;
+    width: 80px;
+  }
   .rize-list-categories-menu-list {
     display: none;
   }
   .rize-list-categories-featured-title {
     font-size: 5rem;
   }
-  .rize-list-categories-text {
+  .rize-list-categories-featured-text {
+    position: absolute;
     top: 20%;
   }
   .rize-list-categories-title {
     font-size: 2.2rem;
+    margin-top: 1rem;
   }
   .rize-list-categories-description {
+    color: #FFF;
     font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
   }
@@ -1274,8 +1313,10 @@ a {
     min-height: 240px;
   }
   .rize-list-categories {
-    border-top: 2px solid #FFF;
-    display: inline-block;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    display: table-cell;
+    vertical-align: top;
     width: 16.66666667%;
   }
 }
@@ -1283,8 +1324,22 @@ a {
   .rize-list-categories-featured {
     height: 500px !important;
   }
-  .rize-list-categories-text {
-    top: 30%;
+  .rize-list-categories-icon {
+    height: 100px;
+    width: 100px;
+  }
+  .rize-list-categories-link:hover .rize-list-categories-icon {
+    animation: flipIcon .5s forwards;
+  }
+  @keyframes flipIcon {
+    0% {
+      height: 100px;
+      width: 100px;
+    }
+    100% {
+      height: 110px;
+      width: 110px;
+    }
   }
   .rize-list-categories-title {
     font-size: 3rem;

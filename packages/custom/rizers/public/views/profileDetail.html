@@ -7,12 +7,6 @@
 
 	<!-- person profile -->
 	<article class="rize-profile ">
-			<div class="rize-profiles-nav-buttons">
-				<div class="rize-profiles-nav-buttons-container">
-					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile" title="{{account.prevAccount.display_name}}">{{account.prevAccount.display_name}}</a> 
-					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile" title="{{account.nextAccount.display_name}}">{{account.nextAccount.display_name}}</a>
-				</div>
-			</div>
 			<header class="rize-profile-header">
 				<style>
 					.rize-profiles-banner-box {
@@ -102,7 +96,7 @@
 							.rize-profiles-mwap { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28{{account.city.longitude}},{{account.city.latitude}}%29/{{account.city.longitude}},{{account.city.latitude}},5/700x200.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px; }
 						}
 						@media (min-width: 701px){
-							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28{{account.city.longitude}},{{account.city.latitude}}%29/{{account.city.longitude}},{{account.city.latitude}},4/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;  
+							.rize-profiles-map { background-image: url(https://api.mapbox.com/v4/mapbox.emerald/pin-m+FFA500%28{{account.city.longitude}},{{account.city.latitude}}%29/{{account.city.longitude}},{{account.city.latitude}},4/200x225.png?access_token=pk.eyJ1IjoidmlzdWFsam91cm5hbGlzdCIsImEiOiIwODQxY2VlNDRjNTBkNWY1Mjg2OTk3NWIzMmJjMGJhMSJ9.ZjwAspfFYSc4bijF6XS7hw) !important; height: 200px;
 						}
 					</style>
 
@@ -119,6 +113,13 @@
 				<a href="{{ account.profile.quotationlink }}">{{ account.display_name }}</a>
 				</p>
 			</footer>
+
+			<div class="rize-profiles-nav-buttons">
+				<div class="rize-profiles-nav-buttons-container">
+					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile" title="{{account.prevAccount.display_name}}"><< {{account.prevAccount.display_name}}</a> 
+					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile" title="{{account.nextAccount.display_name}}">{{account.nextAccount.display_name}} >></a>
+				</div>
+			</div>
 
 	</article><!-- profile -->
 
