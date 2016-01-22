@@ -1031,6 +1031,7 @@ a {
 .rize-list-categories {
 	background-color: @color-light-gray;
 	width: 100%;
+	display: block;
 }
 
 .rize-list-categories-featured {
@@ -1132,27 +1133,48 @@ a {
 }
 
 @media screen and (min-width: @medium-screen) {
+
+	.rize-list-categories-menu-list {
+		display: none;
+	}
+
 	.rize-list-categories-featured-title {
 		font-size: 5rem;
 	}
 
 	.rize-list-categories-title {
-		font-size: 6rem;
+		font-size: 2.2rem;
 	}
+
+	.rize-list-categories-description {
+		font-family: @font-sans;
+		font-size: 1.5rem;
+	}
+	.rize-list-categories-link{
+		min-height: 200px; 
+	}
+
+	.rize-list-categories {
+		width: 100%/6;
+		display:inline-block;
+	}
+
 }
 
 
 @media screen and (min-width: @large-screen) {
-	.rize-list-categories-featured,
-	.rize-list-categories-link {
+	.rize-list-categories-featured{
 		height: @height-large !important;;
 	}
 
+
+	.rize-list-categories-title {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: @extra-large-screen) {
-	.rize-list-categories-featured,
-	.rize-list-categories-link {
+	.rize-list-categories-featured{
 		height: @height-extra-large !important;;
 	}
 }
@@ -1204,11 +1226,18 @@ a {
 }
 
 .rize-profiles-share-label {
+	color: #FFF;
 	display: block;
 	font-weight: bold;
 	margin-bottom: .5rem;
 	text-align: center;
-	text-shadow: 0 0 2px #FFF;
+	text-shadow: 0 0 2px #666;
+}
+
+/*Add a dark 'Share' label if there's no banner image set.*/
+.rize-profiles-share-label.darkLabel{
+	color:#333;
+	text-shadow: none;
 }
 
 .rize-profiles-share-link {
