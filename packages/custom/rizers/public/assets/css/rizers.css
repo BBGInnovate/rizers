@@ -1171,7 +1171,6 @@ a {
 }
 .rize-list-categories-featured {
   background-color: #333;
-  /*background: url(/rizers/assets/img/front_grid_1.png) no-repeat top left;*/
   height: 400px;
 }
 .rize-list-categories-featured-title {
@@ -1261,6 +1260,9 @@ a {
   .rize-list-categories-featured-title {
     font-size: 5rem;
   }
+  .rize-list-categories-text {
+    top: 20%;
+  }
   .rize-list-categories-title {
     font-size: 2.2rem;
   }
@@ -1269,25 +1271,31 @@ a {
     font-size: 1.5rem;
   }
   .rize-list-categories-link {
-    min-height: 200px;
+    min-height: 240px;
   }
   .rize-list-categories {
-    width: 16.66666667%;
+    border-top: 2px solid #FFF;
     display: inline-block;
+    width: 16.66666667%;
   }
 }
 @media screen and (min-width: 1024px) {
   .rize-list-categories-featured {
     height: 500px !important;
   }
+  .rize-list-categories-text {
+    top: 30%;
+  }
   .rize-list-categories-title {
     font-size: 3rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .rize-list-categories-featured {
-    height: 700px !important;
-  }
+  /*
+	.rize-list-categories-featured{
+		height: @height-extra-large !important;;
+	}
+	*/
 }
 /************************/
 /* Category detail page */
