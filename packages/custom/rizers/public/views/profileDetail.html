@@ -79,7 +79,7 @@
 						<div ng-if="account.profile.byline != ''" class="rize-profile-description-byline">—{{ account.profile.byline }}</div>
 
 						<div ng-if="safeYoutubeUrl != ''" class='embed-container'>
-							<iframe src="{{safeYoutubeUrl}}" frameborder='0' allowfullscreen></iframe>
+							<iframe ng-src="{{safeYoutubeUrl}}" frameborder='0' allowfullscreen></iframe>
 						</div>
 
 						<div class="rize-profile-description-related" ng-if="account.rize_links[0].title!=null">
