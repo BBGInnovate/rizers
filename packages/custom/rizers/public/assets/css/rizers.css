@@ -1287,23 +1287,6 @@ a {
   background-color: #096e2f;
 }
 @media screen and (min-width: 700px) {
-  /*
-	.rize-list-categories-link:hover .rize-list-categories-icon{
-		animation: flipIcon .1s forwards;
-	}
-
-	@keyframes flipIcon {
-		0% {
-			height: 80px;
-			width: 80px;
-		}
-
-		100% {
-			height: 100px;
-			width: 100px;
-		}
-	}
-	*/
   .rize-list-categories-icon {
     height: 80px;
     width: 80px;
@@ -1316,7 +1299,6 @@ a {
     color: #333;
     font-size: 2rem;
     padding: 1rem;
-    text-shadow: none;
   }
   .rize-list-categories-featured-text {
     background-color: rgba(250, 165, 0, 0.9);
@@ -1341,10 +1323,6 @@ a {
     min-height: 240px;
   }
   .rize-list-categories {
-    /*
-		border-bottom: 1px solid #FFF;
-		border-top: 1px solid #FFF;
-		*/
     display: table-cell;
     vertical-align: top;
     width: 16.66666667%;
@@ -1352,29 +1330,12 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .rize-list-categories-featured {
-    height: 500px !important;
+    min-height: 350px !important;
   }
   .rize-list-categories-icon {
     height: 100px;
     width: 100px;
   }
-  /*
-	.rize-list-categories-link:hover .rize-list-categories-icon{
-		animation: flipIcon .5s forwards;
-	}
-
-	@keyframes flipIcon {
-		0% {
-			height: 100px;
-			width: 100px;
-		}
-
-		100% {
-			height: 110px;
-			width: 110px;
-		}
-	}
-	*/
   .rize-list-categories-featured-text {
     width: 33.3%;
   }
@@ -1383,11 +1344,14 @@ a {
   }
 }
 @media screen and (min-width: 1200px) {
-  /*
-	.rize-list-categories-featured{
-		height: @height-extra-large !important;;
-	}
-	*/
+  .rize-list-categories-featured {
+    height: 700px !important;
+  }
+  .rize-list-categories-featured-title {
+    color: #333;
+    font-size: 3rem;
+    padding: 2rem;
+  }
 }
 /************************/
 /* Category detail page */
