@@ -6,7 +6,7 @@ html {
   padding: 0;
 }
 body {
-  background-color: #ECECEC;
+  background-color: #111;
   /*background-image: linear-gradient(transparent 0%,#999 300%);*/
   height: 100%;
   margin: 0;
@@ -49,6 +49,11 @@ p {
 }
 a {
   color: #57ad68;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: #ECECEC;
+  }
 }
 /**********/
 /* Mixins */
@@ -828,26 +833,35 @@ a {
 }
 .rize-list-categories-featured {
   background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 20% center;
+  background-image: url(/rizers/assets/img/front_2.jpg);
   min-height: 400px;
 }
+.rize-list-categories-featured-text {
+  background-color: rgba(20, 20, 20, 0.9);
+  position: absolute;
+  bottom: 0;
+}
 .rize-list-categories-featured-title {
-  color: orange;
-  font-size: 4rem;
+  border-bottom: 1px solid #000;
+  color: #FFF;
+  font-size: 2.2rem;
   line-height: 1.2;
   margin: 0 auto;
-  padding-top: 50px;
-  text-shadow: 1px 1px 4px #333;
+  padding: 1rem 2rem;
   text-align: center;
-  width: 80%;
 }
 .rize-list-categories-link {
   margin-bottom: 0;
-  /*min-height: @height-small;*/
   position: relative;
   text-align: center;
 }
 .rize-list-categories-icon {
-  background-color: #FFF;
+  background-color: rgba(250, 250, 250, 0.4);
+  border: 5px solid #FFF;
   border-radius: 50%;
   height: 200px;
   margin: 2rem auto 0 auto;
@@ -917,19 +931,23 @@ a {
   background-color: #096e2f;
 }
 @media screen and (min-width: 700px) {
-  .rize-list-categories-link:hover .rize-list-categories-icon {
-    animation: flipIcon .1s forwards;
-  }
-  @keyframes flipIcon {
-    0% {
-      height: 80px;
-      width: 80px;
-    }
-    100% {
-      height: 100px;
-      width: 100px;
-    }
-  }
+  /*
+	.rize-list-categories-link:hover .rize-list-categories-icon{
+		animation: flipIcon .1s forwards;
+	}
+
+	@keyframes flipIcon {
+		0% {
+			height: 80px;
+			width: 80px;
+		}
+
+		100% {
+			height: 100px;
+			width: 100px;
+		}
+	}
+	*/
   .rize-list-categories-icon {
     height: 80px;
     width: 80px;
@@ -938,11 +956,21 @@ a {
     display: none;
   }
   .rize-list-categories-featured-title {
-    font-size: 5rem;
+    border-bottom: none;
+    color: #333;
+    font-size: 2rem;
+    padding: 1rem;
+    text-shadow: none;
   }
   .rize-list-categories-featured-text {
+    background-color: rgba(250, 165, 0, 0.9);
     position: absolute;
-    top: 20%;
+    bottom: 10%;
+    right: 0;
+    width: 50%;
+  }
+  .rize-list-categories-featured-title {
+    text-align: left;
   }
   .rize-list-categories-title {
     font-size: 2.2rem;
@@ -957,8 +985,10 @@ a {
     min-height: 240px;
   }
   .rize-list-categories {
-    border-bottom: 1px solid #FFF;
-    border-top: 1px solid #FFF;
+    /*
+		border-bottom: 1px solid #FFF;
+		border-top: 1px solid #FFF;
+		*/
     display: table-cell;
     vertical-align: top;
     width: 16.66666667%;
@@ -972,18 +1002,25 @@ a {
     height: 100px;
     width: 100px;
   }
-  .rize-list-categories-link:hover .rize-list-categories-icon {
-    animation: flipIcon .5s forwards;
-  }
-  @keyframes flipIcon {
-    0% {
-      height: 100px;
-      width: 100px;
-    }
-    100% {
-      height: 110px;
-      width: 110px;
-    }
+  /*
+	.rize-list-categories-link:hover .rize-list-categories-icon{
+		animation: flipIcon .5s forwards;
+	}
+
+	@keyframes flipIcon {
+		0% {
+			height: 100px;
+			width: 100px;
+		}
+
+		100% {
+			height: 110px;
+			width: 110px;
+		}
+	}
+	*/
+  .rize-list-categories-featured-text {
+    width: 33.3%;
   }
   .rize-list-categories-title {
     font-size: 3rem;
