@@ -8,7 +8,9 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
         name: 'rizers'
       };
 
-      function sendGA() {
+      function sendGA(eventDetailStr) {
+        //console.log(eventDetailStr + " " + $location.path());
+
         ga('set', 'page', $location.path());
         ga('send', 'pageview');
       }
@@ -16,11 +18,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
       $scope.findAccounts = function() {
         $http.get('/api/accounts/').success(function(data) {
     		  $scope.accounts=data;
-
-          console.log('notify google - account list page ' + $location.path());
-          sendGA();
-          
-
+          sendGA('accountList');
     	  });
       };
 
@@ -43,8 +41,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
                   $scope.safeYoutubeUrl=$sce.trustAsResourceUrl(data.profile.youtube)
                 }
 
-                console.log('notify google - profile detail page ' + $location.path());
-                sendGA();
+                sendGA('profileDetail');
               }
               var timeoutMS=0;
               if (window.rizeConfig.forceDelay) {
@@ -58,17 +55,21 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
       $scope.findCategory = function() {
         
         /* this is called by the category detail page */
-        
-        $http.get('/api/categories/'+$stateParams.categoryId).success(function(data) {
-          $scope.accountList=data.accounts;
-          $scope.category=data.category;
-          $scope.categoryId=$stateParams.categoryId;
-
-          console.log('notify google - category detail page ' + $location.path());
-          sendGA();
-
-
-        });
+        var runCategory = function() {
+          $http.get('/api/categories/'+$stateParams.categoryId).success(function(data) {
+            document.getElementById('categoryPreloader').style.display="none";
+                
+            $scope.accountList=data.accounts;
+            $scope.category=data.category;
+            $scope.categoryId=$stateParams.categoryId;
+            sendGA('category detail');
+          });
+        }
+        var timeoutMS=0;
+        if (window.rizeConfig.forceDelay) {
+          timeoutMS=1000;
+        }
+        $timeout(runCategory, timeoutMS);
       };
 
       $scope.findCategories = function() {
@@ -76,9 +77,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
         
         $http.get('/api/categories/').success(function(data) {
           $scope.categoryList=data;
-
-          console.log('notify google - category list page ' + $location.path());
-          sendGA();
+          sendGA('category list page');
         });
       };
 
