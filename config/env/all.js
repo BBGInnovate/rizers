@@ -7,7 +7,7 @@ var applicationPort=3000;
 var applicationUrl="http://localhost:3000/";
 var fbAppID="1695445710701793";
 var applicationName="2016 Rizers";  //check rizeHead.html, rizeSEO.html - used in title/meta
-var applicationDescription="Connecting the next generation of global influencers from across the Continent, and around the world to engage in, 'a smarter conversation'";
+var applicationDescription="The movers, shakers and next generation leaders to watch in 2016";
 var defaultSocialImage="https://africa.rizing.org/wp-content/uploads/2015/12/cropped-Rize-socialprofiles.png";
 if ( process.env.NODE_ENV === 'production' ){
   fbAppID="1695437487369282";
