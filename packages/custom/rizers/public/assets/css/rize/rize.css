@@ -1151,10 +1151,18 @@ a {
   position: relative;
   top: -350px;
 }
+@media screen and (min-width: 700px) {
+  #profilePreloader {
+    top: -400px;
+  }
+}
 #categoryPreloader {
   text-align: center;
+  top: -75px;
+}
+#homePreloader {
+  text-align: center;
   position: relative;
-  top: -80px;
 }
 .sk-circle {
   margin: 100px auto;

@@ -74,11 +74,18 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
 
       $scope.findCategories = function() {
         /* this is called by the category list view */
-        
-        $http.get('/api/categories/').success(function(data) {
-          $scope.categoryList=data;
-          sendGA('category list page');
-        });
+        var runCategories = function() {
+          $http.get('/api/categories/').success(function(data) {
+            document.getElementById('homePreloader').style.display="none";
+            $scope.categoryList=data;
+            sendGA('category list page');
+          });
+        }
+        var timeoutMS=0;
+        if (window.rizeConfig.forceDelay) {
+          timeoutMS=1000;
+        }
+        $timeout(runCategories, timeoutMS);
       };
 
   }
