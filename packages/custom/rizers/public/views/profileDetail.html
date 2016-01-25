@@ -92,6 +92,7 @@
 						</div>
 
 						<div class="rize-profile-description-related" ng-if="account.rize_links[0].title!=null">
+							<h3>Read more</h3>
 							<ul class="rize-profile-description-related-list">
 								<li ng-repeat="link in account.rize_links" class="rize-profile-description-related-list-item">
 									<a href="{{link.url}}" class="rize-profile-description-related-link">{{ link.title }}</a>
@@ -131,8 +132,8 @@
 
 			<div class="rize-profiles-nav-buttons">
 				<div class="rize-profiles-nav-buttons-container">
-					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile" title="{{account.prevAccount.display_name}}"><< {{account.prevAccount.display_name}}</a> 
-					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile" title="{{account.nextAccount.display_name}}">{{account.nextAccount.display_name}} >></a>
+					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-previous" id="previousProfile" title="{{account.prevAccount.display_name}}"> {{account.prevAccount.display_name}}</a> 
+					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profiles-nav-buttons-next" id="nextProfile" title="{{account.nextAccount.display_name}}">{{account.nextAccount.display_name}} </a>
 				</div>
 			</div>
 
