@@ -85,12 +85,18 @@ module.exports = function(System){
             if (req.param('animate')) {
               animate=true;
             }
+            var forceDelay=false;
+            if (req.param('forceDelay')) {
+              forceDelay=true;
+            }
+            frontEndConfig.forceDelay=forceDelay;
             res.render('index',{
                 categories:categories, 
                 rizeConfigStr:JSON.stringify(frontEndConfig),
                 rizeConfig:rizeConfig,
                 locals: {config: System.config.clean},
-                animate:animate
+                animate:animate,
+                forceDelay:forceDelay
             });  
           }
       } else {
