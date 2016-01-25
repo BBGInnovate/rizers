@@ -268,8 +268,17 @@ a {
   }
   .rize-nav-categories.show {
     animation: toggleNav .2s forwards;
+    -webkit-animation: toggleNav .2s forwards;
   }
   @keyframes toggleNav {
+    0% {
+      right: -200px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  @-webkit-keyframes toggleNav {
     0% {
       right: -200px;
     }
