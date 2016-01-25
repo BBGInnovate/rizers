@@ -21,14 +21,13 @@
 @font-normal:             400;
 @font-bold:               700;
 
-
 // Color
 @color-main:              #000;
 @color-background:        #FFF;
 @color-dark-dark-gray:    #111;
 @color-dark-gray:         #333;
 @color-medium-gray:       #999;
-@color-light-gray:        #CCC;
+@color-light-gray:        #B4B4B4;/*CCC*/
 @color-light-light-gray:  #ECECEC;
 @color-accent-primary:    #FFA500;
 @color-accent-secondary:  #57ad68;
@@ -48,7 +47,6 @@
 @color-category-5:        @color-accent-secondary;
 @color-category-6:        @color-accent-tertiary;
 
-
 // Mobile First Breakpoints
 @small-screen:            320px;
 @medium-screen:           700px;
@@ -65,7 +63,7 @@
 @top-nav-width:           200px;
 @height-small:            400px;
 @height-large:            500px;
-@height-extra-large:      700px;
+@height-extra-large:      550px;
 
 // Next / previous buttons
 @button-next-width: 45px;
@@ -1119,8 +1117,13 @@ a {
 	color: #FFF;
 	font-family: @font-sans;
 	font-size: 2rem;
+	font-weight: bold;
 	line-height: 1.2;
 	margin-top: 0;
+}
+
+.rize-list-categories-title.dark,
+.rize-list-categories-description.dark {
 }
 
 .rize-list-categories-menu-list {
@@ -1196,7 +1199,7 @@ a {
 		position: absolute;
 			bottom: 10%;
 			right: 0;
-		width: 50%;
+		width: 40%;
 	}
 
 	.rize-list-categories-featured-title {
@@ -1220,7 +1223,7 @@ a {
 	.rize-list-categories {
 		display: table-cell;
 		vertical-align: top;
-		width: 100%/6;
+		width: 100%/5;
 	}
 
 }
@@ -1237,7 +1240,7 @@ a {
 	}
 
 	.rize-list-categories-featured-text{
-		width: 33.3%;
+		/*width: 33.3%;*/
 	}
 
 	.rize-list-categories-text{

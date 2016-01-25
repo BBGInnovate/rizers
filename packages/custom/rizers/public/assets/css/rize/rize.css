@@ -1,3 +1,4 @@
+/*CCC*/
 html {
   font-family: 'Arial', sans-serif;
   font-size: 10px;
@@ -77,7 +78,7 @@ a {
   background-color: #333;
 }
 .rize-category-4 {
-  background-color: #CCC;
+  background-color: #B4B4B4;
 }
 .rize-category-5 {
   background-color: #57ad68;
@@ -527,10 +528,10 @@ a {
 }
 .rize-profile-description-related-list-item {
   list-style-type: none;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #B4B4B4;
 }
 .rize-profile-description-related-list-item:first-of-type {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #B4B4B4;
 }
 .rize-profile-description-related-list-item a {
   display: block;
@@ -763,7 +764,7 @@ a {
   padding-left: 0;
 }
 .rize-list-profile {
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #B4B4B4;
   list-style-type: none;
   padding: 0;
 }
@@ -827,7 +828,7 @@ a {
 /**********************/
 /* Category list page */
 .rize-list-categories {
-  background-color: #CCC;
+  background-color: #B4B4B4;
   width: 100%;
   display: block;
 }
@@ -884,6 +885,7 @@ a {
   color: #FFF;
   font-family: 'Arial', sans-serif;
   font-size: 2rem;
+  font-weight: bold;
   line-height: 1.2;
   margin-top: 0;
 }
@@ -922,7 +924,7 @@ a {
   background-color: #333;
 }
 .rize-list-categories-4 {
-  background-color: #CCC;
+  background-color: #B4B4B4;
 }
 .rize-list-categories-5 {
   background-color: #57ad68;
@@ -949,7 +951,7 @@ a {
     position: absolute;
     bottom: 10%;
     right: 0;
-    width: 50%;
+    width: 40%;
   }
   .rize-list-categories-featured-title {
     text-align: left;
@@ -969,7 +971,7 @@ a {
   .rize-list-categories {
     display: table-cell;
     vertical-align: top;
-    width: 16.66666667%;
+    width: 20%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -981,7 +983,7 @@ a {
     width: 100px;
   }
   .rize-list-categories-featured-text {
-    width: 33.3%;
+    /*width: 33.3%;*/
   }
   .rize-list-categories-title {
     font-size: 3rem;
@@ -989,7 +991,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .rize-list-categories-featured {
-    height: 700px !important;
+    height: 550px !important;
   }
   .rize-list-categories-featured-title {
     color: #333;
