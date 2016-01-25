@@ -848,7 +848,7 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-position: 20% center;
-  background-image: url(/rizers/assets/img/front_2.jpg);
+  background-image: url(/rizers/assets/img/front_2_color.jpg);
   min-height: 400px;
 }
 .rize-list-categories-featured-text {
@@ -995,7 +995,7 @@ a {
     height: 100px;
     width: 100px;
     background-color: rgba(0, 160, 0, 0.8);
-    border: 5px solid #333;
+    border: none;
   }
   .rize-list-categories-featured-text {
     /*width: 33.3%;*/
