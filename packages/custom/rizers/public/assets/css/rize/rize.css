@@ -1136,6 +1136,11 @@ a {
   position: relative;
   top: -350px;
 }
+#categoryPreloader {
+  text-align: center;
+  position: relative;
+  top: -80px;
+}
 .sk-circle {
   margin: 100px auto;
   width: 40px;
