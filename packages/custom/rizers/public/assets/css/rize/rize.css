@@ -911,10 +911,6 @@ a {
   line-height: 1.2;
   margin-top: 0;
 }
-.rize-list-categories-title.dark,
-.rize-list-categories-description.dark {
-  color: #333;
-}
 .rize-list-categories-menu-list {
   text-align: center;
 }
@@ -940,10 +936,6 @@ a {
   background-color: #FFA500;
 }
 .rize-list-categories-2 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(/rizers/assets/img/front_grid_1.png);
   background-color: #999;
 }
 .rize-list-categories-3 {
@@ -965,6 +957,7 @@ a {
   .rize-list-categories-icon {
     height: 80px;
     width: 80px;
+    display: none;
   }
   .rize-list-categories-menu-list {
     display: none;
