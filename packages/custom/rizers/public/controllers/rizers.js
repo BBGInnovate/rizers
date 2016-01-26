@@ -40,7 +40,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
                 if (data.profile.youtube != "") {
                   $scope.safeYoutubeUrl=$sce.trustAsResourceUrl(data.profile.youtube)
                 }
-
+                $sce.trustAsHtml($scope.account.profile.quotation); 
                 sendGA('profileDetail');
               }
               var timeoutMS=0;

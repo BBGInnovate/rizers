@@ -124,7 +124,7 @@
 
 			</div><!-- .rize-grid -->
 			<footer ng-if="account.profile.quotation != ''" class="rize-profiles-footer">
-				<h3 class="rize-profiles-quotation-text">{{ account.profile.quotation }}</h3>
+				<h3 class="rize-profiles-quotation-text" ng-bind-html="account.profile.quotation" ></h3>
 				<p class="rize-profiles-quotation-name">
 				<a href="{{ account.profile.quotationlink }}">{{ account.display_name }}</a>
 				</p>
