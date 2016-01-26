@@ -12,7 +12,7 @@ var defaultSocialImage="https://africa.rizing.org/wp-content/uploads/2015/12/cro
 if ( process.env.NODE_ENV === 'production' ){
   fbAppID="1695437487369282";
   applicationPort=80;
-  applicationUrl="http://54.83.55.140/";
+  applicationUrl="http://watch2016.rizing.org/";
 }
 
 module.exports = {
