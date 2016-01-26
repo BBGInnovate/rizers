@@ -211,7 +211,7 @@ function buildRizers(apiStr,profileStr,profileObj) {
 			} else {
 				//
 			}
-			oneRizer.social_media_image=oneRizer.profile.profileImage;
+			oneRizer.social_media_image=oneRizer.profile.image;
 			if (oneRizer.social_media_image == "") {
 				oneRizer.social_media_image=config.defaultSocialImage;
 			}
