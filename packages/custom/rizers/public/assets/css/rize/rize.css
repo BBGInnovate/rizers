@@ -987,9 +987,6 @@ a {
     font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
   }
-  .rize-list-categories-link {
-    min-height: 240px;
-  }
   .rize-list-categories {
     display: table-cell;
     vertical-align: top;
