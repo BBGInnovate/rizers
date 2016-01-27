@@ -7,13 +7,6 @@
 				<label class="rize-list-filter-nav-search-label" for="search-field-big">Search</label>
 				<input ng-model="query" id="search-field-big" class="rize-list-filter-nav-search-input" type="search" name="search">
 			</div>
-			<!--
-			<button class="phoneNumber" ng-click="filterAccount.account_type='Person'">PEOPLE ONLY</button>
-			<span style="color:red; background:#000" ng-click="filterAccount.account_type='Organization'">ORGS ONLY</span>
-			<label><input type="radio" ng-model="filterAccount.account_type" value="Person">Person</label>
-			<label><input type="radio" ng-model="filterAccount.account_type" value="Organization">Organization</label>
-			<label><input type="radio" ng-model="filterAccount.account_type" value="">All</label>
-			-->
 		</div>
 
 		<div>
@@ -32,7 +25,7 @@
 					</a>
 					<!--https://twitter.com/@name/profile_image?size=original -->
 
-					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}">
+					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}"  class="rize-list-profile-link">
 						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-organization">
 							<div class="rize-list-profile-name">{{ account.display_name }}</div>

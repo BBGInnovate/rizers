@@ -38,7 +38,7 @@
   position: fixed;
   top: 5rem;
   width: 100%;
-  z-index: 9990;
+  z-index: 9997;
 }
 .rize-list-filter {
   margin: 3.5rem 0 0 0;
@@ -67,6 +67,7 @@
     position: fixed;
     top: 1.5rem;
     width: 30%;
+    z-index: 9999;
   }
   .rize-list-filter {
     margin: 0;
