@@ -1,0 +1,60 @@
+@import 'variables.less';
+
+/********************************/
+/* Search and filter navigation */
+.rize-list-filter-nav {
+	background-color: @color-medium-gray;
+	margin: 0;
+	padding: 1rem;
+	position: fixed;
+		top: 5rem;
+	width: 100%;
+	z-index: 9999;
+}
+
+.rize-list-filter {
+	margin: 3.5rem 0 0 0;
+	padding-left: 0;
+}
+
+.rize-list-filter-nav-search-label {
+	font-family: @font-sans-display;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	vertical-align: middle;
+	margin-left: @margin-large;
+}
+
+.rize-list-filter-nav-search-input {
+	background-color: @color-light-light-gray;
+	border: none;
+	border-radius: 2px;
+	height: 2rem;
+	max-width: 300px;
+	width: 80%;
+}
+
+
+@media screen and (min-width: @large-screen) {
+	.rize-list-filter-nav {
+		background-color: transparent;
+		padding: 0;
+		position: fixed;
+			top: 1.5rem;
+		width: 30%;
+	}
+
+	.rize-list-filter {
+		margin: 0;
+	}
+
+	.rize-list-filter-nav-search-label {
+		color: @color-medium-gray;
+	}
+
+	.rize-list-filter-nav-search-input {
+		background-color: @color-light-light-gray;
+		max-width: 200px;
+	}
+}

@@ -1,0 +1,81 @@
+/*not used*/
+/**********/
+/* Mixins */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.backgroundCover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rize-category-1 {
+  background-color: #FFA500;
+}
+.rize-category-2 {
+  background-color: #999;
+}
+.rize-category-3 {
+  background-color: #333;
+}
+.rize-category-4 {
+  background-color: #B4B4B4;
+}
+.rize-category-5 {
+  background-color: #27A240;
+}
+.rize-category-6 {
+  background-color: #096e2f;
+}
+/********************************/
+/* Search and filter navigation */
+.rize-list-filter-nav {
+  background-color: #999;
+  margin: 0;
+  padding: 1rem;
+  position: fixed;
+  top: 5rem;
+  width: 100%;
+  z-index: 9999;
+}
+.rize-list-filter {
+  margin: 3.5rem 0 0 0;
+  padding-left: 0;
+}
+.rize-list-filter-nav-search-label {
+  font-family: 'Oswald', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin-left: 2%;
+}
+.rize-list-filter-nav-search-input {
+  background-color: #ECECEC;
+  border: none;
+  border-radius: 2px;
+  height: 2rem;
+  max-width: 300px;
+  width: 80%;
+}
+@media screen and (min-width: 1024px) {
+  .rize-list-filter-nav {
+    background-color: transparent;
+    padding: 0;
+    position: fixed;
+    top: 1.5rem;
+    width: 30%;
+  }
+  .rize-list-filter {
+    margin: 0;
+  }
+  .rize-list-filter-nav-search-label {
+    color: #999;
+  }
+  .rize-list-filter-nav-search-input {
+    background-color: #ECECEC;
+    max-width: 200px;
+  }
+}
