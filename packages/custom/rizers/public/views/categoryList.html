@@ -34,7 +34,7 @@
 		<article ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories rize-list-categories-{{category.id}}">
 
 			<a ng-model="organization" class="rize-list-categories-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
-				<div class="rize-list-categories-icon"></div>
+				<div class="rize-list-categories-icon" style="background-image: url(/rizers/assets/img/icon_{{category.id}}.png)"></div>
 				<div class="rize-list-categories-text">
 					<h2 class="rize-list-categories-title {{ category.css }}">{{ category.name }}</h2>
 					<p class="rize-list-categories-description {{ category.css }}">{{ category.description }}</p>
