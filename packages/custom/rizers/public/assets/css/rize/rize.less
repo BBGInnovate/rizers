@@ -191,6 +191,7 @@ a {
 }
 .rize-nav-categories.show {
 	animation: toggleNav .5s forwards;
+	-webkit-animation: toggleNav .5s forwards;
 }
 
 @keyframes toggleNav {
@@ -228,15 +229,20 @@ a {
 	background-color: @color-light-light-gray;
 }
 .rize-nav-categories-list-item-color {
-	width: 1rem;
-	height: 1rem;
 	border-radius: 50%;
 	display: inline-block;
+	height: 1.2rem;
 	margin-right: .5rem;
+	vertical-align: middle;
+	width: 1.2rem;
 }
 
 
 @media screen and (min-width: @medium-screen) {
+	.rize-nav-categories-list-item-color {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
 
 	.rize-nav-categories {
 		position: fixed;
