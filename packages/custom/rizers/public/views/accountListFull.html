@@ -1,33 +1,45 @@
 <!-- begin system/public/views/index.html -->
 <!-- ng-bind-html="description" OR data-ng-if -->
 <div id="main" class="rize-main-content" role="main">
-<section class="" data-ng-controller="RizersController" data-ng-init="findAccounts()">
-  Search: <input ng-model="query"><BR>
-   <button class="phoneNumber" ng-click="filterAccount.account_type='Person'">PEOPLE ONLY</button>
-   <span style="color:red; background:#000" ng-click="filterAccount.account_type='Organization'">ORGS ONLY</span>
-    <label><input type="radio" ng-model="filterAccount.account_type" value="Person">Person</label>
-    <label><input type="radio" ng-model="filterAccount.account_type" value="Organization">Organization</label>
-    <label><input type="radio" ng-model="filterAccount.account_type" value="">All</label>
+	<section class="" data-ng-controller="RizersController" data-ng-init="findAccounts()">
+		Search: <input ng-model="query"><BR>
+		<button class="phoneNumber" ng-click="filterAccount.account_type='Person'">PEOPLE ONLY</button>
+		<span style="color:red; background:#000" ng-click="filterAccount.account_type='Organization'">ORGS ONLY</span>
+		<label><input type="radio" ng-model="filterAccount.account_type" value="Person">Person</label>
+		<label><input type="radio" ng-model="filterAccount.account_type" value="Organization">Organization</label>
+		<label><input type="radio" ng-model="filterAccount.account_type" value="">All</label>
 
 
-  <div>
-  <ul class="rize-list">
-    <li ng-repeat="account in accounts | filter:filterAccount | filter:query" class="rize-list-profile">
-      
-        <a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}">
-          <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.twitter.profile_image_url_https }});" class="rize-list-photo-small"></div>
-          {{account.first_name + ' ' + account.last_name}}
-        </a>
-        <!--https://twitter.com/@name/profile_image?size=original -->
+		<div>
+			<ul class="rize-list">
 
-        <a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}">
-        <div ng-if="account.twitter.profile_image_url_https!=null" style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
-        {{account.display_name}}
-        </a>
-    </li>
-  </ul>
-  </div>
-</section>
+				<li ng-repeat="account in accounts | filter:filterAccount | filter:query" class="rize-list-profile">
+
+					<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}"  class="rize-list-profile-link">
+
+						<div style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
+						<div class="rize-list-profile-person">
+							<div class="rize-list-profile-name">{{ account.first_name + ' ' + account.last_name }}</div>
+							<div class="rize-list-profile-tagline">{{ account.tagline }}</div>
+						</div>
+
+					</a>
+					<!--https://twitter.com/@name/profile_image?size=original -->
+
+					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}">
+						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
+						<div class="rize-list-profile-organization">
+							<div class="rize-list-profile-name">{{ account.display_name }}</div>
+							<div class="rize-list-profile-tagline">{{ account.tagline }}</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</section>
 </div>
+
+
 
 <!-- end system/public/views/index.html -->

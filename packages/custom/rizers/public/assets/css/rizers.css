@@ -1181,7 +1181,7 @@ a {
 @media screen and (min-width: 1024px) {
   .rize-list-categories-featured {
     background-image: url(/rizers/assets/img/front_1024x400.jpg);
-    min-height: 350px;
+    /*min-height: @height-small;*/
   }
   .rize-list-categories-featured-title {
     color: #333;
