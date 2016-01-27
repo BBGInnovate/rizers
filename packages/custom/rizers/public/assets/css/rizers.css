@@ -1342,7 +1342,7 @@ a {
   position: fixed;
   top: 5rem;
   width: 100%;
-  z-index: 9999;
+  z-index: 9990;
 }
 .rize-list-filter {
   margin: 3.5rem 0 0 0;
