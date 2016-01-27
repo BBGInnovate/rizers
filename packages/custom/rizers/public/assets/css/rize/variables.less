@@ -61,7 +61,7 @@
 @margin-large:            2%;
 @column-width-side:       20%;
 @top-nav-width:           200px;
-@height-small:            400px;
+@height-small:            350px;
 @height-large:            500px;/*not used*/
 @height-extra-large:      550px;
 
@@ -70,3 +70,47 @@
 @button-next-height:          90px;
 @button-next-container-width: 90px;
 @button-next-padding:          5px;
+
+
+/**********/
+/* Mixins */
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.backgroundColorTransparent(@bgColor: @color-dark-gray){
+	background-color: @bgColor;
+	background-color: fade(@bgColor, @color-fade);
+}
+
+.backgroundCover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.rize-category-1{
+	background-color: @color-category-1;
+}
+
+.rize-category-2{
+	background-color: @color-category-2;
+}
+
+.rize-category-3{
+	background-color: @color-category-3;
+}
+
+.rize-category-4{
+	background-color: @color-category-4;
+}
+
+.rize-category-5{
+	background-color: @color-category-5;
+}
+
+.rize-category-6{
+	background-color: @color-category-6;
+}

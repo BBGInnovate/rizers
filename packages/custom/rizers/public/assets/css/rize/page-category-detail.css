@@ -1,4 +1,102 @@
 /*not used*/
+/**********/
+/* Mixins */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.backgroundCover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rize-category-1 {
+  background-color: #FFA500;
+}
+.rize-category-2 {
+  background-color: #999;
+}
+.rize-category-3 {
+  background-color: #333;
+}
+.rize-category-4 {
+  background-color: #B4B4B4;
+}
+.rize-category-5 {
+  background-color: #27A240;
+}
+.rize-category-6 {
+  background-color: #096e2f;
+}
+/********************/
+/* List page styles */
+.rize-list {
+  margin: 0;
+  padding-left: 0;
+}
+.rize-list-profile {
+  border-bottom: 1px solid #B4B4B4;
+  list-style-type: none;
+  padding: 0;
+}
+.rize-list-profile a {
+  display: block;
+  font-size: 1.5rem;
+  height: 100%;
+  padding: 10px 5%;
+  text-decoration: none;
+  width: 90%;
+}
+.rize-list-profile-link:hover {
+  background-color: #ECECEC;
+}
+.rize-list-photo-small {
+  display: none;
+}
+.rize-list-profile-organization,
+.rize-list-profile-person {
+  display: inline-block;
+}
+.rize-list-profile-tagline {
+  display: none;
+}
+@media screen and (min-width: 320px) {
+  .rize-list-photo-small {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
+    display: inline-block;
+    height: 45px;
+    vertical-align: middle;
+    width: 45px;
+  }
+  .rize-list-profile-name {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .rize-list-profile {
+    border-bottom: none;
+  }
+  .rize-list-photo-small {
+    height: 60px;
+    vertical-align: top;
+    width: 60px;
+  }
+  .rize-list-profile-name {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 1rem;
+  }
+  .rize-list-profile-tagline {
+    color: #999;
+    display: block;
+  }
+}
 /************************/
 /* Category detail page */
 .rize-list-category-detail-header {

@@ -1,1 +1,31 @@
 /*not used*/
+/**********/
+/* Mixins */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.backgroundCover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rize-category-1 {
+  background-color: #FFA500;
+}
+.rize-category-2 {
+  background-color: #999;
+}
+.rize-category-3 {
+  background-color: #333;
+}
+.rize-category-4 {
+  background-color: #B4B4B4;
+}
+.rize-category-5 {
+  background-color: #27A240;
+}
+.rize-category-6 {
+  background-color: #096e2f;
+}

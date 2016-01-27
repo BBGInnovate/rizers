@@ -1,0 +1,174 @@
+@import 'variables.less';
+
+/****************/
+/* Social links */
+.rize-profile-social-label,
+.rize-profile-social-list,
+.rize-profile-social-link {
+	display: inline-block;
+}
+
+.rize-profile-social-link {
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-color: @color-medium-gray;
+	display: inline-block;
+	height: 20px;
+	line-height: 2.2;
+	margin-bottom: 5px;
+	margin-right: 3px;
+	width: auto;
+}
+
+.rize-profile-social-label {
+	margin-bottom: 0;
+	margin-right: 10px;
+}
+
+.rize-icon-facebook {
+	background-image: url(../img/social_icons/facebook-gray.png);
+}
+.rize-icon-instagram {
+	background-image: url(../img/social_icons/instagram-gray.png);
+}
+.rize-icon-linkedin {
+	background-image: url(../img/social_icons/linkedin-gray.png);
+}
+.rize-icon-twitter {
+	background-image: url(../img/social_icons/twitter-gray.png);
+}
+.rize-icon-website {
+	background-image: url(../img/social_icons/website-gray.png);
+}
+.rize-icon-youtube {
+	background-image: url(../img/social_icons/youtube-gray.png);
+}
+
+
+
+
+.rize-icon-facebook:hover {
+	background-color: @color-facebook;
+	background-image: url(../img/social_icons/facebook.png);
+}
+.rize-icon-instagram:hover {
+	background-color: @color-instagram;
+	background-image: url(../img/social_icons/instagram.png);
+}
+.rize-icon-linkedin:hover {
+	background-color: @color-linkedin;
+	background-image: url(../img/social_icons/linkedin.png);
+}
+.rize-icon-twitter:hover {
+	background-color: @color-twitter;
+	background-image: url(../img/social_icons/twitter.png);
+}
+.rize-icon-website:hover {
+	background-color: @color-website;
+	background-image: url(../img/social_icons/website.png);
+}
+.rize-icon-youtube:hover {
+	background-color: @color-youtube;
+	background-image: url(../img/social_icons/youtube.png);
+}
+
+
+.rize-profile-social-link a{
+	color: #FFF;
+	padding-left: 22px;
+	padding-right: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: @medium-screen) {
+	.rize-profile-social-label {
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.rize-profile-social-list {
+		margin: 0;
+	}
+
+	.rize-profile-social-link {
+		background-size: 40px;
+		background-position: center center;
+		background-color: @color-medium-gray;
+		//display: block;
+		height: 40px;
+		margin-bottom: 5px;
+		padding-left: 0;
+		width: 40px;
+	}
+
+	.rize-profile-social-link a{
+		color: #333;
+		font-size: 1.2rem;
+		font-weight: 900;
+		display: block;
+		height: 100%;
+		padding-left: 45px;
+	}
+
+	.rize-profile-social-link a span {
+		display: none;
+	}
+}
+
+@media screen and (min-width: @large-screen) {
+	.rize-profile-social-link a{
+		font-size: 1.4rem;
+	}
+}
+
+
+
+/***********************/
+/* Share profile links */
+.rize-profiles-share {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
+.rize-profiles-share-label {
+	color: #FFF;
+	display: block;
+	font-weight: bold;
+	margin-bottom: .5rem;
+	text-align: center;
+	text-shadow: 0 0 2px #666;
+}
+
+/*Add a dark 'Share' label if there's no banner image set.*/
+.rize-profiles-share-label.darkLabel{
+	color:#333;
+	text-shadow: none;
+}
+
+.rize-profiles-share-link {
+	display: block;
+	height: 3rem;
+	margin: 0 auto;
+	width: 3rem;
+}
+
+.rize-profiles-share-link.facebook {
+	background: @color-facebook url(/rizers/assets/img/social_icons/facebook.png)no-repeat center center / cover;
+}
+
+.rize-profiles-share-link.twitter {
+	background: @color-twitter url(/rizers/assets/img/social_icons/twitter.png)no-repeat center center / cover;
+}
+
+@media screen and (min-width: @medium-screen) {
+	.rize-profiles-share-link {
+		display: block;
+		height: 4rem;
+		width: 4rem;
+		margin-bottom: .5rem;
+	}
+}

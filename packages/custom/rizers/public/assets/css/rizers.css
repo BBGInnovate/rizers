@@ -354,6 +354,36 @@ th {
   padding: 0;
 }
 /*not used*/
+/**********/
+/* Mixins */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.backgroundCover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rize-category-1 {
+  background-color: #FFA500;
+}
+.rize-category-2 {
+  background-color: #999;
+}
+.rize-category-3 {
+  background-color: #333;
+}
+.rize-category-4 {
+  background-color: #B4B4B4;
+}
+.rize-category-5 {
+  background-color: #27A240;
+}
+.rize-category-6 {
+  background-color: #096e2f;
+}
 html {
   font-family: 'Arial', sans-serif;
   font-size: 10px;
@@ -410,36 +440,6 @@ a {
   body {
     background-color: #ECECEC;
   }
-}
-/**********/
-/* Mixins */
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.backgroundCover {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.rize-category-1 {
-  background-color: #FFA500;
-}
-.rize-category-2 {
-  background-color: #999;
-}
-.rize-category-3 {
-  background-color: #333;
-}
-.rize-category-4 {
-  background-color: #B4B4B4;
-}
-.rize-category-5 {
-  background-color: #27A240;
-}
-.rize-category-6 {
-  background-color: #096e2f;
 }
 /***************/
 /* Site banner */
@@ -537,37 +537,43 @@ a {
   margin: 0 auto;
   max-width: 600px;
 }
+/*
 .rize-footer-nav {
-  background-color: #333;
-  color: #FFF;
-  display: block;
-  margin: 0 auto;
-  max-width: 1024px;
+	background-color: @color-dark-gray;
+	color: #FFF;
+	display: block;
+	margin: 0 auto;
+	max-width: @max-width;
 }
+
 .rize-footer-nav-links {
-  margin: 0;
+	margin: 0;
 }
+
 .rize-footer-nav-links li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  width: 24%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 24%;
 }
+
 .rize-footer-nav-links li a {
-  border-right: 1px solid #999;
-  color: #FFF;
-  display: inline-block;
-  margin: 0;
-  padding: 40px 0 5px 0;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
+	border-right: 1px solid @color-medium-gray;
+	color: #FFF;
+	display: inline-block;
+	margin: 0;
+	padding: 40px 0 5px 0;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;
 }
+
 .rize-footer-nav-links li:last-of-type a {
-  border-right: none;
+	border-right: none;
 }
+*/
 @media screen and (min-width: 700px) {
   .rize-footer-site-info {
     padding: 2rem 2%;
@@ -652,7 +658,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 400px;
+  height: 350px;
   position: relative;
   width: 100%;
 }
@@ -722,10 +728,6 @@ a {
   border-bottom: 1px solid #222;
   display: table;
   pointer-events: none;
-  /*
-	position: absolute;
-		bottom: 0;
-	*/
   width: 100%;
   z-index: 9999;
 }
@@ -810,7 +812,6 @@ a {
   text-transform: uppercase;
 }
 .rize-profiles-category-link {
-  /*background-color: @color-accent-secondary;*/
   color: #FFF;
   padding: 7px 12px;
   text-decoration: none;
@@ -883,6 +884,12 @@ a {
   /*border-radius: 50%;*/
   max-width: 100%;
 }
+.rize-profiles-mugshot.noBannerImage {
+  margin-top: 20px;
+}
+.rize-profiles-mugshot.noBannerImage .rize-profiles-mugshot-photo {
+  border: 0;
+}
 .rize-profiles-person {
   margin: 1rem auto;
   text-align: center;
@@ -936,14 +943,14 @@ a {
   }
   .rize-profiles-mugshot.noBannerImage {
     float: left;
-    margin: 10px 5% auto 2%;
+    margin: 20px 5% auto 2%;
     position: relative;
     width: 10%;
     vertical-align: middle;
   }
   .rize-profiles-person {
-    margin: 20px 2% auto auto;
-    max-width: 74%;
+    margin: 20px 8% auto auto;
+    max-width: 68%;
   }
   .rize-profiles-person-name {
     font-size: 4rem;
@@ -994,12 +1001,12 @@ a {
   padding: 0 10%;
 }
 .rize-profiles-quotation-name {
+  color: #999;
   font-size: 1.5rem;
   margin-top: 1rem;
   text-align: center;
 }
 .rize-profiles-quotation-name a {
-  /*color: @color-accent-primary;*/
   text-decoration: none;
 }
 .rize-profiles-aside-image {
@@ -1024,6 +1031,306 @@ a {
 @media screen and (min-width: 1024px) {
   .rize-profile-label {
     font-size: 2rem;
+  }
+}
+/**********************/
+/* Category list page */
+.rize-list-categories {
+  background-color: #B4B4B4;
+  width: 100%;
+  display: block;
+}
+.rize-list-categories-featured {
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 20% center;
+  background-image: url(/rizers/assets/img/front_700x500.jpg);
+  min-height: 400px;
+}
+.rize-list-categories-featured-text {
+  background-color: rgba(20, 20, 20, 0.9);
+  position: absolute;
+  bottom: 0;
+}
+.rize-list-categories-featured-title {
+  border-bottom: 1px solid #000;
+  color: #FFF;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.rize-list-categories-link {
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
+}
+.rize-list-categories-icon {
+  background-color: rgba(250, 250, 250, 0.5);
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  height: 200px;
+  margin: 2rem auto 0 auto;
+  width: 200px;
+}
+.rize-list-categories-text {
+  margin: 0 auto;
+  width: 90%;
+}
+.rize-list-categories-title {
+  color: #FFF;
+  display: block;
+  font-size: 5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+.rize-list-categories-description {
+  color: #FFF;
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 0;
+}
+.rize-list-categories-menu-list {
+  text-align: center;
+}
+.rize-list-categories-menu-list-item {
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+.rize-list-categories-menu-list-item-link {
+  display: inline-block !important;
+  margin: 0 2rem;
+  padding: 0 !important;
+  width: auto !important;
+}
+.rize-list-categories-menu-list-item:after {
+  color: #666;
+  content: "|";
+}
+.rize-list-categories-menu-list-item:last-of-type:after {
+  content: "";
+}
+.rize-list-categories-1 {
+  background-color: #FFA500;
+}
+.rize-list-categories-2 {
+  background-color: #999;
+}
+.rize-list-categories-3 {
+  background-color: #333;
+}
+.rize-list-categories-4 {
+  background-color: #B4B4B4;
+}
+.rize-list-categories-5 {
+  background-color: #27A240;
+}
+.rize-list-categories-6 {
+  background-color: #096e2f;
+}
+@media screen and (min-width: 700px) {
+  .rize-list-categories-featured {
+    background-image: url(/rizers/assets/img/front_1024x400.jpg);
+  }
+  .rize-list-categories-icon {
+    height: 80px;
+    width: 80px;
+    display: none;
+  }
+  .rize-list-categories-menu-list {
+    display: none;
+  }
+  .rize-list-categories-featured-title {
+    border-bottom: none;
+    color: #333;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .rize-list-categories-featured-text {
+    background-color: rgba(250, 165, 0, 0.9);
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 40%;
+  }
+  .rize-list-categories-featured-title {
+    text-align: left;
+  }
+  .rize-list-categories-title {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+  .rize-list-categories-description {
+    color: #FFF;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+  }
+  .rize-list-categories {
+    display: table-cell;
+    vertical-align: top;
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rize-list-categories-featured {
+    background-image: url(/rizers/assets/img/front_1024x400.jpg);
+    min-height: 350px;
+  }
+  .rize-list-categories-featured-title {
+    color: #333;
+    font-size: 3rem;
+    padding: 2rem;
+  }
+  .rize-list-categories-icon {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0, 160, 0, 0.8);
+    border: none;
+  }
+  .rize-list-categories {
+    border-right: 2px dotted #B4B4B4;
+  }
+  .rize-list-categories:last-of-type {
+    border-right: none;
+  }
+  .rize-list-categories-title {
+    font-size: 3rem;
+    color: #333;
+  }
+  .rize-list-categories-description {
+    color: #333;
+  }
+  .rize-list-categories-link:hover .rize-list-categories-title {
+    color: #27A240;
+  }
+  .rize-list-categories-1 {
+    background-color: #FFF;
+  }
+  .rize-list-categories-2 {
+    background-color: #FFF;
+    background-image: none;
+  }
+  .rize-list-categories-3 {
+    background-color: #FFF;
+  }
+  .rize-list-categories-4 {
+    background-color: #FFF;
+  }
+  .rize-list-categories-5 {
+    background-color: #FFF;
+  }
+  .rize-list-categories-6 {
+    background-color: #FFF;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .rize-list-categories-featured {
+    background-image: url(/rizers/assets/img/front_1200x600.jpg);
+    height: 550px !important;
+  }
+}
+/********************/
+/* List page styles */
+.rize-list {
+  margin: 0;
+  padding-left: 0;
+}
+.rize-list-profile {
+  border-bottom: 1px solid #B4B4B4;
+  list-style-type: none;
+  padding: 0;
+}
+.rize-list-profile a {
+  display: block;
+  font-size: 1.5rem;
+  height: 100%;
+  padding: 10px 5%;
+  text-decoration: none;
+  width: 90%;
+}
+.rize-list-profile-link:hover {
+  background-color: #ECECEC;
+}
+.rize-list-photo-small {
+  display: none;
+}
+.rize-list-profile-organization,
+.rize-list-profile-person {
+  display: inline-block;
+}
+.rize-list-profile-tagline {
+  display: none;
+}
+@media screen and (min-width: 320px) {
+  .rize-list-photo-small {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
+    display: inline-block;
+    height: 45px;
+    vertical-align: middle;
+    width: 45px;
+  }
+  .rize-list-profile-name {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .rize-list-profile {
+    border-bottom: none;
+  }
+  .rize-list-photo-small {
+    height: 60px;
+    vertical-align: top;
+    width: 60px;
+  }
+  .rize-list-profile-name {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 1rem;
+  }
+  .rize-list-profile-tagline {
+    color: #999;
+    display: block;
+  }
+}
+/************************/
+/* Category detail page */
+.rize-list-category-detail-header {
+  margin-bottom: 1rem;
+  padding: 2rem 5%;
+}
+.rize-list-category-detail-name {
+  color: #FFF;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+}
+.rize-list-category-detail-description {
+  color: #FFF;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 700px) {
+  .rize-list-category-detail-header {
+    /*border-bottom: 4px dotted @color-accent-primary;*/
+    margin-bottom: 2rem;
+  }
+  .rize-list-category-detail-name {
+    font-size: 6rem;
+  }
+  .rize-list-category-detail-description {
+    font-size: 2.5rem;
   }
 }
 /****************/
@@ -1133,308 +1440,6 @@ a {
     font-size: 1.4rem;
   }
 }
-/********************/
-/* List page styles */
-.rize-list {
-  margin: 0;
-  padding-left: 0;
-}
-.rize-list-profile {
-  border-bottom: 1px solid #B4B4B4;
-  list-style-type: none;
-  padding: 0;
-}
-.rize-list-profile a {
-  display: block;
-  font-size: 1.5rem;
-  height: 100%;
-  padding: 10px 5%;
-  text-decoration: none;
-  width: 90%;
-}
-.rize-list-profile-link:hover {
-  background-color: #ECECEC;
-}
-.rize-list-photo-small {
-  display: none;
-}
-.rize-list-profile-organization,
-.rize-list-profile-person {
-  display: inline-block;
-}
-.rize-list-profile-tagline {
-  display: none;
-}
-@media screen and (min-width: 320px) {
-  .rize-list-photo-small {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 1px solid #ECECEC;
-    border-radius: 50%;
-    display: inline-block;
-    height: 45px;
-    vertical-align: middle;
-    width: 45px;
-  }
-  .rize-list-profile-name {
-    font-size: 1.8rem;
-  }
-}
-@media screen and (min-width: 700px) {
-  .rize-list-profile {
-    border-bottom: none;
-  }
-  .rize-list-photo-small {
-    height: 60px;
-    vertical-align: top;
-    width: 60px;
-  }
-  .rize-list-profile-name {
-    color: #333;
-    font-size: 2rem;
-    font-weight: 700;
-    padding-top: 1rem;
-  }
-  .rize-list-profile-tagline {
-    color: #999;
-    display: block;
-  }
-}
-/**********************/
-/* Category list page */
-.rize-list-categories {
-  background-color: #B4B4B4;
-  width: 100%;
-  display: block;
-}
-.rize-list-categories-featured {
-  background-color: #333;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position: 20% center;
-  background-image: url(/rizers/assets/img/front_700x500.jpg);
-  min-height: 400px;
-}
-.rize-list-categories-featured-text {
-  background-color: rgba(20, 20, 20, 0.9);
-  position: absolute;
-  bottom: 0;
-}
-.rize-list-categories-featured-title {
-  border-bottom: 1px solid #000;
-  color: #FFF;
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  text-align: center;
-}
-.rize-list-categories-link {
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
-}
-.rize-list-categories-icon {
-  background-color: rgba(250, 250, 250, 0.5);
-  border: 5px solid #FFF;
-  border-radius: 50%;
-  height: 200px;
-  margin: 2rem auto 0 auto;
-  width: 200px;
-}
-.rize-list-categories-text {
-  margin: 0 auto;
-  width: 90%;
-}
-.rize-list-categories-title {
-  color: #FFF;
-  display: block;
-  font-size: 6rem;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  text-transform: uppercase;
-}
-.rize-list-categories-description {
-  color: #FFF;
-  font-family: 'Arial', sans-serif;
-  font-size: 2rem;
-  line-height: 1.2;
-  margin-top: 0;
-}
-.rize-list-categories-menu-list {
-  text-align: center;
-}
-.rize-list-categories-menu-list-item {
-  display: inline-block;
-  height: auto;
-  width: auto;
-}
-.rize-list-categories-menu-list-item-link {
-  display: inline-block !important;
-  margin: 0 2rem;
-  padding: 0 !important;
-  width: auto !important;
-}
-.rize-list-categories-menu-list-item:after {
-  color: #666;
-  content: "|";
-}
-.rize-list-categories-menu-list-item:last-of-type:after {
-  content: "";
-}
-.rize-list-categories-1 {
-  background-color: #FFA500;
-}
-.rize-list-categories-2 {
-  background-color: #999;
-}
-.rize-list-categories-3 {
-  background-color: #333;
-}
-.rize-list-categories-4 {
-  background-color: #B4B4B4;
-}
-.rize-list-categories-5 {
-  background-color: #27A240;
-}
-.rize-list-categories-6 {
-  background-color: #096e2f;
-}
-@media screen and (min-width: 700px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1024x400.jpg);
-  }
-  .rize-list-categories-icon {
-    height: 80px;
-    width: 80px;
-    display: none;
-  }
-  .rize-list-categories-menu-list {
-    display: none;
-  }
-  .rize-list-categories-featured-title {
-    border-bottom: none;
-    color: #333;
-    font-size: 2rem;
-    padding: 1rem;
-  }
-  .rize-list-categories-featured-text {
-    background-color: rgba(250, 165, 0, 0.9);
-    position: absolute;
-    bottom: 10%;
-    right: 0;
-    width: 40%;
-  }
-  .rize-list-categories-featured-title {
-    text-align: left;
-  }
-  .rize-list-categories-title {
-    font-size: 2.2rem;
-    margin-top: 1rem;
-  }
-  .rize-list-categories-description {
-    color: #FFF;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
-  }
-  .rize-list-categories {
-    display: table-cell;
-    vertical-align: top;
-    width: 20%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1024x400.jpg);
-    min-height: 400px;
-  }
-  .rize-list-categories-featured-title {
-    color: #333;
-    font-size: 3rem;
-    padding: 2rem;
-  }
-  .rize-list-categories-icon {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(0, 160, 0, 0.8);
-    border: none;
-  }
-  .rize-list-categories {
-    border-right: 2px dotted #B4B4B4;
-  }
-  .rize-list-categories:last-of-type {
-    border-right: none;
-  }
-  .rize-list-categories-title {
-    font-size: 3rem;
-    color: #333;
-  }
-  .rize-list-categories-description {
-    color: #333;
-  }
-  .rize-list-categories-link:hover .rize-list-categories-title {
-    color: #27A240;
-  }
-  .rize-list-categories-1 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-2 {
-    background-color: #FFF;
-    background-image: none;
-  }
-  .rize-list-categories-3 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-4 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-5 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-6 {
-    background-color: #FFF;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1200x600.jpg);
-    height: 550px !important;
-  }
-}
-/************************/
-/* Category detail page */
-.rize-list-category-detail-header {
-  /*border-bottom: 2px dotted @color-accent-primary;*/
-  margin-bottom: 1rem;
-  padding: 2rem 5%;
-}
-.rize-list-category-detail-name {
-  /*color: @color-accent-primary;*/
-  color: #FFF;
-  font-size: 4rem;
-  line-height: 1.1;
-  margin: 0;
-  text-transform: uppercase;
-}
-.rize-list-category-detail-description {
-  color: #FFF;
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 700px) {
-  .rize-list-category-detail-header {
-    /*border-bottom: 4px dotted @color-accent-primary;*/
-    margin-bottom: 2rem;
-  }
-  .rize-list-category-detail-name {
-    font-size: 6rem;
-  }
-  .rize-list-category-detail-description {
-    font-size: 2.5rem;
-  }
-}
 /***********************/
 /* Share profile links */
 .rize-profiles-share {
@@ -1473,238 +1478,6 @@ a {
     height: 4rem;
     width: 4rem;
     margin-bottom: .5rem;
-  }
-}
-/**********************/
-/* Category list page */
-.rize-list-categories {
-  background-color: #B4B4B4;
-  width: 100%;
-  display: block;
-}
-.rize-list-categories-featured {
-  background-color: #333;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position: 20% center;
-  background-image: url(/rizers/assets/img/front_700x500.jpg);
-  min-height: 400px;
-}
-.rize-list-categories-featured-text {
-  background-color: rgba(20, 20, 20, 0.9);
-  position: absolute;
-  bottom: 0;
-}
-.rize-list-categories-featured-title {
-  border-bottom: 1px solid #000;
-  color: #FFF;
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  text-align: center;
-}
-.rize-list-categories-link {
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
-}
-.rize-list-categories-icon {
-  background-color: rgba(250, 250, 250, 0.5);
-  border: 5px solid #FFF;
-  border-radius: 50%;
-  height: 200px;
-  margin: 2rem auto 0 auto;
-  width: 200px;
-}
-.rize-list-categories-text {
-  margin: 0 auto;
-  width: 90%;
-}
-.rize-list-categories-title {
-  color: #FFF;
-  display: block;
-  font-size: 6rem;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  text-transform: uppercase;
-}
-.rize-list-categories-description {
-  color: #FFF;
-  font-family: 'Arial', sans-serif;
-  font-size: 2rem;
-  line-height: 1.2;
-  margin-top: 0;
-}
-.rize-list-categories-menu-list {
-  text-align: center;
-}
-.rize-list-categories-menu-list-item {
-  display: inline-block;
-  height: auto;
-  width: auto;
-}
-.rize-list-categories-menu-list-item-link {
-  display: inline-block !important;
-  margin: 0 2rem;
-  padding: 0 !important;
-  width: auto !important;
-}
-.rize-list-categories-menu-list-item:after {
-  color: #666;
-  content: "|";
-}
-.rize-list-categories-menu-list-item:last-of-type:after {
-  content: "";
-}
-.rize-list-categories-1 {
-  background-color: #FFA500;
-}
-.rize-list-categories-2 {
-  background-color: #999;
-}
-.rize-list-categories-3 {
-  background-color: #333;
-}
-.rize-list-categories-4 {
-  background-color: #B4B4B4;
-}
-.rize-list-categories-5 {
-  background-color: #27A240;
-}
-.rize-list-categories-6 {
-  background-color: #096e2f;
-}
-@media screen and (min-width: 700px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1024x400.jpg);
-  }
-  .rize-list-categories-icon {
-    height: 80px;
-    width: 80px;
-    display: none;
-  }
-  .rize-list-categories-menu-list {
-    display: none;
-  }
-  .rize-list-categories-featured-title {
-    border-bottom: none;
-    color: #333;
-    font-size: 2rem;
-    padding: 1rem;
-  }
-  .rize-list-categories-featured-text {
-    background-color: rgba(250, 165, 0, 0.9);
-    position: absolute;
-    bottom: 10%;
-    right: 0;
-    width: 40%;
-  }
-  .rize-list-categories-featured-title {
-    text-align: left;
-  }
-  .rize-list-categories-title {
-    font-size: 2.2rem;
-    margin-top: 1rem;
-  }
-  .rize-list-categories-description {
-    color: #FFF;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
-  }
-  .rize-list-categories {
-    display: table-cell;
-    vertical-align: top;
-    width: 20%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1024x400.jpg);
-    min-height: 400px;
-  }
-  .rize-list-categories-featured-title {
-    color: #333;
-    font-size: 3rem;
-    padding: 2rem;
-  }
-  .rize-list-categories-icon {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(0, 160, 0, 0.8);
-    border: none;
-  }
-  .rize-list-categories {
-    border-right: 2px dotted #B4B4B4;
-  }
-  .rize-list-categories:last-of-type {
-    border-right: none;
-  }
-  .rize-list-categories-title {
-    font-size: 3rem;
-    color: #333;
-  }
-  .rize-list-categories-description {
-    color: #333;
-  }
-  .rize-list-categories-link:hover .rize-list-categories-title {
-    color: #27A240;
-  }
-  .rize-list-categories-1 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-2 {
-    background-color: #FFF;
-    background-image: none;
-  }
-  .rize-list-categories-3 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-4 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-5 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-6 {
-    background-color: #FFF;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1200x600.jpg);
-    height: 550px !important;
-  }
-}
-/************************/
-/* Category detail page */
-.rize-list-category-detail-header {
-  margin-bottom: 1rem;
-  padding: 2rem 5%;
-}
-.rize-list-category-detail-name {
-  color: #FFF;
-  font-size: 4rem;
-  line-height: 1.1;
-  margin: 0;
-  text-transform: uppercase;
-}
-.rize-list-category-detail-description {
-  color: #FFF;
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 700px) {
-  .rize-list-category-detail-header {
-    /*border-bottom: 4px dotted @color-accent-primary;*/
-    margin-bottom: 2rem;
-  }
-  .rize-list-category-detail-name {
-    font-size: 6rem;
-  }
-  .rize-list-category-detail-description {
-    font-size: 2.5rem;
   }
 }
 /*****************************/
