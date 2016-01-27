@@ -225,10 +225,16 @@ function buildRizers(apiStr,profileStr,profileObj) {
 				oneRizer.tagline = oneRizer.linkedin.job_title;
 			}
 		} else {
-			console.log("id " + oneRizer.id + " has no profile");
+			console.log("id " + oneRizer.id + " has no profile"); 
 		}
 
 	}
-
-	return {allRizerJson:allRizerJson, rizersById:rizersById} ;
+	//only use the ones that have a spreadsheet entry
+	var filtered=[];
+	for (var i=0; i < allRizerJson.length; i++) {
+		if (allRizerJson[i].profile) {
+			filtered.push(allRizerJson[i])
+		}
+	}
+	return {allRizerJson:filtered, rizersById:rizersById} ;
 }
