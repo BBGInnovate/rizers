@@ -38,22 +38,15 @@
 }
 .rize-list-categories-featured {
   background-color: #333;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position: 20% center;
-  background-image: url(/rizers/assets/img/front_700x500.jpg);
-  min-height: 400px;
 }
 .rize-list-categories-featured-text {
-  background-color: rgba(20, 20, 20, 0.9);
-  position: absolute;
-  bottom: 0;
+  /*background-color: rgba(20, 20, 20, .9);*/
 }
 .rize-list-categories-featured-title {
-  border-bottom: 1px solid #000;
-  color: #FFF;
-  font-size: 2.2rem;
+  /*border-bottom: 1px solid @color-dark-dark-gray;*/
+  color: #B4B4B4;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.8rem;
   line-height: 1.2;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -70,9 +63,9 @@
   background-position: center center;
   border: 8px solid #FFF;
   border-radius: 50%;
-  height: 250px;
+  height: 200px;
   margin: 2rem auto 0 auto;
-  width: 250px;
+  width: 200px;
 }
 .rize-list-categories-text {
   margin: 0 auto;
@@ -81,7 +74,7 @@
 .rize-list-categories-title {
   color: #FFF;
   display: block;
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 1.1;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -90,7 +83,7 @@
 .rize-list-categories-description {
   color: #FFF;
   font-family: 'Arial', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   margin-top: 0;
 }
@@ -103,9 +96,11 @@
   width: auto;
 }
 .rize-list-categories-menu-list-item-link {
+  color: #FFF;
   display: inline-block !important;
   margin: 0 2rem;
   padding: 0 !important;
+  text-transform: uppercase;
   width: auto !important;
 }
 .rize-list-categories-menu-list-item:after {
@@ -133,9 +128,23 @@
 .rize-list-categories-6 {
   background-color: #096e2f;
 }
+@media screen and (min-width: 320px) {
+  .rize-list-categories-title {
+    font-size: 4rem;
+  }
+  .rize-list-categories-description {
+    font-size: 1.8rem;
+  }
+}
 @media screen and (min-width: 700px) {
   .rize-list-categories-featured {
+    background-color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 20% center;
     background-image: url(/rizers/assets/img/front_1024x400.jpg);
+    min-height: 400px;
   }
   .rize-list-categories-icon {
     border-width: 4px;
@@ -148,6 +157,7 @@
   .rize-list-categories-featured-title {
     border-bottom: none;
     color: #333;
+    font-family: 'Oswald', 'Arial', sans-serif;
     font-size: 2rem;
     padding: 1rem;
   }
