@@ -4,7 +4,8 @@
 	<section class="" data-ng-controller="RizersController" data-ng-init="findCategory()">
 		<div>
 
-			<header class="rize-list-category-detail-header rize-category-{{category.id}}">
+			<header class="rize-list-category-detail-header rize-category-{{category.id}} clearfix">
+				<img src="/rizers/assets/img/icon_{{ category.id }}.png" class="rize-list-category-detail-header-icon" style=""/>
 				<h1 class="rize-list-category-detail-name">{{ category.name }}</h1>
 				<p class="rize-list-category-detail-description">{{ category.description }}</p>
 			</header>
