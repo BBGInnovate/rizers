@@ -1049,7 +1049,7 @@ a {
   background-color: #FFA500;
   font-family: 'Arial', sans-serif;
   font-size: 1.8rem;
-  font-style: italic;
+  font-weight: bold;
   line-height: 1.2;
   margin: 0 auto;
   padding: 1rem 2rem 0 2rem;
@@ -1170,7 +1170,7 @@ a {
     color: #333;
     font-family: 'Oswald', 'Arial', sans-serif;
     font-size: 2rem;
-    font-style: normal;
+    font-weight: normal;
     padding: 1rem;
   }
   .rize-list-categories-featured-text {
