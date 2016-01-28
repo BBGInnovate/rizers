@@ -16,7 +16,7 @@
 }
 
 .rize-profiles-banner-box.noBannerImage {
-	height: 2rem;
+	height: 4rem;
 	background: transparent;
 }
 
@@ -52,6 +52,11 @@
 	width: 100%;
 }
 
+@media screen and (min-width: @small-screen) {
+	.rize-profiles-banner-box.noBannerImage {
+		height: 2rem;
+	}
+}
 @media screen and (min-width: @medium-screen) {
 	.rize-profiles-article-text {
 		display: inline-block;
@@ -201,15 +206,7 @@
 }
 
 .rize-profiles-banner-cutline {
-	.backgroundColorTransparent(@color-dark-gray);
-	color: #FFF;
-	font-size: 1.25rem;
-	padding: 10px @margin-small;
-	position: absolute;
-		bottom: 0;
-		left: 0;
-	width: 90%;
-	z-index: 9995;
+	display: none;
 }
 
 .rize-profiles-category-loop{
@@ -232,14 +229,32 @@
 	margin-top: 5px;
 	width: 1rem;
 }
+
 .rize-profiles-category-loop-list-item.selected{
 	.backgroundColorTransparent(@color-accent-primary);
 }
+
 .rize-profiles-category-loop-list-item-link{
 	display:block;
 	height: 100%;
 	width: 100%;
 }
+
+@media screen and (min-width: @small-screen) {
+	.rize-profiles-banner-cutline {
+		.backgroundColorTransparent(@color-dark-gray);
+		color: #FFF;
+		display: block;
+		font-size: 1.25rem;
+		padding: 10px @margin-small;
+		position: absolute;
+			bottom: 0;
+			left: 0;
+		width: 90%;
+		z-index: 9995;
+	}
+}
+
 @media screen and (min-width: @medium-screen) {
 	.rize-profiles-banner-cutline {
 		padding: 10px;
@@ -266,6 +281,10 @@
 	margin: 50px auto 10px auto;
 	position: relative;
 	width: 120px;
+}
+
+.rize-profiles-mugshot.includeBanner {
+	margin: -50px auto 10px auto;
 }
 
 .rize-profiles-mugshot-photo {
@@ -319,7 +338,8 @@
 }
 
 @media screen and (min-width: @small-screen) {
-	.rize-profiles-mugshot {
+	.rize-profiles-mugshot,
+	.rize-profiles-mugshot.includeBanner {
 		float: left;
 		margin: 10px @margin-small auto @margin-small;
 		position: relative;
@@ -335,7 +355,7 @@
 }
 
 @media screen and (min-width: @medium-screen) {
-	.rize-profiles-mugshot {
+	.rize-profiles-mugshot.includeBanner {
 		margin: -75px @margin-large auto @margin-large;
 		position: relative;
 		width: @column-width-side;
