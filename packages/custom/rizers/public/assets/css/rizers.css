@@ -1282,7 +1282,8 @@ a {
 }
 @media screen and (min-width: 700px) {
   .rize-list-profile {
-    border-bottom: none;
+    /*border-bottom: none;*/
+    border-bottom: 1px solid #ECECEC;
   }
   .rize-list-photo-small {
     height: 60px;
@@ -1347,6 +1348,10 @@ a {
   .rize-list-category-detail-header {
     /*border-bottom: 4px dotted @color-accent-primary;*/
     margin-bottom: 2rem;
+  }
+  .rize-list-category-detail-header-icon {
+    height: 120px;
+    width: 120px;
   }
   .rize-list-category-detail-name {
     font-size: 6rem;
