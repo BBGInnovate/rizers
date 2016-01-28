@@ -50,7 +50,7 @@ body {
   margin: 0 auto;
   max-width: 1024px;
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden;*/
   width: 100%;
 }
 .rize-main-content {

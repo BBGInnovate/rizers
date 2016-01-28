@@ -2,10 +2,9 @@
 <!-- ng-bind-html="description" OR data-ng-if -->
 <div id="main" class="rize-main-content" role="main">
 	<section class="clearfix" data-ng-controller="RizersController" data-ng-init="findCategories()">
-		<article class="rize-list-profile rize-list-categories-featured" style="position: relative;">
+		<article class="rize-list-categories-featured" style="position: relative;">
 			<div class="rize-list-categories-featured-text">
 
-				<h1 class="rize-list-categories-featured-title">The movers, shakers and next generation leaders to watch in 2016</h1>
 
 				<div>
 					<ul class="rize-list-categories-menu-list">
@@ -14,6 +13,7 @@
 						</li>
 					</ul>
 				</div>
+				<h1 class="rize-list-categories-featured-title">The movers, shakers and next generation leaders to watch in 2016</h1>
 
 			</div>
 		</article>
@@ -31,7 +31,7 @@
 			<div class="sk-circle11 sk-child"></div>
 			<div class="sk-circle12 sk-child"></div>
 		</div>
-		<article ng-repeat="category in categoryList" class="rize-list-profile rize-list-categories rize-list-categories-{{category.id}}">
+		<article ng-repeat="category in categoryList" class="rize-list-categories rize-category-{{ category.id }}">
 
 			<a ng-model="organization" class="rize-list-categories-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
 				<div class="rize-list-categories-icon" style="background-image: url(/rizers/assets/img/icon_{{category.id}}.png)"></div>
