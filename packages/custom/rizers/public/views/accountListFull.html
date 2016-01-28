@@ -16,7 +16,7 @@
 
 					<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}"  class="rize-list-profile-link">
 
-						<div style="background-image:url({{ account.profile_image }});" class="rize-list-photo-small"></div>
+						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-person">
 							<div class="rize-list-profile-name">{{ account.first_name + ' ' + account.last_name }}</div>
 							<div class="rize-list-profile-tagline">{{ account.tagline }}</div>

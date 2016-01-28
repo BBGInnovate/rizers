@@ -162,6 +162,7 @@
     display: none;
   }
   .rize-list-categories-featured-title {
+    background-color: transparent;
     border-bottom: none;
     color: #333;
     font-family: 'Oswald', 'Arial', sans-serif;
