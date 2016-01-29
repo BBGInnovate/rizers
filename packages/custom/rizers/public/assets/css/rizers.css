@@ -1328,7 +1328,7 @@ a {
 /********************************/
 /* Search and filter navigation */
 .rize-list-filter-nav {
-  background-color: #999;
+  background-color: #333;
   margin: 0;
   padding: 1rem;
   position: fixed;
@@ -1341,6 +1341,7 @@ a {
   padding-left: 0;
 }
 .rize-list-filter-nav-search-label {
+  color: #999;
   font-family: 'Oswald', 'Arial', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
@@ -1350,14 +1351,20 @@ a {
   margin-right: .5rem;
 }
 .rize-list-filter-nav-search-input {
-  background-color: #ECECEC;
+  background-color: #B4B4B4;
   border: none;
   border-radius: 2px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   height: 2rem;
   padding-left: .5rem;
   max-width: 300px;
   width: 70%;
+}
+.rize-list-filter-nav-search-input::placeholder {
+  color: #666;
+}
+.rize-list-filter-nav-search-input::-webkit-input-placeholder {
+  color: #666;
 }
 .rize-list-filter-nav-search-input:focus {
   background-color: #FFF;

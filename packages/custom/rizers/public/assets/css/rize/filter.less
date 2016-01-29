@@ -3,7 +3,7 @@
 /********************************/
 /* Search and filter navigation */
 .rize-list-filter-nav {
-	background-color: @color-medium-gray;
+	background-color: @color-dark-gray;
 	margin: 0;
 	padding: 1rem;
 	position: fixed;
@@ -18,6 +18,7 @@
 }
 
 .rize-list-filter-nav-search-label {
+	color: @color-medium-gray;
 	font-family: @font-sans-display;
 	font-size: 1.5rem;
 	font-weight: 500;
@@ -28,14 +29,21 @@
 }
 
 .rize-list-filter-nav-search-input {
-	background-color: @color-light-light-gray;
+	background-color: @color-light-gray;
 	border: none;
 	border-radius: 2px;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	height: 2rem;
 	padding-left: .5rem;
 	max-width: 300px;
 	width: 70%;
+}
+
+.rize-list-filter-nav-search-input::placeholder{
+	color: #666;
+}
+.rize-list-filter-nav-search-input::-webkit-input-placeholder{
+	color: #666;
 }
 
 .rize-list-filter-nav-search-input:focus {
