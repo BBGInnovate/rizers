@@ -4,12 +4,19 @@
 /* Search and filter navigation */
 .rize-list-filter-nav {
 	background-color: @color-dark-gray;
-	margin: 0;
-	padding: 1rem;
+	padding: 1rem ;
 	position: fixed;
 		top: 5rem;
 	width: 100%;
 	z-index: 9997;
+}
+
+.rize-list-filter-nav-search {
+	background-repeat: no-repeat;
+	background-size: 22px 22px;
+	background-position: @margin-small center;
+	background-image: url(/rizers/assets/img/icon_search.png);
+	padding-left: @margin-small;
 }
 
 .rize-list-filter {
@@ -24,8 +31,8 @@
 	font-weight: 500;
 	text-transform: uppercase;
 	vertical-align: -7%;
-	margin-left: @margin-large;
 	margin-right: .5rem;
+		display: none;
 }
 
 .rize-list-filter-nav-search-input {
@@ -34,6 +41,7 @@
 	border-radius: 2px;
 	font-size: 1.6rem;
 	height: 2rem;
+	margin-left: 3rem;
 	padding-left: .5rem;
 	max-width: 300px;
 	width: 70%;
@@ -45,12 +53,19 @@
 .rize-list-filter-nav-search-input::-webkit-input-placeholder{
 	color: #666;
 }
-
+.rize-list-filter-nav-search-input:focus::placeholder{
+	color: @color-light-light-gray;
+}
+.rize-list-filter-nav-search-input:focus::-webkit-input-placeholder{
+	color: @color-light-light-gray;
+}
 .rize-list-filter-nav-search-input:focus {
 	background-color: #FFF;
 	box-shadow: none;
 	outline: none;
 }
+
+
 
 .rize-list-filter-category {
 	color: #FFF;
