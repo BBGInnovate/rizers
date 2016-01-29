@@ -5,14 +5,6 @@
 		<article class="rize-list-categories-featured" style="position: relative;">
 			<div class="rize-list-categories-featured-text">
 
-
-				<div>
-					<ul class="rize-list-categories-menu-list">
-						<li ng-repeat="category in categoryList" class="rize-list-categories-menu-list-item">
-							<a ng-model="organization" class="rize-list-categories-menu-list-item-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">{{ category.name }}</a>
-						</li>
-					</ul>
-				</div>
 				<h1 class="rize-list-categories-featured-title">The movers, shakers and next generation leaders to watch</h1>
 
 			</div>
@@ -33,7 +25,7 @@
 		</div>
 		<article ng-repeat="category in categoryList" class="rize-list-categories rize-category-{{ category.id }}">
 
-			<a ng-model="organization" class="rize-list-categories-link" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
+			<a ng-model="organization" class="rize-list-categories-link clearfix" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
 				<div class="rize-list-categories-icon" style="background-image: url(/rizers/assets/img/icon_{{category.id}}.png)"></div>
 				<div class="rize-list-categories-text">
 					<h2 class="rize-list-categories-title {{ category.css }}">{{ category.name }}</h2>

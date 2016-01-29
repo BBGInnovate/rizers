@@ -550,6 +550,7 @@ a {
   top: -100%;
   width: 100%;
   z-index: 9998;
+  border-bottom: 1px solid #999;
 }
 .rize-nav-categories.show {
   animation: toggleNav .5s forwards;
@@ -1035,14 +1036,16 @@ a {
 /**********************/
 /* Category list page */
 .rize-list-categories {
-  width: 100%;
+  background-color: #FFF;
+  border-bottom: 2px dotted #B4B4B4;
   display: block;
+  width: 100%;
+}
+.rize-list-categories:last-of-type {
+  border-bottom: none;
 }
 .rize-list-categories-featured {
   background-color: #333;
-}
-.rize-list-categories-featured-text {
-  /*background-color: rgba(20, 20, 20, .9);*/
 }
 .rize-list-categories-featured-title {
   color: #333;
@@ -1052,7 +1055,7 @@ a {
   font-weight: bold;
   line-height: 1.2;
   margin: 0 auto;
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 }
 .rize-list-categories-link {
@@ -1062,7 +1065,7 @@ a {
   margin-bottom: 0;
   padding: 10px 5%;
   position: relative;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   width: 90%;
 }
@@ -1072,78 +1075,40 @@ a {
   background-position: center center;
   border: 8px solid #FFF;
   border-radius: 50%;
-  height: 200px;
-  margin: 2rem auto 0 auto;
-  width: 200px;
+  float: left;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
 }
 .rize-list-categories-text {
-  margin: 0 auto;
-  width: 90%;
+  margin: 1.5rem auto 0 120px;
+  width: 50%;
 }
 .rize-list-categories-title {
-  color: #FFF;
+  color: #333;
   display: block;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1;
   margin-bottom: 1rem;
   margin-top: 1rem;
   text-transform: uppercase;
 }
 .rize-list-categories-description {
-  color: #FFF;
+  color: #333;
   font-family: 'Arial', sans-serif;
   font-size: 1.5rem;
   line-height: 1.2;
   margin-top: 0;
 }
-.rize-list-categories-menu-list {
-  padding: 1rem;
-  text-align: center;
-}
-.rize-list-categories-menu-list-item {
-  display: inline-block;
-  height: auto;
-  width: auto;
-}
-.rize-list-categories-menu-list-item-link {
-  display: inline-block !important;
-  font-size: 1.5rem;
-  margin: 0 2rem;
-  padding: 0 !important;
-  text-transform: uppercase;
-  width: auto !important;
-}
-.rize-list-categories-menu-list-item:after {
-  color: #666;
-  content: "|";
-}
-.rize-list-categories-menu-list-item:last-of-type:after {
-  content: "";
-}
-.rize-list-categories-1 {
-  background-color: #FFA500;
-}
-.rize-list-categories-2 {
-  background-color: #999;
-}
-.rize-list-categories-3 {
-  background-color: #333;
-}
-.rize-list-categories-4 {
-  background-color: #B4B4B4;
-}
-.rize-list-categories-5 {
-  background-color: #27A240;
-}
-.rize-list-categories-6 {
-  background-color: #096e2f;
-}
 @media screen and (min-width: 320px) {
+  .rize-list-categories-text {
+    width: 60%;
+  }
   .rize-list-categories-title {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .rize-list-categories-description {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 700px) {
@@ -1156,14 +1121,6 @@ a {
     background-image: url(/rizers/assets/img/front_1024x400.jpg);
     min-height: 400px;
   }
-  .rize-list-categories-icon {
-    border-width: 4px;
-    height: 80px;
-    width: 80px;
-  }
-  .rize-list-categories-menu-list {
-    display: none;
-  }
   .rize-list-categories-featured-title {
     background-color: transparent;
     border-bottom: none;
@@ -1172,36 +1129,52 @@ a {
     font-size: 2rem;
     font-weight: normal;
     padding: 1rem;
+    text-align: left;
   }
   .rize-list-categories-featured-text {
+    background-color: #FFA500;
     background-color: rgba(250, 165, 0, 0.9);
     position: absolute;
     bottom: 10%;
     right: 0;
     width: 40%;
   }
-  .rize-list-categories-featured-title {
-    text-align: left;
+  .rize-list-categories {
+    border-bottom: none;
+    border-right: 2px dotted #B4B4B4;
+    display: table-cell;
+    padding: 1rem 0 0 0;
+    vertical-align: top;
+    width: 20%;
+  }
+  .rize-list-categories:last-of-type {
+    border-right: none;
+  }
+  .rize-list-categories-icon {
+    border-width: 4px;
+    float: none;
+    height: 80px;
+    width: 80px;
+  }
+  .rize-list-categories-link {
+    text-align: center;
+  }
+  .rize-list-categories-text {
+    margin: 0 auto;
+    width: 90%;
   }
   .rize-list-categories-title {
     font-size: 2.2rem;
     margin-top: 1rem;
   }
   .rize-list-categories-description {
-    color: #FFF;
     font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
-  }
-  .rize-list-categories {
-    display: table-cell;
-    vertical-align: top;
-    width: 20%;
   }
 }
 @media screen and (min-width: 1024px) {
   .rize-list-categories-featured {
     background-image: url(/rizers/assets/img/front_1024x400.jpg);
-    /*min-height: @height-small;*/
   }
   .rize-list-categories-featured-title {
     color: #333;
@@ -1209,17 +1182,9 @@ a {
     padding: 2rem;
   }
   .rize-list-categories-icon {
-    background-color: rgba(0, 160, 0, 0.8);
     border: none;
     height: 140px;
     width: 140px;
-  }
-  .rize-list-categories {
-    background-color: #FFF;
-    border-right: 2px dotted #B4B4B4;
-  }
-  .rize-list-categories:last-of-type {
-    border-right: none;
   }
   .rize-list-categories-title {
     font-size: 3rem;
@@ -1231,33 +1196,11 @@ a {
   .rize-list-categories-link:hover .rize-list-categories-title {
     color: #27A240;
   }
-  .rize-list-categories-1 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-2 {
-    background-color: #FFF;
-    background-image: none;
-  }
-  .rize-list-categories-3 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-4 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-5 {
-    background-color: #FFF;
-  }
-  .rize-list-categories-6 {
-    background-color: #FFF;
-  }
 }
 @media screen and (min-width: 1200px) {
   .rize-list-categories-featured {
     background-image: url(/rizers/assets/img/front_1200x600.jpg);
     height: 550px !important;
-  }
-  .rize-list-categories-icon {
-    display: none;
   }
 }
 /********************/
