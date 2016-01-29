@@ -68,6 +68,18 @@
   box-shadow: none;
   outline: none;
 }
+.rize-list-filter-category {
+  color: #FFF;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0.5rem 5%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 700px) {
+  .rize-list-filter-category {
+    font-size: 2rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .rize-list-filter-nav {
     background-color: transparent;
@@ -85,5 +97,8 @@
   }
   .rize-list-filter-nav-search-input {
     max-width: 200px;
+  }
+  .rize-list-filter-category {
+    font-size: 2.5rem;
   }
 }
