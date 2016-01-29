@@ -17,7 +17,8 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
 
       $scope.findAccounts = function() {
         $http.get('/api/accounts/').success(function(data) {
-    		  $scope.accounts=data;
+    		  $scope.accountsByCategory=data.profilesByCategory;
+          $scope.categories=data.categories;
           sendGA('accountList');
     	  });
       };

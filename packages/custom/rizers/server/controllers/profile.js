@@ -12,8 +12,13 @@ var rizeAPI = require('../service/rizeAPI');
 module.exports = function(System){
 	return {
 		showAll:function(req,res){
-			res.json(rizeAPI.getAllProfiles());
+			var o = {
+				profilesByCategory:rizeAPI.getAllProfilesByCategory(),
+				categories:rizeAPI.getAllCategories()
+			}
+			res.json(o);
 		},
+
 		showOne:function(req,res) {
 			var account= rizeAPI.getOneProfile(req.params.id);
 			var category=rizeAPI.getOneCategory(account.profile.category)

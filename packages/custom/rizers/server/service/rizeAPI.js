@@ -46,6 +46,16 @@ function getAllProfiles () {
 }
 exports.getAllProfiles=getAllProfiles;
 
+function getAllProfilesByCategory () {
+	if (rizerData && rizerData.rd && rizerData.rd.byCategory) {
+		return rizerData.rd.byCategory;
+	} else {
+		return {};
+	}
+}
+exports.getAllProfilesByCategory=getAllProfilesByCategory;
+
+
 function getOneProfile(profileId) {
 	if (rizerData && rizerData.rd && rizerData.rd.rizersById) {
 		var oneRizer=rizerData.rd.rizersById[profileId];
@@ -237,7 +247,18 @@ function buildRizers(apiStr,profileStr,profileObj) {
 		}
 	}
 	sortByKey(filtered,"display_name");
-	return {allRizerJson:filtered, rizersById:rizersById} ;
+
+	var byCategory={};
+	for (var i=0; i < filtered.length; i++) {
+		var a = filtered[i];
+		var c = filtered[i].profile.category;
+		if (byCategory[c]==null) {
+			byCategory[c]=[];
+		}
+		byCategory[c].push(a);
+	}
+
+	return {allRizerJson:filtered, rizersById:rizersById, byCategory:byCategory};
 }
 
 function sortByKey(array, key) {
