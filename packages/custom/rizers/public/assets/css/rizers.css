@@ -1099,6 +1099,9 @@ a {
   line-height: 1.2;
   margin-top: 0;
 }
+.rize-list-categories-link:hover .rize-list-categories-title {
+  color: #27A240;
+}
 @media screen and (min-width: 320px) {
   .rize-list-categories-text {
     width: 60%;
@@ -1187,9 +1190,6 @@ a {
   }
   .rize-list-categories-description {
     color: #333;
-  }
-  .rize-list-categories-link:hover .rize-list-categories-title {
-    color: #27A240;
   }
 }
 @media screen and (min-width: 1200px) {

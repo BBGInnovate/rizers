@@ -2,13 +2,12 @@
 <!-- ng-bind-html="description" OR data-ng-if -->
 <div id="main" class="rize-main-content" role="main">
 	<section class="clearfix" data-ng-controller="RizersController" data-ng-init="findCategories()">
-		<article class="rize-list-categories-featured" style="position: relative;">
+		<div class="rize-list-categories-featured" style="position: relative;">
 			<div class="rize-list-categories-featured-text">
-
 				<h1 class="rize-list-categories-featured-title">The movers, shakers and next generation leaders to watch</h1>
-
 			</div>
-		</article>
+		</div>
+
 		<div id="homePreloader" class="sk-circle">
 			<div class="sk-circle1 sk-child"></div>
 			<div class="sk-circle2 sk-child"></div>
@@ -23,17 +22,20 @@
 			<div class="sk-circle11 sk-child"></div>
 			<div class="sk-circle12 sk-child"></div>
 		</div>
-		<article ng-repeat="category in categoryList" class="rize-list-categories rize-category-{{ category.id }}">
 
-			<a ng-model="organization" class="rize-list-categories-link clearfix" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
-				<div class="rize-list-categories-icon" style="background-image: url(/rizers/assets/img/icon_{{category.id}}.png)"></div>
-				<div class="rize-list-categories-text">
-					<h2 class="rize-list-categories-title {{ category.css }}">{{ category.name }}</h2>
-					<p class="rize-list-categories-description {{ category.css }}">{{ category.description }}</p>
-				</div>
-			</a>
+		<nav role="navigation">
+			<div ng-repeat="category in categoryList" class="rize-list-categories rize-category-{{ category.id }}">
 
-		</article>
+				<a ng-model="organization" class="rize-list-categories-link clearfix" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
+					<div class="rize-list-categories-icon" style="background-image: url(/rizers/assets/img/icon_{{category.id}}.png)"></div>
+					<div class="rize-list-categories-text">
+						<h2 class="rize-list-categories-title {{ category.css }}">{{ category.name }}</h2>
+						<p class="rize-list-categories-description {{ category.css }}">{{ category.description }}</p>
+					</div>
+				</a>
+
+			</div>
+		</nav>
 	</section>
 </div>
 

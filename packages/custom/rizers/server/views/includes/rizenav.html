@@ -1,5 +1,5 @@
 		<div class="rize-nav-categories-container">
-			<div id="dropdown-nav" class="rize-nav-categories">
+			<nav id="dropdown-nav" class="rize-nav-categories" role="navigation">
 				<ul class="rize-nav-categories-list">
 					{% for category in categories %}
 						<li class="rize-nav-categories-list-item"><a href="/categories/{{ category.id }}/{{ category.safeName }}"><span class="rize-nav-categories-list-item-color rize-category-{{ category.id }}"></span>{{ category.name }}</a></li>
@@ -7,5 +7,5 @@
 					<li class="rize-nav-categories-list-item"><a href="/accounts/">Search all profiles</a></li>
 					<li class="rize-nav-categories-list-item"><a href="//africa.rizing.org">Africa Rizing</a></li>
 				</ul>
-			</div>
+			</nav>
 		</div>
