@@ -12,9 +12,10 @@
 		<div>
 			<ul class="rize-list rize-list-filter">
 				<div ng-repeat="category in categories">
-					<h1 class="rize-list-filter-category rize-category-{{ category.id }}">{{ category.name }}</h1>
-
+					
 					<li ng-repeat="account in accountsByCategory[category.id] | filter:filterAccount | filter:query" class="rize-list-profile">
+						<h1 ng-show="$first" class="rize-list-filter-category rize-category-{{ category.id }}">{{ category.name }}</h1>
+
 						<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}"  class="rize-list-profile-link">
 
 							<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
