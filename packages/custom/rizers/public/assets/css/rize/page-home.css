@@ -33,7 +33,7 @@
 /* Category list page */
 .rize-list-categories {
   background-color: #FFF;
-  border-bottom: 2px dotted #B4B4B4;
+  border-bottom: 1px dotted #B4B4B4;
   display: block;
   width: 100%;
 }
@@ -69,7 +69,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border: 8px solid #FFF;
   border-radius: 50%;
   float: left;
   height: 100px;
@@ -147,10 +146,7 @@
     border-right: none;
   }
   .rize-list-categories-icon {
-    border-width: 4px;
     float: none;
-    height: 80px;
-    width: 80px;
   }
   .rize-list-categories-link {
     text-align: center;
@@ -178,7 +174,6 @@
     padding: 2rem;
   }
   .rize-list-categories-icon {
-    border: none;
     height: 140px;
     width: 140px;
   }
