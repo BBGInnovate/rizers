@@ -26,7 +26,7 @@
 		<nav role="navigation">
 			<div ng-repeat="category in categoryList" class="rize-list-categories rize-category-{{ category.id }}">
 
-				<a ng-model="organization" class="rize-list-categories-link clearfix" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}">
+				<a ng-model="organization" class="rize-list-categories-link clearfix" href="/categories/{{ category.id }}/{{ category.name | linkSafeString }}" title="{{ category.name }}">
 					<div class="rize-list-categories-icon" style="background-image: url(/rizers/assets/img/icon_{{category.id}}.png)"></div>
 					<div class="rize-list-categories-text">
 						<h2 class="rize-list-categories-title {{ category.css }}">{{ category.name }}</h2>

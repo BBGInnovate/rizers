@@ -9,6 +9,7 @@
 				<h1 class="rize-list-category-detail-name">{{ category.name }}</h1>
 				<p class="rize-list-category-detail-description">{{ category.description }}</p>
 			</header>
+
 			<ul class="rize-list">
 
 				<div id="categoryPreloader" class="sk-circle">
@@ -25,29 +26,31 @@
 					<div class="sk-circle11 sk-child"></div>
 					<div class="sk-circle12 sk-child"></div>
 				</div>
+
 				<li ng-repeat="account in accountList | filter:filterByCategory" class="rize-list-profile">
-				  
-					<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}" class="rize-list-profile-link">
+
+					<a ng-model="person" data-ng-if="account.account_type=='Person'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}" class="rize-list-profile-link" title="A profile of {{ account.first_name + ' ' + account.last_name }}">
 						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-person">
 							<div class="rize-list-profile-name">{{ account.first_name + ' ' + account.last_name }}</div>
 							<div class="rize-list-profile-tagline">{{ account.tagline }}</div>
 						</div>
 					</a>
-					<!--https://twitter.com/@name/profile_image?size=original -->
 
-					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}" class="rize-list-profile-link">
+					<a ng-model="organization" data-ng-if="account.account_type=='Organization'" href="/accounts/{{account.id}}/{{account.display_name | linkSafeString}}" class="rize-list-profile-link" title="A profile of {{ account.display_name }}">
 						<div style="background-image:url({{ account.profile_image_small }});" class="rize-list-photo-small"></div>
 						<div class="rize-list-profile-organization">
 							<div class="rize-list-profile-name">{{ account.display_name }}</div>
 							<div class="rize-list-profile-tagline">{{ account.tagline }}</div>
 						</div>
 					</a>
+
 				</li>
+
 			</ul>
+
 		</div>
-		<style>
-		</style>
+
 	</section>
 </div>
 
