@@ -1073,11 +1073,30 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  border: 8px solid #FFF;
   border-radius: 50%;
   float: left;
   height: 100px;
   margin: 0 auto;
   width: 100px;
+}
+.rize-list-categories-icon-1 {
+  background-image: url(/rizers/assets/img/icon_1.png);
+}
+.rize-list-categories-icon-2 {
+  background-image: url(/rizers/assets/img/icon_2.png);
+}
+.rize-list-categories-icon-3 {
+  background-image: url(/rizers/assets/img/icon_3.png);
+}
+.rize-list-categories-icon-4 {
+  background-image: url(/rizers/assets/img/icon_4.png);
+}
+.rize-list-categories-icon-5 {
+  background-image: url(/rizers/assets/img/icon_5.png);
+}
+.rize-list-categories-link:hover .rize-list-categories-icon {
+  border: 8px solid #333;
 }
 .rize-list-categories-text {
   margin: 1.5rem auto 0 120px;
