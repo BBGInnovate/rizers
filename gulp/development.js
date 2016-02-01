@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   gutil = require('gulp-util'),
   plugins = gulpLoadPlugins(),
   coffee = require('gulp-coffee'),
+  rename = require('gulp-rename'),
   paths = {
     js: ['./*.js', 'config/**/*.js', 'gulp/**/*.js', 'tools/**/*.js', 'packages/**/*.js', '!packages/**/node_modules/**', '!packages/**/assets/**/lib/**', '!packages/**/assets/**/js/**'],
     html: ['packages/**/*.html', '!packages/**/node_modules/**', '!packages/**/assets/**/lib/**'],
@@ -16,7 +17,7 @@ var gulp = require('gulp'),
   };
 
 /*var defaultTasks = ['clean', 'jshint', 'less', 'csslint', 'devServe', 'watch'];*/
-var defaultTasks = ['coffee','clean', 'less', 'csslint', 'devServe', 'watch'];
+var defaultTasks = ['coffee','clean', 'less','cssminDev', 'csslint', 'devServe', 'watch'];
 
 gulp.task('env:development', function () {
   process.env.NODE_ENV = 'development';
@@ -41,6 +42,13 @@ gulp.task('less', function() {
   return gulp.src(paths.less)
     .pipe(plugins.less())
     .pipe(gulp.dest('./packages'));
+});
+gulp.task('cssminDev',['less'], function () {
+    return gulp.src(['./packages/custom/rizers/public/assets/css/rizers.css'])
+      .pipe(plugins.cssmin({keepBreaks: false}))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('./packages/custom/rizers/public/assets/css/'));
+  
 });
 
 gulp.task('devServe', ['env:development'], function () {
