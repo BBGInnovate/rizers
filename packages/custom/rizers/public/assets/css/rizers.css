@@ -472,7 +472,8 @@ a {
   font-size: 2.5rem;
   height: 4rem;
   margin: 0;
-  text-align: center;
+  padding-left: 5%;
+  text-align: left;
   text-transform: uppercase;
   width: 100%;
 }
@@ -509,6 +510,10 @@ a {
   }
 }
 @media screen and (min-width: 700px) {
+  .rize-profiles-header-title {
+    padding-left: 0;
+    text-align: center;
+  }
   .menu-button {
     background-position: center right;
     padding-left: 1rem;
@@ -1066,8 +1071,8 @@ a {
   font-weight: normal;
   line-height: 1.2;
   margin: 0 auto;
-  padding: 1rem 2rem;
-  text-align: center;
+  padding: 1rem 5%;
+  text-align: left;
 }
 .rize-list-categories-link {
   display: block;
@@ -1161,7 +1166,6 @@ a {
     font-size: 2rem;
     font-weight: normal;
     padding: 1rem;
-    text-align: left;
   }
   .rize-list-categories-featured-text {
     background-color: #FFA500;
