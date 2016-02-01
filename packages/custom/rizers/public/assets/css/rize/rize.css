@@ -158,11 +158,14 @@ a {
     background-position: center right;
     padding-left: 1rem;
     padding-right: 30px;
+    text-decoration: none;
     width: auto;
   }
   .menu-button-label {
     color: #999;
     display: block;
+    font-family: 'Oswald', 'Arial', sans-serif;
+    font-size: 1.5rem;
     padding-top: 1.4rem;
     text-transform: uppercase;
   }
