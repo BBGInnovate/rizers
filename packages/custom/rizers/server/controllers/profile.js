@@ -24,6 +24,10 @@ module.exports = function(System){
 			var category=rizeAPI.getOneCategory(account.profile.category)
 			var categoryListing= new Array();
 
+			/* this category listing object is maintained separately from the accounts so that angular doesn't include it in the search filter 
+			   ideally, this object would be created and initialized when the app is initialized, but this
+			   works.
+			*/
 			for (var i=0; i < category.accounts.length;i++) {
 				var curr = category.accounts[i];
 				var currAccount={selected:"",index:i,display_name:curr.display_name, id:curr.id}
@@ -46,8 +50,8 @@ module.exports = function(System){
 				}
 				categoryListing.push(currAccount);
 			}
-			account.categoryListing=categoryListing;
-			res.json(account);
+
+			res.json({account:account, categoryListing:categoryListing});
 		}
 	};
 };

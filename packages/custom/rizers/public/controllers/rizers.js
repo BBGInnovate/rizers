@@ -30,20 +30,21 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
               var runProfile = function() {
                 document.getElementById('profilePreloader').style.display="none";
                 $scope.showMap=false;
-                if (data.city.latitude) {
+                $scope.account=data.account;
+                if ($scope.account.city.latitude) {
                   $scope.showMap=true;
                 }
-                $scope.account=data;
                 $scope.shareURL = $location.$$absUrl;
                 $scope.shareURLEncoded = $location.$$absUrl;
-                $scope.twitterShareText="Check out " + data.display_name + " on 2016 Rizers";
+                $scope.twitterShareText="Check out " + $scope.account.display_name + " on 2016 Rizers";
                 $scope.safeYoutubeUrl="";
-                if (data.profile.youtube != "") {
-                  $scope.safeYoutubeUrl=$sce.trustAsResourceUrl(data.profile.youtube)
+                if ($scope.account.profile.youtube != "") {
+                  $scope.safeYoutubeUrl=$sce.trustAsResourceUrl($scope.account.profile.youtube)
                 }
-                if (data.profile.quotationLink == "") {
-                  data.profile.quotationLink="#";
+                if ($scope.account.profile.quotationLink == "") {
+                  $scope.account.profile.quotationLink="#";
                 }
+                $scope.categoryListing=data.categoryListing;
                 $sce.trustAsHtml($scope.account.profile.quotation); 
                 sendGA('profileDetail');
               }
