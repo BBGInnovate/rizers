@@ -464,6 +464,9 @@ a {
   vertical-align: middle;
   width: 30px;
 }
+.hideMobile {
+  display: none;
+}
 .rize-profiles-header-title {
   color: #FFF;
   font-size: 2.5rem;
@@ -499,6 +502,11 @@ a {
 }
 .menu-button-label {
   display: none;
+}
+@media screen and (min-width: 320px) {
+  .hideMobile {
+    display: inline-block;
+  }
 }
 @media screen and (min-width: 700px) {
   .menu-button {
