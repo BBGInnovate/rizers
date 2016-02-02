@@ -48,6 +48,7 @@
 .rize-list-filter {
   margin: 9rem 0 0 0;
   padding-left: 0;
+  min-height: 200px;
 }
 .rize-list-filter-nav-search-label {
   color: #999;
