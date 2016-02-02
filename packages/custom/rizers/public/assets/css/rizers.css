@@ -1624,6 +1624,10 @@ a {
   text-align: center;
   top: -75px;
 }
+.rize-category-preloader {
+  text-align: center;
+  top: 50px;
+}
 .rize-home-preloader {
   text-align: center;
   position: relative;

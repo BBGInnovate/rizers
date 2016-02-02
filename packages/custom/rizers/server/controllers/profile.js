@@ -21,6 +21,13 @@ module.exports = function(System){
 
 		showOne:function(req,res) {
 			var account= rizeAPI.getOneProfile(req.params.id);
+			/* hack to fix api data returned */
+			if (account.rize_links[0].title=="") {
+				account.rize_links[0].title=null;
+			}
+			if (account.rize_links[0].url=="") {
+				account.rize_links[0].url=null;
+			}
 			var category=rizeAPI.getOneCategory(account.profile.category)
 			var categoryListing= new Array();
 
