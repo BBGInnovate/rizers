@@ -34,17 +34,15 @@ module.exports = function(System){
         /** facebook/twitter don't obey the meta tag about fragments, so we detect user agent and behave appropriately **/
         /* for FB this is important for regular shares - for Twitter it's so that card detail views show images */
         var userAgent = req.headers['user-agent'];
-        if (userAgent.indexOf('facebookexternalhit') >= 0 || userAgent.indexOf('Twitterbot') >= 0) {
-          req.query._escaped_fragment_=req.originalUrl;
-        }
-
-        if(false && typeof(req.query._escaped_fragment_) !== 'undefined') {
+        if(userAgent.indexOf('facebookexternalhit') >= 0 || userAgent.indexOf('Twitterbot') >= 0) {
+            req.query._escaped_fragment_=req.originalUrl; 
             var translatedURL=config.applicationUrl;
             if (req.query._escaped_fragment_.charAt(0)=="/") {
               translatedURL+=req.query._escaped_fragment_.substr(1);
             } else {
               translatedURL+=req.query._escaped_fragment_;
             }
+            /*
             var simpleRender=false;
             if (translatedURL.indexOf("/accounts/") != -1 ) {
                var urlArray=translatedURL.split("/");
@@ -62,7 +60,8 @@ module.exports = function(System){
                   }
                }
             } 
-            if (!simpleRender) {
+            */
+            if (true) {
                 console.log('running phantomJS for ' + translatedURL);
                 phantom.create(function(ph) {
                   ph.createPage(function(page) {
