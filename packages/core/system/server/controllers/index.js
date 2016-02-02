@@ -38,7 +38,7 @@ module.exports = function(System){
           req.query._escaped_fragment_=req.originalUrl;
         }
 
-        if(typeof(req.query._escaped_fragment_) !== 'undefined') {
+        if(false && typeof(req.query._escaped_fragment_) !== 'undefined') {
             var translatedURL=config.applicationUrl;
             if (req.query._escaped_fragment_.charAt(0)=="/") {
               translatedURL+=req.query._escaped_fragment_.substr(1);
