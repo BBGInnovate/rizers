@@ -93,7 +93,7 @@ module.exports = {
   profileFlatPath:'/packages/custom/rizers/server/models/profiles.json',
   apiFlatPath:'/packages/custom/rizers/server/models/api.json',
   categoryFlatPath:'/packages/custom/rizers/server/models/categories.json',
-  useLiveData:false,
+  useLiveData:true,
   applicationUrl:applicationUrl,
   applicationName:applicationName,
   applicationDescription:applicationDescription,
