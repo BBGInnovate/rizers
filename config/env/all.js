@@ -4,30 +4,45 @@ var path = require('path'),
   rootPath = path.normalize(__dirname + '/../..');
 
 var applicationPort=3000;
+var nonSSLPort=applicationPort;
 var applicationUrl="http://localhost:3000/";
 var fbAppID="1695445710701793";
 var applicationName="2016 Rizers";  //check rizeHead.html, rizeSEO.html - used in title/meta
 var applicationDescription="The movers, shakers and next generation leaders to watch in 2016";
 var defaultSocialImage="https://africa.rizing.org/wp-content/uploads/2015/12/cropped-Rize-socialprofiles.png";
+var isSSL=false;
+var useSSLOnProd=true;
+var sslKey='';
+var sslCert='';
+var sslCa='';
+var sslPort=false;
 if ( process.env.NODE_ENV === 'production' ){
   fbAppID="1695437487369282";
-  applicationPort=80;
+  nonSSLPort=80;
   applicationUrl="http://watch2016.rizing.org/";
+  
+  if (useSSLOnProd) {
+    sslPort=443;
+    applicationUrl="https://watch2016.rizing.org/";
+    sslKey='/etc/apache2/SSL/rizing.org.key';
+    sslCert='/etc/apache2/SSL/rizing.org.crt';
+    sslCa='/etc/apache2/SSL/gd_bundle-g2-g1.crt';
+  }
 }
 
 module.exports = {
   root: rootPath,
   http: {
-    port: process.env.PORT || applicationPort
+    port: nonSSLPort
   },
   https: {
-    port: false,
+    port: sslPort,
 
     // Paths to key and cert as string
     ssl: {
-      key: '',
-      cert: '',
-      ca: ''
+      key: sslKey,
+      cert: sslCert,
+      ca: sslCa
     }
   },
   hostname: process.env.HOST || process.env.HOSTNAME,
@@ -78,7 +93,7 @@ module.exports = {
   profileFlatPath:'/packages/custom/rizers/server/models/profiles.json',
   apiFlatPath:'/packages/custom/rizers/server/models/api.json',
   categoryFlatPath:'/packages/custom/rizers/server/models/categories.json',
-  useLiveData:true,
+  useLiveData:false,
   applicationUrl:applicationUrl,
   applicationName:applicationName,
   applicationDescription:applicationDescription,
