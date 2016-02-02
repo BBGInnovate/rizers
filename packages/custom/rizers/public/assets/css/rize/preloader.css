@@ -1,4 +1,3 @@
-/*not used*/
 /**********/
 /* Mixins */
 .clearfix:after {
@@ -31,21 +30,21 @@
 }
 /*************/
 /* Preloader */
-#profilePreloader {
+.rize-profile-preloader {
   text-align: center;
   position: relative;
   top: -350px;
 }
 @media screen and (min-width: 700px) {
-  #profilePreloader {
+  .rize-profile-preloader {
     top: -400px;
   }
 }
-#categoryPreloader {
+.rize-category-preloader {
   text-align: center;
   top: -75px;
 }
-#homePreloader {
+.rize-home-preloader {
   text-align: center;
   position: relative;
 }
