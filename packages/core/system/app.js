@@ -26,7 +26,7 @@ SystemPackage.register(function(app, auth, database, circles) {
           next();
       } else {
           // request was via http, so redirect to https
-          console.log("forcing redirect to host " req.headers.host + " with url " + req.url );
+          console.log("forcing redirect to host " + req.headers.host + " with url " + req.url );
           res.redirect('https://' + req.headers.host + req.url);
       }
     });
