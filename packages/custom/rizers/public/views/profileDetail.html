@@ -132,8 +132,8 @@
 
 			<nav class="rize-profile-nav-buttons">
 				<div class="rize-profile-nav-buttons-container">
-					<a href="/accounts/{{ account.prevAccount.id }}/{{account.prevAccount.display_name | linkSafeString}}" class="rize-profile-nav-buttons-previous" id="previousProfile" title="Previous profile: {{account.prevAccount.display_name}}"> {{account.prevAccount.display_name}}</a> 
-					<a href="/accounts/{{ account.nextAccount.id }}/{{account.nextAccount.display_name | linkSafeString}}" class="rize-profile-nav-buttons-next" id="nextProfile" title="Next profile: {{account.nextAccount.display_name}}">{{account.nextAccount.display_name}} </a>
+					<a href="/accounts/{{ prevAccount.id }}/{{prevAccount.display_name | linkSafeString}}" class="rize-profile-nav-buttons-previous" id="previousProfile" title="Previous profile: {{prevAccount.display_name}}"> {{prevAccount.display_name}}</a> 
+					<a href="/accounts/{{ nextAccount.id }}/{{nextAccount.display_name | linkSafeString}}" class="rize-profile-nav-buttons-next" id="nextProfile" title="Next profile: {{nextAccount.display_name}}">{{nextAccount.display_name}} </a>
 				</div>
 			</nav>
 

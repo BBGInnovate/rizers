@@ -28,6 +28,8 @@ module.exports = function(System){
 			   ideally, this object would be created and initialized when the app is initialized, but this
 			   works.
 			*/
+			var prevAccount={};
+			var nextAccount={};
 			for (var i=0; i < category.accounts.length;i++) {
 				var curr = category.accounts[i];
 				var currAccount={selected:"",index:i,display_name:curr.display_name, id:curr.id}
@@ -44,14 +46,14 @@ module.exports = function(System){
 					var prev = category.accounts[prevAccountIndex];
 					var next = category.accounts[nextAccountIndex];
 					
-					account.prevAccount={display_name:prev.display_name,id:prev.id, profileImage:prev.profile.profileImage, image:prev.profile.image}
-					account.nextAccount={display_name:next.display_name,id:next.id, profileImage:next.profile.profileImage, image:next.profile.image}
+					prevAccount={display_name:prev.display_name,id:prev.id, profileImage:prev.profile.profileImage, image:prev.profile.image}
+					nextAccount={display_name:next.display_name,id:next.id, profileImage:next.profile.profileImage, image:next.profile.image}
 					
 				}
 				categoryListing.push(currAccount);
 			}
 
-			res.json({account:account, categoryListing:categoryListing});
+			res.json({account:account, categoryListing:categoryListing, prevAccount:prevAccount, nextAccount:nextAccount});
 		}
 	};
 };

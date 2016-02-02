@@ -45,6 +45,8 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
                   $scope.account.profile.quotationLink="#";
                 }
                 $scope.categoryListing=data.categoryListing;
+                $scope.nextAccount=data.nextAccount;
+                $scope.prevAccount=data.prevAccount;
                 $sce.trustAsHtml($scope.account.profile.quotation); 
                 sendGA('profileDetail');
               }
