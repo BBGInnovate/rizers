@@ -48,6 +48,41 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
                 $scope.nextAccount=data.nextAccount;
                 $scope.prevAccount=data.prevAccount;
                 $sce.trustAsHtml($scope.account.profile.quotation); 
+
+                // set metadata for meta tags
+                var metaTags = document.getElementsByTagName('meta');
+                for (var i = 0; i < metaTags.length; i++) {
+                  if(metaTags[i].getAttribute('property') === 'og:title') {
+                    metaTags[i].setAttribute('content', $scope.account.display_name);
+                  }
+
+                  if(metaTags[i].getAttribute('property') === 'og:description') {
+                    metaTags[i].setAttribute('content', $scope.account.rize_summary_stripped);
+                  }
+
+                  if(metaTags[i].getAttribute('property') === 'og:image') {
+                    metaTags[i].setAttribute('content', $scope.account.social_media_image);
+                  }
+
+                  if(metaTags[i].getAttribute('property') === 'og:url') {
+                    metaTags[i].setAttribute('content', $location.$$absUrl);
+                  }
+
+                  if(metaTags[i].getAttribute('property') === 'twitter:title') {
+                    metaTags[i].setAttribute('content', $scope.account.display_name);
+                  }
+
+                  if(metaTags[i].getAttribute('property') === 'twitter:description') {
+                    metaTags[i].setAttribute('content', $scope.account.rize_summary_stripped);
+                  }
+
+                  if(metaTags[i].getAttribute('property') === 'twitter:image') {
+                    metaTags[i].setAttribute('content', $scope.account.social_media_image);
+                  }
+                }
+
+
+
                 sendGA('profileDetail');
               }
               var timeoutMS=0;
