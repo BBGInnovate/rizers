@@ -12,7 +12,6 @@ html {
 
 body {
 	background-color: @color-dark-dark-gray;
-	/*background-image: linear-gradient(transparent 0%,#999 300%);*/
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -32,10 +31,6 @@ body {
 
 .rize-main-content {
 	background-color: #FFF;
-	/*
-	border-left: 1px solid @color-light-gray;
-	border-right: 1px solid @color-light-gray;
-	*/
 	margin: 0 auto;
 	max-width: @max-width;
 	padding: 0;
@@ -78,6 +73,7 @@ a {
 	width: 100%;
 	z-index: 9999;
 }
+
 .rize-profiles-header-box {
 	background-color: @color-dark-gray;
 	border-bottom: 1px solid #000;
@@ -86,6 +82,7 @@ a {
 	padding:5px 0;
 	position: relative;
 }
+
 .rize-profiles-header-logo {
 	padding: 0 0 5px 0;
 	vertical-align: middle;
@@ -95,7 +92,6 @@ a {
 .hideMobile {
 	display: none;
 }
-
 
 .rize-profiles-header-title {
 	color: #FFF;
@@ -116,6 +112,7 @@ a {
 .rize-profiles-navigation-top {
 	float: right;
 }
+
 .menu-button {
 	background-size: 30px;
 	background-repeat: no-repeat;
@@ -133,6 +130,7 @@ a {
 		top: 0;
 	width: 30px;
 }
+
 .menu-button-label{
 	display: none;
 }
@@ -166,6 +164,8 @@ a {
 		text-transform: uppercase;
 	}
 }
+
+
 
 /***************/
 /* Site footer */
@@ -204,12 +204,12 @@ a {
 /****************************/
 /* Site category navigation */
 .rize-nav-categories {
+	border-bottom: 1px solid @color-medium-gray;
 	max-width: @max-width;
 	position: fixed;
 		top: -100%;
 	width: 100%;
 	z-index: 9998;
-	border-bottom: 1px solid @color-medium-gray;
 }
 .rize-nav-categories.show {
 	animation: toggleNav .5s forwards;
@@ -217,23 +217,13 @@ a {
 }
 
 @keyframes toggleNav {
-	0% {
-		top: -100%;
-	}
-
-	100% {
-		top: 5.1rem;
-	}
+	  0% {top: -100%;}
+	100% {top: 5.1rem;}
 }
 
 @-webkit-keyframes toggleNav {
-	0% {
-		top: -100%;
-	}
-
-	100% {
-		top: 5.1rem;
-	}
+	  0% {top: -100%;}
+	100% {top: 5.1rem;}
 }
 
 
@@ -261,6 +251,7 @@ a {
 .rize-nav-categories-list-item a:hover {
 	background-color: @color-light-light-gray;
 }
+
 .rize-nav-categories-list-item-color {
 	border-radius: 50%;
 	display: inline-block;
@@ -290,21 +281,11 @@ a {
 	}
 
 	@keyframes toggleNav {
-		0% {
-			right: -@top-nav-width;
-		}
-
-		100% {
-			right: 0;
-		}
+		  0% {right: -@top-nav-width;}
+		100% {right: 0;}
 	}
 	@-webkit-keyframes toggleNav {
-		0% {
-			right: -@top-nav-width;
-		}
-
-		100% {
-			right: 0;
-		}
+		  0% {right: -@top-nav-width;}
+		100% {right: 0;}
 	}
 }

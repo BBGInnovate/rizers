@@ -15,7 +15,7 @@
 					}
 				</style>
 
-				<div class="rize-profile-banner-box" ng-class="account.profile.image=='' ? '--noBannerImage' : '--includeBanner'">
+				<div class="rize-profile-banner-box" ng-class="account.profile.image=='' ? 'noBannerImage' : 'includeBanner'">
 					<div class="rize-profile-category">
 						<a href="/categories/{{ account.profile.categoryData.id }}/{{ account.profile.categoryData.name | linkSafeString }}" class="rize-profile-category-link rize-category-{{ account.profile.categoryData.id }}">{{ account.profile.categoryData.name }}</a>
 
@@ -35,11 +35,12 @@
 					<div ng-if="account.profile.cutline != ''" class="rize-profile-banner-cutline">
 						{{ account.profile.cutline }}
 					</div>
+
 					<div ng-if="account.profile.image != ''" class="rize-profile-banner-shadow"></div>
 				</div>
 
-				<div class="rize-profile-mugshot" ng-class="account.profile.image=='' ? '--noBannerImage' : '--includeBanner'">
-					<img src="{{ account.profile_image }}" class="rize-profile-mugshot-photo" />
+				<div class="rize-profile-mugshot" ng-class="account.profile.image=='' ? 'noBannerImage' : 'includeBanner'">
+					<img src="{{ account.profile_image }}" class="rize-profile-mugshot-photo" alt="Profile photo of {{ account.display_name }}"/>
 				</div>
 				<div class="rize-profile-person clearfix">
 					<h2 class="rize-profile-person-name">{{ account.display_name }}</h2>
@@ -48,7 +49,7 @@
 			</header>
 
 			<div class="rize-profile-grid clearfix">
-				<div id="profilePreloader" class="sk-circle">
+				<div id="profilePreloader" class="rize-profile-preloader sk-circle">
 					<div class="sk-circle1 sk-child"></div>
 					<div class="sk-circle2 sk-child"></div>
 					<div class="sk-circle3 sk-child"></div>
@@ -68,13 +69,13 @@
 					<div class="rize-profile-social">
 						<h3 class="rize-profile-social-label rize-profile-label">Follow {{account.first_name}} online: </h3>
 						<ul class="rize-profile-social-list">
-							<li ng-if="account.url" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="Website"><span>Website</span></a></li>
-							<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}" title="Twitter"><span>{{account.twitter.screen_name}}</span></a></li>
-							<li ng-if="account.linkedin.url" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="LinkedIn"><span>LinkedIn</span></a></li>
-							<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}" title="Facebook"><span>Facebook</span></a></li>
+							<li ng-if="account.url" class="rize-profile-social-link rize-icon-website"> <a href="{{account.url}}" title="{{account.display_name}}'s Website"><span>Website</span></a></li>
+							<li ng-if="account.twitter.screen_name" class="rize-profile-social-link rize-icon-twitter"> <a href="https://twitter.com/{{account.twitter.screen_name}}" title="{{account.display_name}}'s Twitter"><span>{{account.twitter.screen_name}}</span></a></li>
+							<li ng-if="account.linkedin.url" class="rize-profile-social-link rize-icon-linkedin"> <a href="{{account.linkedin.url}}" title="{{account.display_name}}'s LinkedIn"><span>LinkedIn</span></a></li>
+							<li ng-if="account.facebook.url" class="rize-profile-social-link rize-icon-facebook"> <a href="{{account.facebook.url}}" title="{{account.display_name}}'s Facebook"><span>Facebook</span></a></li>
 
 							<li ng-if="account.instagram_url" class="rize-profile-social-link rize-icon-instagram"> <a href="{{account.instagram_url}}" title="Instagram"><span>Instagram</span></a></li>
-							<li ng-if="account.youtube" class="rize-profile-social-link rize-icon-youtube"> <a href="{{account.youtube}}" title="YouTube"><span>YouTube</span></a></li>
+							<li ng-if="account.youtube" class="rize-profile-social-link rize-icon-youtube"> <a href="{{account.youtube}}" title="{{account.display_name}}'s YouTube"><span>YouTube</span></a></li>
 						</ul>
 					</div>
 

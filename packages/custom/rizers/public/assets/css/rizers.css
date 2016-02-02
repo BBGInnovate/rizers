@@ -353,7 +353,6 @@ td,
 th {
   padding: 0;
 }
-/*not used*/
 /**********/
 /* Mixins */
 .clearfix:after {
@@ -393,7 +392,6 @@ html {
 }
 body {
   background-color: #111;
-  /*background-image: linear-gradient(transparent 0%,#999 300%);*/
   height: 100%;
   margin: 0;
   padding: 0;
@@ -410,10 +408,6 @@ body {
 }
 .rize-main-content {
   background-color: #FFF;
-  /*
-	border-left: 1px solid @color-light-gray;
-	border-right: 1px solid @color-light-gray;
-	*/
   margin: 0 auto;
   max-width: 1024px;
   padding: 0;
@@ -561,12 +555,12 @@ a {
 /****************************/
 /* Site category navigation */
 .rize-nav-categories {
+  border-bottom: 1px solid #999;
   max-width: 1024px;
   position: fixed;
   top: -100%;
   width: 100%;
   z-index: 9998;
-  border-bottom: 1px solid #999;
 }
 .rize-nav-categories.show {
   animation: toggleNav .5s forwards;
@@ -663,7 +657,7 @@ a {
   position: relative;
   width: 100%;
 }
-.rize-profile-banner-box.--noBannerImage {
+.rize-profile-banner-box.noBannerImage {
   height: 4rem;
   background: transparent;
 }
@@ -695,7 +689,7 @@ a {
   width: 100%;
 }
 @media screen and (min-width: 320px) {
-  .rize-profile-banner-box.--noBannerImage {
+  .rize-profile-banner-box.noBannerImage {
     height: 2rem;
   }
 }
@@ -768,7 +762,7 @@ a {
   }
   .rize-profile-nav-buttons-container {
     margin: 0 auto;
-    max-width: 1234px;
+    max-width: 1216px;
   }
   .rize-profile-nav-buttons a {
     background-repeat: no-repeat;
@@ -833,6 +827,7 @@ a {
   margin-top: 0;
 }
 .rize-profile-category-loop-list-item {
+  background-color: #FFF;
   background-color: rgba(250, 250, 250, 0.8);
   border: 1px solid #999;
   border-radius: 50%;
@@ -890,19 +885,18 @@ a {
   position: relative;
   width: 120px;
 }
-.rize-profile-mugshot.--includeBanner {
+.rize-profile-mugshot.includeBanner {
   margin: -50px auto 10px auto;
 }
 .rize-profile-mugshot-photo {
   background-color: #FFF;
   border: 5px solid #FFF;
-  /*border-radius: 50%;*/
   max-width: 100%;
 }
-.rize-profile-mugshot.--noBannerImage {
+.rize-profile-mugshot.noBannerImage {
   margin-top: 20px;
 }
-.rize-profile-mugshot.--noBannerImage .rize-profile-mugshot-photo {
+.rize-profile-mugshot.noBannerImage .rize-profile-mugshot-photo {
   border: 0;
 }
 .rize-profile-person {
@@ -938,7 +932,7 @@ a {
 }
 @media screen and (min-width: 320px) {
   .rize-profile-mugshot,
-  .rize-profile-mugshot.--includeBanner {
+  .rize-profile-mugshot.includeBanner {
     float: left;
     margin: 10px 5% auto 5%;
     position: relative;
@@ -951,13 +945,13 @@ a {
   }
 }
 @media screen and (min-width: 700px) {
-  .rize-profile-mugshot.--includeBanner {
+  .rize-profile-mugshot.includeBanner {
     margin: -75px 2% auto 2%;
     position: relative;
     width: 20%;
     z-index: 9990;
   }
-  .rize-profile-mugshot.--noBannerImage {
+  .rize-profile-mugshot.noBannerImage {
     float: left;
     margin: 20px 5% auto 2%;
     position: relative;
@@ -1206,9 +1200,6 @@ a {
   }
 }
 @media screen and (min-width: 1024px) {
-  .rize-list-categories-featured {
-    background-image: url(/rizers/assets/img/front_1024x400.jpg);
-  }
   .rize-list-categories-featured-title {
     color: #333;
     font-size: 3rem;
@@ -1619,21 +1610,21 @@ a {
 }
 /*************/
 /* Preloader */
-#profilePreloader {
+.rize-profile-preloader {
   text-align: center;
   position: relative;
   top: -350px;
 }
 @media screen and (min-width: 700px) {
-  #profilePreloader {
+  .rize-profile-preloader {
     top: -400px;
   }
 }
-#categoryPreloader {
+.rize-category-preloader {
   text-align: center;
   top: -75px;
 }
-#homePreloader {
+.rize-home-preloader {
   text-align: center;
   position: relative;
 }
