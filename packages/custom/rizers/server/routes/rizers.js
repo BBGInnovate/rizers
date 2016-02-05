@@ -14,6 +14,8 @@ module.exports = function(Rizers, app, auth, database) {
 	app.route('/api/categories/:id').get(category.showOne);
 	app.route('/api/categories/').get(category.showAll);
 	app.route('/api/liveDataUpdate').get(rizeAPI.updateDisk);
+	app.route('/api/sitemap').get(sitemap.show);
+	/*
 	app.route('/sitemap').get(sitemap.show);
 	
 	app.route('/_escaped_fragment_=/accounts/:id').get(function(req,res){ 
@@ -21,5 +23,6 @@ module.exports = function(Rizers, app, auth, database) {
 		console.log('alternate id ' + req.params.id); 
 		res.send("render article " + req.params.id); 
 	});
+*/
 	
 };
