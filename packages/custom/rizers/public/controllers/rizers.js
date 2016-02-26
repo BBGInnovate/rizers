@@ -64,7 +64,7 @@ angular.module('mean.rizers').controller('RizersController', ['$scope', 'Global'
                     metaTags[i].setAttribute('content', $scope.account.display_name);
                   }
 
-                  if(metaTags[i].getAttribute('property') === 'og:description') {
+                  if(metaTags[i].getAttribute('property') === 'og:description' || metaTags[i].getAttribute('name') === 'description') {
                     metaTags[i].setAttribute('content', $scope.account.rize_summary_stripped);
                   }
 
