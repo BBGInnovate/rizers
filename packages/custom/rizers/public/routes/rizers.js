@@ -14,6 +14,9 @@ angular.module('mean.rizers').config(['$stateProvider',
     }).state('category Detail view', {
       url: '/categories/:categoryId/:categoryName',
       templateUrl: 'rizers/views/categoryDetail.html'
+    }).state('contact us form', {
+      url: '/contactus',
+      templateUrl: 'rizers/views/contactUs.html'
     })
   }
 
