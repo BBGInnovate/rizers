@@ -92,7 +92,7 @@ gulp.task('watch', function () {
 
   gulp.watch(paths.coffee,['coffee']);
   gulp.watch(paths.js, ['jshint']);
-  gulp.watch(paths.css, ['csslint']).on('change', plugins.livereload.changed);
+  //gulp.watch(paths.css, ['csslint']).on('change', plugins.livereload.changed);
   gulp.watch(paths.less, ['less','cssminDev']);
 });
 
