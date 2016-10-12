@@ -187,7 +187,7 @@
 @media screen and (min-width: 1024px) {
   .rize-list-categories-featured-title {
     color: #333;
-    font-size: 3rem;
+    font-size: 2.6rem;
     padding: 2rem;
   }
   .rize-list-categories-icon {
@@ -206,5 +206,8 @@
   .rize-list-categories-featured {
     background-image: url(/rizers/assets/img/front_1200x600.jpg);
     height: 550px !important;
+  }
+  .rize-list-categories-featured-title {
+    font-size: 3.3rem;
   }
 }
