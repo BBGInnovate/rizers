@@ -24,9 +24,9 @@ if ( process.env.NODE_ENV === 'production' ){
   if (useSSLOnProd) {
     sslPort=443;
     applicationUrl="https://watch2016.rizing.org/";
-    sslKey='/etc/apache2/SSL/rizing.org.key';
-    sslCert='/etc/apache2/SSL/rizing.org.crt';
-    sslCa='/etc/apache2/SSL/gd_bundle-g2-g1.crt';
+    sslKey='/etc/letsencrypt/live/watch2016.rizing.org/privkey.pem';
+    sslCert='/etc/letsencrypt/live/watch2016.rizing.org/cert.pem';
+    sslCa='/etc/letsencrypt/live/watch2016.rizing.org/chain.pem';
   }
 }
 
